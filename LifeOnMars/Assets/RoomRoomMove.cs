@@ -10,6 +10,8 @@ public class RoomRoomMove : MonoBehaviour
 
     [SerializeField]
     bool smooth=true;
+
+    bool inside=false;
     private Coroutine c;
     void Start()
     {
@@ -34,10 +36,33 @@ public class RoomRoomMove : MonoBehaviour
             
         c=StartCoroutine(Move(target, ()=>{
             foreach(LocomotionProvider c in providers){
-                if (!(c is ContinuousMoveProviderBase) && !(c is ContinuousTurnProviderBase) )
+                if (!(c is ContinuousMoveProviderBase) )
                     c.enabled=true;
+
             }
-                
+        }));
+        
+    }
+
+    public void MoveInOut(Transform target){
+
+        LocomotionProvider[]  providers=GetComponents<LocomotionProvider>();
+        print(providers.Length);
+        foreach(LocomotionProvider c in providers){
+            c.enabled=false;
+            print(c.name);
+        }
+            
+        c=StartCoroutine(Move(target, ()=>{
+            foreach(LocomotionProvider c in providers){
+                if (!inside && !(c is ContinuousMoveProviderBase)  )
+                    c.enabled=true;
+                else if(inside){
+                    c.enabled=true;
+                }
+
+            }
+            inside=!inside; 
         }));
         
     }
