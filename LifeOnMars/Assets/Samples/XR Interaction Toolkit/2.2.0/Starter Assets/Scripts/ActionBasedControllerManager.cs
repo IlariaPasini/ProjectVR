@@ -314,7 +314,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 DisableAction(m_Turn);
                 DisableAction(m_SnapTurn);
-                return;
+                // return;
             }
 
             if (m_SmoothTurnEnabled)
