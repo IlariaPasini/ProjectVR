@@ -141,11 +141,11 @@ MonoBehaviour:
   outlineSettings:
     outlineColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
     outlineScale: 0.8
-    depthThreshold: 5.4
-    robertsCrossMultiplier: 418
-    normalThreshold: 0.393
-    steepAngleThreshold: 0.59
-    steepAngleMultiplier: 180
+    depthThreshold: 2
+    robertsCrossMultiplier: 109
+    normalThreshold: 0.45
+    steepAngleThreshold: 0.35
+    steepAngleMultiplier: 110
   viewSpaceNormalsTextureSettings:
     colorFormat: 0
     depthBufferBits: 72
