@@ -52,18 +52,19 @@ public class RoomRoomMove : MonoBehaviour
             c.enabled=false;
             print(c.name);
         }
-            
-        c=StartCoroutine(Move(target, ()=>{
-            foreach(LocomotionProvider c in providers){
-                if (!inside && !(c is ContinuousMoveProviderBase)  )
-                    c.enabled=true;
-                else if(inside){
-                    c.enabled=true;
-                }
 
+        transform.position=target.position;
+
+        foreach(LocomotionProvider c in providers){
+            if (!inside && !(c is ContinuousMoveProviderBase)  )
+                c.enabled=true;
+            else if(inside){
+                c.enabled=true;
             }
-            inside=!inside; 
-        }));
+
+        }
+        inside=!inside; 
+            
         
     }
     IEnumerator Move(Transform target, Action a){

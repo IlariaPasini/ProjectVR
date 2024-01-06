@@ -112,7 +112,7 @@ MonoBehaviour:
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
-  m_DepthPrimingMode: 1
+  m_DepthPrimingMode: 2
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_ClusteredRendering: 0
@@ -140,10 +140,10 @@ MonoBehaviour:
     m_Bits: 128
   outlineSettings:
     outlineColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    outlineScale: 0.8
-    depthThreshold: 5.4
-    robertsCrossMultiplier: 418
-    normalThreshold: 0.393
+    outlineScale: 0.6
+    depthThreshold: 22
+    robertsCrossMultiplier: 500
+    normalThreshold: 0.695
     steepAngleThreshold: 0.59
     steepAngleMultiplier: 180
   viewSpaceNormalsTextureSettings:
