@@ -472,6 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1601316929}
+  anchor: {fileID: 1776048157}
 --- !u!114 &136865676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1197,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5617632107413205437, guid: c526e3fb4ea0d704690c537c4eaefbfc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[6]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2e79910639741044acc6f3ebfa65864, type: 2}
     - target: {fileID: 5985553264182505641, guid: c526e3fb4ea0d704690c537c4eaefbfc,
         type: 3}
       propertyPath: m_Layer
@@ -1772,7 +1778,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -3041,7 +3047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776048156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.88, z: -1.13}
+  m_LocalPosition: {x: 0, y: 0.88, z: 0.836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

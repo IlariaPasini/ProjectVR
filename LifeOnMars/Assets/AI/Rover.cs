@@ -12,7 +12,7 @@ public class Rover : MonoBehaviour
 
     Stack<GameObject> stored_objects=new Stack<GameObject>();
 
-    Transform anchor;
+    [SerializeField]Transform anchor;
     void Start()
     {
         
@@ -29,8 +29,12 @@ public class Rover : MonoBehaviour
         GameObject popped;
         if(stored_objects.TryPop(out popped)){
             popped.transform.SetParent(anchor);
-            popped.GetComponent<Rigidbody>().position=Vector3.zero;
             popped.SetActive(true);
+            popped.GetComponent<Rigidbody>().isKinematic=true;
+            popped.transform.localPosition=Vector3.zero;
+            popped.GetComponent<Rigidbody>().isKinematic=false;
+            //.position=Vector3.zero;
+            
         }
     }
     void Update()
