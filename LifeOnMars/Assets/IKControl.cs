@@ -44,6 +44,7 @@ public class IKControl : MonoBehaviour
         ray = new(transform.position + new Vector3(0.0f, 10.0f, 0.0f), Vector3.down); // start the ray 10m higher to surely hit the ground
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
+            //if (Mathf.Abs(transform.position.y - hit.point.y) > 0.05f)
             transform.position = hit.point + offset;
         }
         
