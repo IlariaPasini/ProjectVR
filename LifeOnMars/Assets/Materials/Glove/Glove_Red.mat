@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1056367226952999514
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -20,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CelShadingExampleMat
+  m_Name: Glove_Red
   m_Shader: {fileID: -6465566751694194690, guid: 8dcdece5f1b6e284689331a3234ea276,
     type: 3}
   m_ValidKeywords: []
@@ -57,18 +44,31 @@ Material:
     m_Ints: []
     m_Floats:
     - _AmbientEnvironmentMultiplier: 1
-    - _EdgeDiffuse: 0
-    - _EdgeDistanceAttenuation: 0
-    - _EdgeRim: 0
-    - _EdgeShadowAttenuation: 0
-    - _EdgeSpecular: 0
+    - _EdgeDiffuse: 0.001
+    - _EdgeDistanceAttenuation: 0.001
+    - _EdgeRim: 0.001
+    - _EdgeShadowAttenuation: 1
+    - _EdgeSpecular: 0.001
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RimAmount: 0.77
+    - _RimAmount: 0.25
     - _RimStrength: 1
-    - _RimThreshold: 0.74
-    - _Smoothness: 0.22
+    - _RimThreshold: 0.15
+    - _Smoothness: 0
     m_Colors:
-    - _AmbientColor: {r: 0.21698111, g: 0.100262225, b: 0.031523664, a: 0}
-    - _BaseColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+    - _AmbientColor: {r: 1, g: 1, b: 1, a: 0}
+    - _BaseColor: {r: 0.3018868, g: 0.08657884, b: 0.08657884, a: 1}
   m_BuildTextureStacks: []
+--- !u!114 &7905919910131106483
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
