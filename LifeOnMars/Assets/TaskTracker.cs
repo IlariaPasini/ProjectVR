@@ -21,6 +21,10 @@ public class TaskTracker : MonoBehaviour
                     print("Updated!");
                     tmp.text=task.ToString();
                 };
+                TaskSystem.instance.GetTask(task.name).on_done+= ()=>{
+                    print("Updated!");
+                    tmp.text=task.ToString()+"\n Bravo Shinji!";
+                };
                 
             }
         };

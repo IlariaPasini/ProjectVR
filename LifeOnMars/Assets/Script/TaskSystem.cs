@@ -13,6 +13,7 @@ public class Task{
     public int target;
     public int current_done;
     public Action on_update;
+    public Action on_done;
 
 
     public Task(string name, string description, int target){
@@ -33,6 +34,10 @@ public class Task{
         if(on_update!=null)
             on_update();
 
+        if(current_done==target){
+            if(on_done!=null)
+                on_done();
+        }
         return current_done>=target;
     }
 
