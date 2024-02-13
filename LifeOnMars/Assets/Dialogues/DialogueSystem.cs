@@ -46,6 +46,10 @@ public class DialogueSystem : MonoBehaviour
         
     }
 
+    public void SetDialogue(Dialogue dialogue){
+        dialogues=dialogue;
+    }
+
     public void Talk(){
         if(!interruptable && talking)
             return;

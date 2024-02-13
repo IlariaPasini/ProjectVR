@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Rover : MonoBehaviour
+public class Rover : Receiver
 {
     // Start is called before the first frame update
     [SerializeField] Transform target;
@@ -19,10 +19,9 @@ public class Rover : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Store(GameObject g){
+    public override void Receive(GameObject g){
         stored_objects.Push(g);
         g.SetActive(false);
-
     }
 
     public void Pop(){

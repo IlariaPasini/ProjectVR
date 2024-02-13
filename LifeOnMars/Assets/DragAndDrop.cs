@@ -25,10 +25,10 @@ public class DragAndDrop : MonoBehaviour
         if(r.interactablesSelected.Count>0){
             GameObject selected=r.interactablesSelected[0].transform.gameObject;
             if(hit.HasValue){
-                Rover rover;
+                Receiver receiver;
                 print(hit.Value.transform.name);
-                if(hit.Value.transform.TryGetComponent<Rover>(out rover)){
-                    rover.Store(selected);
+                if(hit.Value.transform.TryGetComponent<Receiver>(out receiver)){
+                    receiver.Receive(selected);
                 }
             }
         }

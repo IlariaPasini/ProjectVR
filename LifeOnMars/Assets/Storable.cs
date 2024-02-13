@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,11 @@ public class Storable : MonoBehaviour
     // Start is called before the first frame update
     RaycastHit? hit;
     XRGrabInteractable grab;
+    [SerializeField]
+    string item_name="Default";
+
+    public string ItemName { get => item_name; set => item_name = value; }
+
     void Start()
     {
         grab=GetComponent<XRGrabInteractable>();
@@ -30,17 +36,17 @@ public class Storable : MonoBehaviour
     {
 
         if(hit.HasValue){
-            Rover rover;
+            Receiver receiver;
             print(hit.Value.transform.name);
-            if(hit.Value.transform.TryGetComponent<Rover>(out rover)){
+            if(hit.Value.transform.TryGetComponent<Receiver>(out receiver)){
                 
-                StartCoroutine(delayedStore(rover));
+                StartCoroutine(delayedStore(receiver));
             }
         }
     }
 
-    IEnumerator delayedStore(Rover rover){
+    IEnumerator delayedStore(Receiver receiver){
         yield return new WaitForSeconds(0.15f);
-        rover.Store(gameObject);
+        receiver.Receive(gameObject);
     }
 }
