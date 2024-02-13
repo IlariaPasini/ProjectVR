@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CelShadingExampleMat
+  m_Name: CelShadingTerrainMat
   m_Shader: {fileID: -6465566751694194690, guid: 8dcdece5f1b6e284689331a3234ea276,
     type: 3}
   m_ValidKeywords: []
@@ -64,11 +64,11 @@ Material:
     - _EdgeSpecular: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RimAmount: 0.8
+    - _RimAmount: 0.518
     - _RimStrength: 1
-    - _RimThreshold: 0.617
-    - _Smoothness: 0.338
+    - _RimThreshold: 0.288
+    - _Smoothness: 0.469
     m_Colors:
     - _AmbientColor: {r: 0.21698111, g: 0.100262225, b: 0.031523664, a: 0}
-    - _BaseColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+    - _BaseColor: {r: 1, g: 0.49400964, b: 0.42138356, a: 1}
   m_BuildTextureStacks: []
