@@ -16,7 +16,8 @@ public class GameMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //faccio sì che l'oggetto sia disattivato all'avvio del gioco
+        menu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,10 +28,10 @@ public class GameMenuManager : MonoBehaviour
             menu.SetActive(!menu.activeSelf);
         }
 
-        if(menu.activeSelf){
+       /*if(menu.activeSelf){
             menu.transform.position = bracelet.position + new Vector3(bracelet.forward.x-3, bracelet.forward.y, bracelet.forward.z)*spawnDistance;
             menu.transform.rotation = bracelet.rotation;   
             menu.transform.Rotate(0,0,-90,Space.Self); 
-        }
+        }*/
     }
 }
