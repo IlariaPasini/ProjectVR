@@ -5,7 +5,7 @@ using UnityEngine;
 public class Craft : MonoBehaviour
 {
     [SerializeField] GameObject createdOne;
-
+    [SerializeField] GameObject CollisionOne;
  void OnCollisionEnter(Collision collision)
     {
         Vector3 positionCreated = collision.transform.position;
@@ -14,10 +14,10 @@ public class Craft : MonoBehaviour
     if(collision != null){    
     //Debug.Log(positionCreated);
 
-        CraftToBeRemoved hinge = collision.gameObject.GetComponent<CraftToBeRemoved>();
+       
        
 
-         if(hinge!= null){
+         if(CollisionOne.name == collision.gameObject.name){
             
             Destroy(collision.gameObject);
 
