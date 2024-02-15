@@ -5,6 +5,8 @@ using System.Data;
 using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class Task{
@@ -52,15 +54,19 @@ public class TaskSystem
     public Action<Task> on_new_task;
     Dictionary<string, Task> tasks=new Dictionary<string, Task>();
     public static TaskSystem instance;
+    int scene=-1;
 
     public static void Init()
     {
-        
-        
         if(instance==null){
             instance=new TaskSystem();
         }
-        instance.on_new_task=null;
+
+        SceneManager.activeSceneChanged+=(_,_)=>{
+            if(instance!=null)
+                instance.on_new_task=null;
+            };
+        
     }
 
     public Task GetTask(string task_name){
