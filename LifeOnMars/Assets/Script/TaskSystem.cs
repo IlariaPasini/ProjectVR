@@ -82,4 +82,14 @@ public class TaskSystem
         if(on_new_task!=null)
             on_new_task(task);
     }
+
+    //metodo che permette di ottenere la lista di Task presenti nel dizionario
+    public List<Task> GetTasks(){
+        List<Task> task_list= new();
+        foreach(KeyValuePair<string, Task> task in tasks){
+            task_list.Add(task.Value);
+        }
+        return task_list;
+    }
+
 }
