@@ -70,6 +70,8 @@ public class TaskSystem
     }
 
     public void UpdateTask(string task_name, int amount){
+        if(!tasks.ContainsKey(task_name))
+            return;
         if(tasks[task_name].Update(amount)){
             tasks.Remove(task_name);
         }
