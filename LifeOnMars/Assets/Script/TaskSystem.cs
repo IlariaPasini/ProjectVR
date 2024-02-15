@@ -5,6 +5,8 @@ using System.Data;
 using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class Task{
@@ -52,15 +54,19 @@ public class TaskSystem
     public Action<Task> on_new_task;
     Dictionary<string, Task> tasks=new Dictionary<string, Task>();
     public static TaskSystem instance;
+    int scene=-1;
 
     public static void Init()
     {
-        
-        
         if(instance==null){
             instance=new TaskSystem();
         }
-        instance.on_new_task=null;
+
+        SceneManager.activeSceneChanged+=(_,_)=>{
+            if(instance!=null)
+                instance.on_new_task=null;
+            };
+        
     }
 
     public Task GetTask(string task_name){
@@ -70,6 +76,8 @@ public class TaskSystem
     }
 
     public void UpdateTask(string task_name, int amount){
+        if(!tasks.ContainsKey(task_name))
+            return;
         if(tasks[task_name].Update(amount)){
             tasks.Remove(task_name);
         }
@@ -82,4 +90,14 @@ public class TaskSystem
         if(on_new_task!=null)
             on_new_task(task);
     }
+
+    //metodo che permette di ottenere la lista di Task presenti nel dizionario
+    public List<Task> GetTasks(){
+        List<Task> task_list= new();
+        foreach(KeyValuePair<string, Task> task in tasks){
+            task_list.Add(task.Value);
+        }
+        return task_list;
+    }
+
 }
