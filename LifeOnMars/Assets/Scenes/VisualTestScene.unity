@@ -296,7 +296,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -642,6 +642,7 @@ GameObject:
   - component: {fileID: 508869233}
   - component: {fileID: 508869232}
   - component: {fileID: 508869231}
+  - component: {fileID: 508869235}
   m_Layer: 6
   m_Name: Table
   m_TagString: Untagged
@@ -727,6 +728,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &508869235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508869230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01caf2c04a8204d4f930bff719c3e9c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  task:
+    name: Popi
+    description: Portami tua madre
+    target: 1
+    current_done: 0
+  expected_object: 
+  answer_on_receive: 0
+  answer: {fileID: 0}
 --- !u!1 &509265777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,7 +1213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4, y: 13.4}
+  m_AnchoredPosition: {x: -1, y: 26}
   m_SizeDelta: {x: 221.7, y: 119.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &931054766
@@ -1717,7 +1738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8235294}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1972,7 +1993,7 @@ RectTransform:
   m_GameObject: {fileID: 1762113941}
   m_LocalRotation: {x: -0.00000008940696, y: 0.00000008940696, z: -0.70710677, w: 0.7071069}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.95092, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 931054765}
@@ -1997,15 +2018,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18823528, g: 0.5346334, b: 0.8509804, a: 0.5529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8392157}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 27d3cbb9154adef4190217e485519134, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
