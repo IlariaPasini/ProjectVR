@@ -13,16 +13,17 @@ public class TaskGiver : Receiver
     bool answer_on_receive;
     [SerializeField]
     Dialogue answer;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    /// <summary>
+    /// Registra la task nel Task System
+    /// </summary>
     public void GiveTask(){
         TaskSystem.instance.AddTask(task.name, task);
     }
-    // Update is called once per frame
+    /// <summary>
+    /// Riceve un oggetto solo se è l'oggetto che si aspetta (expected object) e aggiorna la relativa task, se answer_on_receive, allora cambia pure il dialogo del dialogue system
+    /// </summary>
+    /// <param name="g"></param>
     public override void Receive(GameObject g)
     {
         Storable s;
