@@ -19,13 +19,8 @@ public class ComponentTarget : MonoBehaviour
         originalMat=mr.material;
 
         mr.material=emptyMaterial;
-
-        // for(int i=0;i<mr.materials.Length;i++){
-        //     mr.materials[i]=emptyMaterial;
-        // }
     }
 
-    // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {   
         if(other.gameObject==requiredComponent){

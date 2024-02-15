@@ -30,6 +30,11 @@ public class Task{
         on_update+=callback;
     }
 
+    /// <summary>
+    /// Aggiorna il valore di una task e ritorna vero se la task è completata
+    /// </summary>
+    /// <param name="amount"></param>
+    /// <returns></returns>
     public bool Update(int amount){
         current_done+=amount;
         
@@ -43,6 +48,11 @@ public class Task{
         return current_done>=target;
     }
 
+    
+    /// <summary>
+    /// Cast a stringa, viene printato come "nome:descrizione valore_corrente/valore_obiettivo"
+    /// </summary>
+    /// <returns></returns>
     public override string ToString(){
         return name+": "+description+" "+current_done+"/"+target;
     }
@@ -56,6 +66,9 @@ public class TaskSystem
     public static TaskSystem instance;
     int scene=-1;
 
+    /// <summary>
+    /// Inizializza il singleton, dovrebbe essere chiamato almeno una volta (>=1) nella scena
+    /// </summary>
     public static void Init()
     {
         if(instance==null){
@@ -66,14 +79,25 @@ public class TaskSystem
             if(instance!=null)
                 instance.on_new_task=null;
             };
-        
+
     }
+
+    /// <summary>
+    /// Ottiene una task cercandola per nome
+    /// </summary>
+    /// <param name="task_name"></param>
+    /// <returns></returns>
 
     public Task GetTask(string task_name){
         if(!tasks.ContainsKey(task_name))
             return null;
         return tasks[task_name];
     }
+    /// <summary>
+    /// Incrementa di "amount" il valore corrente di una task, se viene completata la task viene rimossa dal dictionary
+    /// </summary>
+    /// <param name="task_name"></param>
+    /// <param name="amount"></param>
 
     public void UpdateTask(string task_name, int amount){
         if(!tasks.ContainsKey(task_name))
@@ -83,6 +107,11 @@ public class TaskSystem
         }
     }
 
+    /// <summary>
+    /// Aggiunge una task, se è gia presente una task con lo stesso nome non fa nulla
+    /// </summary>
+    /// <param name="task_name"></param>
+    /// <param name="task"></param>
     public void AddTask(string task_name, Task task){
         if(tasks.ContainsKey(task_name))
             return;
