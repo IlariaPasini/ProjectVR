@@ -20,7 +20,7 @@ public class Storable : MonoBehaviour
     }
 
     void Update(){  
-        if(grab.interactorsSelecting.Count>0){
+        if(grab.interactorsSelecting.Count>0 && grab.interactorsSelecting[0] is XRRayInteractor){
             XRRayInteractor ray_interactor=grab.interactorsSelecting[0] as XRRayInteractor;
 
             ray_interactor.TryGetCurrentRaycast(out hit,out _,out _,out _,out _);

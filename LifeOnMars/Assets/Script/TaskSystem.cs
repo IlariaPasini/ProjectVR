@@ -76,6 +76,8 @@ public class TaskSystem
     }
 
     public void AddTask(string task_name, Task task){
+        if(tasks.ContainsKey(task_name))
+            return;
         tasks.Add(task_name,task);
         if(on_new_task!=null)
             on_new_task(task);
