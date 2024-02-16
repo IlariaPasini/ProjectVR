@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -119,4 +117,14 @@ public class TaskSystem
         if(on_new_task!=null)
             on_new_task(task);
     }
+
+    //metodo che permette di ottenere la lista di Task presenti nel dizionario
+    public List<Task> GetTasks(){
+        List<Task> task_list= new();
+        foreach(KeyValuePair<string, Task> task in tasks){
+            task_list.Add(task.Value);
+        }
+        return task_list;
+    }
+
 }
