@@ -13,6 +13,8 @@ public class IKControl : MonoBehaviour
     
     private RaycastHit hit;                         // hit out struct for the raycast functions
     private Ray ray;                                // ray for the raycast
+
+    [SerializeField]LayerMask layerMask;
     #endregion
 
     #region Gizmo
@@ -39,10 +41,10 @@ public class IKControl : MonoBehaviour
 
     private void SetIKPositions()
     {
-        // set roverìs height based on ground height with offset
+        // set roverï¿½s height based on ground height with offset
         Vector3 offset = new Vector3(0.0f, 0.025f, 0.0f);
         ray = new(transform.position + new Vector3(0.0f, 10.0f, 0.0f), Vector3.down); // start the ray 10m higher to surely hit the ground
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
             //if (Mathf.Abs(transform.position.y - hit.point.y) > 0.05f)
             transform.position = hit.point + offset;
@@ -54,7 +56,7 @@ public class IKControl : MonoBehaviour
         foreach (Transform t in IKs)
         {
             ray = new(t.position + new Vector3(0.0f, 10.0f, 0.0f), Vector3.down); // start the ray 10m higher to surely hit the ground
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity,layerMask))
             {
                 // set position based on hit height
                 t.position = Vector3.Lerp(t.position, hit.point + offset, 0.4f);

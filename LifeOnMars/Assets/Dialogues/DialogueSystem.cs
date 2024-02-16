@@ -4,6 +4,7 @@ using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 [System.Serializable]
 public class DialogueSystemException : System.Exception
@@ -22,6 +23,10 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private float speed=.1f;
     TextMeshProUGUI tmp;
     [SerializeField] Dialogue dialogues;
+
+    [SerializeField] UnityEvent events;
+    [SerializeField] bool interruptable=true;
+    bool talking=false;
     int counter=0, size=0;
     //[SerializeField] string text;
     void Start()
@@ -41,17 +46,27 @@ public class DialogueSystem : MonoBehaviour
         
     }
 
+    public void SetDialogue(Dialogue dialogue){
+        dialogues=dialogue;
+    }
+
     public void Talk(){
+        if(!interruptable && talking)
+            return;
+
         StopAllCoroutines();
         tmp.text="";
         StartCoroutine(talk());
         counter++;
+        if(counter>=size){
+            events.Invoke();
+        }
         counter%=size;
     }
 
     private IEnumerator talk(){
         CharEnumerator e=dialogues.texts[counter].GetEnumerator();
-
+        talking=true;
         while(e.MoveNext()){
             char c=e.Current;
             tmp.text+=c;
@@ -66,6 +81,8 @@ public class DialogueSystem : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
         tmp.text="";
+
+        talking=false;
         
     }
 }
