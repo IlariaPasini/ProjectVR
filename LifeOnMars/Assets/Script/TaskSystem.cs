@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.SceneManagement;
 
 [Serializable]
@@ -16,6 +18,8 @@ public class Task{
     public int current_done;
     public Action on_update;
     public Action on_done;
+
+    public UnityEvent events;
 
 
     public Task(string name, string description, int target){
@@ -44,6 +48,7 @@ public class Task{
         if(current_done==target){
             if(on_done!=null)
                 on_done();
+            events.Invoke();
         }
         return current_done>=target;
     }
@@ -102,9 +107,11 @@ public class TaskSystem
     public void UpdateTask(string task_name, int amount){
         if(!tasks.ContainsKey(task_name))
             return;
-        if(tasks[task_name].Update(amount)){
-            tasks.Remove(task_name);
-        }
+
+        // if(tasks[task_name].Update(amount)){
+        //     tasks.Remove(task_name);
+        //     on_new_task(null);
+        // }
     }
 
     /// <summary>
@@ -120,13 +127,14 @@ public class TaskSystem
             on_new_task(task);
     }
 
+    public void ResetTasks(){
+        tasks.Clear();
+        on_new_task(null);
+
+    }
     //metodo che permette di ottenere la lista di Task presenti nel dizionario
     public List<Task> GetTasks(){
-        List<Task> task_list= new();
-        foreach(KeyValuePair<string, Task> task in tasks){
-            task_list.Add(task.Value);
-        }
-        return task_list;
+        return tasks.Values.ToList();
     }
 
 }
