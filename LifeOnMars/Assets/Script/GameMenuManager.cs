@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
+//classe che gestisce il menu di gioco a livello visuale. 
+//Di fatto è un semplice script che attiva e disattiva l'HUD quando viene premuto un tasto del controller
+
 public class GameMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject menu;
     [SerializeField] private InputActionProperty showButton;
 
-    //voglio che la UI sia sempre ancorata al braccio del giocatore
-    [SerializeField] private Transform bracelet;
-    [SerializeField] private float spawnDistance = 0.005f;
-
     // Start is called before the first frame update
     void Start()
     {
-        //faccio sì che l'oggetto sia disattivato all'avvio del gioco
+        //faccio sì che l'oggetto sia disattivato all'avvio del gioco 
+        //(si poteva fare dall'editor ma così siamo sicuri di non scordarcelo)
         menu.SetActive(false);
     }
 
@@ -27,11 +27,5 @@ public class GameMenuManager : MonoBehaviour
         {
             menu.SetActive(!menu.activeSelf);
         }
-
-       /*if(menu.activeSelf){
-            menu.transform.position = bracelet.position + new Vector3(bracelet.forward.x-3, bracelet.forward.y, bracelet.forward.z)*spawnDistance;
-            menu.transform.rotation = bracelet.rotation;   
-            menu.transform.Rotate(0,0,-90,Space.Self); 
-        }*/
     }
 }
