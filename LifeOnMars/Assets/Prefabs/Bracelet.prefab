@@ -25,12 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4074136612417141268}
-  m_LocalRotation: {x: 0.04792954, y: 0.61277753, z: -0.7708037, w: 0.16753548}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.15631449, y: -0.15631448, z: -0.15631445}
+  m_LocalRotation: {x: 0.000000029802322, y: 0.00000010756776, z: 0.00000012852252,
+    w: 1}
+  m_LocalPosition: {x: -59.751255, y: 25.953028, z: -1.0503875}
+  m_LocalScale: {x: 100.00007, y: 100.00004, z: 100.00003}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7004036642198212823}
+  m_Father: {fileID: 8723554245163664650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9076630584694281290
@@ -83,38 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7886307215671330402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7004036642198212823}
-  m_Layer: 0
-  m_Name: BraceletPivot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7004036642198212823
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7886307215671330402}
-  m_LocalRotation: {x: -0.047929406, y: -0.61277753, z: 0.7708037, w: 0.1675354}
-  m_LocalPosition: {x: -59.75124, y: 25.952965, z: -1.0504379}
-  m_LocalScale: {x: -639.7362, y: -639.73615, z: -639.7362}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7380262033578587300}
-  m_Father: {fileID: 8723554245163664650}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8240350304212918192
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +114,7 @@ Transform:
   m_LocalScale: {x: -0.0015631436, y: -0.0015631436, z: -0.0015631436}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7004036642198212823}
+  - {fileID: 7380262033578587300}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -78.615, y: 105.747, z: 173.44}

@@ -10,15 +10,17 @@ Material:
   m_Name: HologramPlane
   m_Shader: {fileID: -6465566751694194690, guid: d68f961f7d2e4c84bbf5753a2df75f3b,
     type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap:
-    RenderType: Opaque
+    RenderType: Transparent
   disabledShaderPasses:
+  - DepthOnly
   - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
@@ -37,22 +39,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.5
+    - _Alpha: 1
     - _AlphaClip: 0
-    - _AlphaInt: 0.5
+    - _AlphaInt: 0.1
     - _Blend: 0
     - _CastShadows: 0
     - _Cull: 2
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _Fresnel: 3
-    - _MixToWhite: 0.3
+    - _MixToWhite: 0.96
+    - _Offset: -0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Size: 70
-    - _SrcBlend: 1
-    - _Surface: 0
+    - _Size: 300
+    - _SrcBlend: 5
+    - _Surface: 1
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
     - _Color: {r: 0, g: 3.5032575, b: 3.9999995, a: 0}
