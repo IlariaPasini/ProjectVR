@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442e0d9669a00e442a932e45d2d5e387, type: 3}
   m_Name: New Craft
   m_EditorClassIdentifier: 
-  secondElement: 
-  createdElement: {fileID: 0}
+  secondElement: Cube (8)
+  createdElement: {fileID: 8240350304212918192, guid: 064e628b531e1c944bcb00824a17769c,
+    type: 3}
