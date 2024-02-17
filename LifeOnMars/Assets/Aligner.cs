@@ -45,6 +45,7 @@ public class Aligner : MonoBehaviour
     }
 
     public void MoveLeft(){
+        
         direction=-1;
     }
     public void MoveRight(){
