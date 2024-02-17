@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class Craft : MonoBehaviour
 {
-    [SerializeField] GameObject createdOne;
-    [SerializeField] GameObject CollisionOne;
+        [SerializeField] CraftElement craft;
+        private string collisionOne;
+        private GameObject createdOne;
+void Start(){
+    
+    collisionOne = craft.secondElement;
+    createdOne = craft.createdElement;
+
+}
  void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("SCONTRO");
         Vector3 positionCreated = collision.transform.position;
        // Quaternion rotationCreated = collision.transform.rotation;
       //Debug.Log(collision.gameObject.name);
@@ -17,7 +25,7 @@ public class Craft : MonoBehaviour
        
        
 
-         if(CollisionOne.name == collision.gameObject.name){
+         if(collisionOne == collision.gameObject.name){
             
             Destroy(collision.gameObject);
 
