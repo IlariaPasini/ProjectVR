@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -5,16 +6,31 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Events;
 
+[Serializable]
 public class Waterable : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
     bool watered=false;
+    [SerializeField]
     int day_watered=-1;
     public UnityEvent waterableCallback;
-    public UnityEvent onNewDay;
+    public UnityEvent<int> onNewDay;
+
+    //List<GameObject> phases; 
     public void Start(){
-        //Load();
-        DontDestroyOnLoad(gameObject);
+        Load();
+
+        
+        if(watered){
+            int day_since_water=Mathf.Clamp(DaySystem.day_number-day_watered,0,transform.childCount-1);
+            foreach(Transform t in transform){
+                t.gameObject.SetActive(false);
+            }
+            if(day_since_water>=0)
+                transform.GetChild(day_since_water).gameObject.SetActive(true);
+        }
+        transform.GetChild(0).gameObject.SetActive(true);
     }
     public void Water()
     {
@@ -26,7 +42,7 @@ public class Waterable : MonoBehaviour
 
 
         waterableCallback.Invoke();
-
+        Save();
 
     }
 
