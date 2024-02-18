@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Classe che permette di cambiare lo stato di visibilità di un pannello UI. Questo script va collegato ad un bottone UI.
 public class EnableDisableMenuPanels : MonoBehaviour
 {
     [SerializeField] private GameObject taskMenu;
@@ -14,15 +15,4 @@ public class EnableDisableMenuPanels : MonoBehaviour
         taskMenu.SetActive(isTaskMenuEnabled);
     }
     
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
 }
