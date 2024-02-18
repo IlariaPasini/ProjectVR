@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//classe che prende in input il valore di pressione del trigger del controller e lo passa come valore di input all'animator
+
 public class AnimateHandOnInput : MonoBehaviour
 {
     //dall'editor prendo in input il valore di pressione del trigger del controller
@@ -20,7 +22,7 @@ public class AnimateHandOnInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //prendo il valore di pressione del trigger del controller
+        //prendo il valore di pressione del trigger del controller e lo passo come valore di input all'animator
         float triggerValue = pinchAnimationAction.action.ReadValue<float>();
         handAnimator.SetFloat("Trigger", triggerValue);
 

@@ -6,6 +6,9 @@ using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
+//classe che gestisce il menu di gioco a livello visuale. 
+//Di fatto è un semplice script che attiva e disattiva l'HUD quando viene premuto un tasto del controller
+
 public class GameMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject menu;
@@ -21,7 +24,8 @@ public class GameMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //faccio sì che l'oggetto sia disattivato all'avvio del gioco
+        //faccio sì che l'oggetto sia disattivato all'avvio del gioco 
+        //(si poteva fare dall'editor ma così siamo sicuri di non scordarcelo)
         menu.SetActive(false);
         showButton.action.started+=(_)=>{menu.SetActive(!menu.activeSelf);};
     }
