@@ -17,12 +17,15 @@ public class SavableObject : MonoBehaviour
     [SerializeField]
     Quaternion rotation;
     [SerializeField]
-    bool isStatic;
+    bool isStatic=false, active=true;
     // Start is called before the first frame update
 
     void Start()
     {
         Load();
+        //DontDestroyOnLoad(gameObject);
+
+        
     }
 
     public void MakeStatic(){
@@ -37,6 +40,19 @@ public class SavableObject : MonoBehaviour
         }
     }
 
+    public bool IsStatic(){
+        Rigidbody rb;
+        XRBaseInteractable interactable;
+
+        if(TryGetComponent(out rb)){
+            return rb.isKinematic;
+        }
+        if(TryGetComponent(out interactable)){
+            return interactable.enabled;
+        }
+        return true;
+    }
+
     public void Save(){
         //BinaryFormatter formatter=new BinaryFormatter();
         position=transform.position;
@@ -48,6 +64,7 @@ public class SavableObject : MonoBehaviour
         byte[] byteArray=Encoding.UTF8.GetBytes(json);
         fs.Write(byteArray,0, byteArray.Length);
 
+        isStatic=IsStatic();
         fs.Close();
     }
     public void Load(){
@@ -65,6 +82,9 @@ public class SavableObject : MonoBehaviour
             //Destroy(gameObject);  
             fs.Close();
 
+            if(!active){
+                gameObject.SetActive(false);
+            }
             if(isStatic){
                 MakeStatic();
             }

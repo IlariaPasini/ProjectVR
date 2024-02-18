@@ -32,7 +32,7 @@ public class ComponentTarget : MonoBehaviour
     bool done=false;
     void Start()
     {
-        Load();
+        //Load();
         mr=GetComponent<MeshRenderer>();
         originalMat=mr.material;
         
@@ -44,9 +44,12 @@ public class ComponentTarget : MonoBehaviour
         mr.materials=newMaterials;
     }
 
+    public void Awake(){
+        Load();
+    }
     public void Save(){
         BinaryFormatter formatter=new BinaryFormatter();
-        FileStream fs=new FileStream(Application.persistentDataPath+"/"+name+gameObject.GetInstanceID()+".savedobj", FileMode.Create);
+        FileStream fs=new FileStream(Application.persistentDataPath+"/"+name+".savedobj", FileMode.Create);
 
         string json=JsonUtility.ToJson(this);
         byte[] byteArray=Encoding.UTF8.GetBytes(json);
@@ -81,10 +84,7 @@ public class ComponentTarget : MonoBehaviour
     {   
         if(with_object && other.gameObject==requiredComponent) {
             //other.gameObject.SetActive(false);
-            SavableObject savable;
-            if(other.TryGetComponent<SavableObject>(out savable)){
-                savable.Save();
-            }
+            
 
             other.GetComponent<XRGrabInteractable>().enabled=false;
             other.GetComponent<Rigidbody>().isKinematic=true;
@@ -95,6 +95,12 @@ public class ComponentTarget : MonoBehaviour
             onComplete.Invoke();
             TaskSystem.instance.UpdateTask(task_to_update,1);
             done=true;
+
+            SavableObject savable;
+            if(other.TryGetComponent<SavableObject>(out savable)){
+                savable.Save();
+            }
+            Save();
             gameObject.SetActive(false);
         }
 
@@ -106,11 +112,6 @@ public class ComponentTarget : MonoBehaviour
 
             other.GetComponent<Rigidbody>().isKinematic=true;
 
-            SavableObject savable;
-            if(other.TryGetComponent<SavableObject>(out savable)){
-                savable.Save();
-            }
-            
             other.transform.position=transform.position;
             other.transform.rotation=transform.rotation;
             other.transform.localScale=transform.localScale;
@@ -118,6 +119,11 @@ public class ComponentTarget : MonoBehaviour
             onComplete.Invoke();
             TaskSystem.instance.UpdateTask(task_to_update,1);
             done=true;
+            SavableObject savable;
+            if(other.TryGetComponent<SavableObject>(out savable)){
+                savable.Save();
+            }
+            Save();
             gameObject.SetActive(false);
             
         }
