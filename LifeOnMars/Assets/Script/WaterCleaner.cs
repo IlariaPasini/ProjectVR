@@ -21,18 +21,19 @@ public class WaterCleaner : Receiver
 
     public override void Receive(GameObject g)
     {
-        if (!full)
+        if (g.GetComponent<Storable>().ItemName == "Water")
         {
-            // hide object
-            GameObject.Destroy(g);
-            FillTank();
+            if (!full)
+            {
+                // hide object
+                GameObject.Destroy(g);
+                FillTank();
+            }
         }
     }
 
     public void PushButton(SelectEnterEventArgs args)
     {
-        print("Load more water");
-
         if (!full)
         {
             print("Load more water");
