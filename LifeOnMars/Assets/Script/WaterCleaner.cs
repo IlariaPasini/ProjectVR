@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class WaterCleaner : Receiver
 {
@@ -18,6 +19,11 @@ public class WaterCleaner : Receiver
     [SerializeField] private MeshRenderer screen;
 
     bool full = false, cleaned = false;
+
+    [SerializeField] private TextMeshPro screenText;
+    const string startCleaningPrompt = "Premi spazio per continuare",
+        cleaningPrompt = "Filtraggio in corso...",
+        completePrompt = "Filtraggio completato!";
 
     public override void Receive(GameObject g)
     {
@@ -69,6 +75,9 @@ public class WaterCleaner : Receiver
                 mats[1] = new Material(enabledMat);
                 screen.materials = mats;
 
+                // change screentext
+                screenText.text = startCleaningPrompt;
+
                 full = !full;
             }
         }
@@ -76,10 +85,12 @@ public class WaterCleaner : Receiver
 
     private void CleanWater()
     {
-        // fill the clean water tank
-        StartCoroutine(Grow(WATER_MAX_AMOUNT, cleanTank, 0.01f));
+        // set screen text
+        screenText.text = cleaningPrompt;
         // empty the dirty water tank
-        StartCoroutine(Shrink(dirtyTank, 0.01f));
+        StartCoroutine(Shrink(dirtyTank, 0.05f));
+        // fill the clean water tank
+        StartCoroutine(Grow(WATER_MAX_AMOUNT, cleanTank, 0.05f));
     }
 
     #region Coroutines
@@ -90,6 +101,8 @@ public class WaterCleaner : Receiver
             target.localScale = new(1.0f, 1.0f, scale);
             yield return new WaitForSeconds(speed);
         }
+        if (target == cleanTank)
+            screenText.text = completePrompt;
     }
 
     IEnumerator Shrink(Transform target, float speed)

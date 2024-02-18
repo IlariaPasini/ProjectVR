@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Frame
+  m_Name: BucketInside
   m_Shader: {fileID: -6465566751694194690, guid: 8dcdece5f1b6e284689331a3234ea276,
     type: 3}
   m_ValidKeywords: []
@@ -70,5 +70,5 @@ Material:
     - _Smoothness: 0.338
     m_Colors:
     - _AmbientColor: {r: 0.21698111, g: 0.100262225, b: 0.031523664, a: 0}
-    - _BaseColor: {r: 0.8980392, g: 0.44705883, b: 0.44705883, a: 1}
+    - _BaseColor: {r: 0, g: 0.037006535, b: 0.20754719, a: 1}
   m_BuildTextureStacks: []
