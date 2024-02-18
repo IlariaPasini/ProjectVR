@@ -17,6 +17,8 @@ public class Rover : Receiver
     [SerializeField]Transform anchor;
     [SerializeField] int max_items=5;
     public Action on_inv_update;
+
+    
     void Start()
     {
         
@@ -66,6 +68,7 @@ public class Rover : Receiver
             if(on_inv_update!=null){
                 on_inv_update();
             }
+
         }
     }
     void Update()

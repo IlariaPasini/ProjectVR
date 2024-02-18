@@ -26,7 +26,6 @@ public class TaskTracker : MonoBehaviour
     void UpdateTask()
     {
         List<Task> tasks=TaskSystem.instance.GetTasks();
-        print(tasks.Count);
         if(!tracking && tasks.Count>task_id){
             tmp.text=tasks[task_id].ToString();
             tasks[task_id].on_update+= ()=>{
