@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem.Interactions;
@@ -11,6 +12,7 @@ using UnityEngine.SceneManagement;
 [Serializable]
 public class Task{
     public string name;
+    public bool done;
     public string description;
     public int target;
     public int current_done;
@@ -39,11 +41,10 @@ public class Task{
     /// <returns></returns>
     public bool Update(int amount){
         current_done+=amount;
-        
-        if(on_update!=null)
-            on_update();
+        on_update?.Invoke();
 
         if(current_done==target){
+            done=true;
             if(on_done!=null)
                 on_done();
             events.Invoke();
@@ -65,6 +66,8 @@ public class TaskSystem
 {
     // Start is called before the first frame update
     public Action<Task> on_new_task;
+
+    public Action onTasksDone;
     Dictionary<string, Task> tasks=new Dictionary<string, Task>();
     public static TaskSystem instance;
     int scene=-1;
@@ -106,12 +109,19 @@ public class TaskSystem
         if(!tasks.ContainsKey(task_name))
             return;
 
+        tasks[task_name].Update(amount);
+        
         // if(tasks[task_name].Update(amount)){
         //     tasks.Remove(task_name);
         //     on_new_task(null);
         // }
     }
 
+    public int TaskCompleted{
+        get{
+            return tasks.Count((pair)=>pair.Value.done);
+        }
+    }
     /// <summary>
     /// Aggiunge una task, se è gia presente una task con lo stesso nome non fa nulla
     /// </summary>

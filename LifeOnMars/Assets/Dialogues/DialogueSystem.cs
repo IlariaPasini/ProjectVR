@@ -22,8 +22,9 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private float speed=.1f;
     TextMeshProUGUI tmp;
     [SerializeField] Dialogue dialogues;
-
+    Dialogue defDialogue;
     [SerializeField] UnityEvent events;
+    UnityEvent defEvents;
     [SerializeField] bool interruptable=true;
     bool talking=false;
     int counter=0, size=0;
@@ -37,6 +38,9 @@ public class DialogueSystem : MonoBehaviour
         if(dialogues==null)
             enabled=false;
         size=dialogues.texts.Length;
+        defDialogue=dialogues;
+        defEvents=events;
+        //events.AddListener(()=>{dialogues=defDialogue; events=defEvents;});
     }
 
     // Update is called once per frame
@@ -45,9 +49,28 @@ public class DialogueSystem : MonoBehaviour
         
     }
 
-    public void SetDialogue(Dialogue dialogue){
+    public void SetDialogueTemp(Dialogue dialogue){
         dialogues=dialogue;
+        counter=0;
+        size=dialogue.texts.Length;
+        UnityEvent tempEvents=new UnityEvent();
+        tempEvents.AddListener(ResetDialogue);
+        events=tempEvents;
     }
+    public void ResetDialogue(){
+        dialogues=defDialogue; 
+        counter=0;
+        size=defDialogue.texts.Length;
+
+        events=defEvents;
+    }
+    public void SetDialoguePermanent(Dialogue dialogue, UnityEvent newEvents){
+        defDialogue=dialogue;
+        defEvents=newEvents;
+        ResetDialogue();
+    }
+
+    
 
     public void Talk(){
         if(!interruptable && talking)
