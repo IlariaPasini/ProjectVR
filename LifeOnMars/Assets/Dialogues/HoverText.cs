@@ -7,6 +7,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HoverText : MonoBehaviour
 {
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +22,6 @@ public class HoverText : MonoBehaviour
         // xrs.hoverEntered+=()=>{gameObject.SetActive(true);};
     }
 
+ 
     
 }
