@@ -29,7 +29,9 @@ public class TaskGiver : Receiver
         Storable s;
         if(g.TryGetComponent<Storable>(out s) && s.ItemName==expected_object){
             base.Receive(g);
-            task.Update(1);
+
+            TaskSystem.instance.UpdateTask(task.name, 1);
+            // task.Update(1);
 
             if(answer_on_receive){
                 DialogueSystem ds=GetComponentInChildren<DialogueSystem>();

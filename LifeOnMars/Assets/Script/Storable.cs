@@ -23,25 +23,11 @@ public class Storable : MonoBehaviour
         grab.selectExited.AddListener(OnDeselect);
     }
 
-    // void Update(){  
-    //     if(grab.interactorsSelecting.Count>0 && grab.interactorsSelecting[0] is XRRayInteractor){
-    //         //XRRayInteractor ray_interactor=grab.interactorsSelecting[0] as XRRayInteractor;
-
-    //         ray_interactor.TryGetCurrentRaycast(out hit,out _,out _,out _,out _);
-
-    //     }
-    // }
-
     public void OnSelect(SelectEnterEventArgs args){
         if(args.interactorObject is XRRayInteractor){
             ray_interactor=args.interactorObject as XRRayInteractor;
-
-            //ray_interactor.TryGetCurrentRaycast(out hit,out _,out _,out _,out _);
-
         }
     }
-
-    // Update is called once per frame
     public void OnDeselect(SelectExitEventArgs args)
     {
         ray_interactor.TryGetCurrentRaycast(out hit,out _,out _,out _,out _);
