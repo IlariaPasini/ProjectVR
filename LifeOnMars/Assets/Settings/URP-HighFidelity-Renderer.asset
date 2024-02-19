@@ -167,8 +167,8 @@ MonoBehaviour:
     outlineScale: 0.8
     depthThreshold: 2
     robertsCrossMultiplier: 109
-    normalThreshold: 0.45
-    steepAngleThreshold: 0.35
+    normalThreshold: 0.51
+    steepAngleThreshold: 0.41
     steepAngleMultiplier: 110
   viewSpaceNormalsTextureSettings:
     colorFormat: 0
