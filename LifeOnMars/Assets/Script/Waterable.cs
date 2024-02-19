@@ -13,8 +13,10 @@ public class Waterable : MonoBehaviour
     WaterableData data=new WaterableData();
     public UnityEvent waterableCallback;
     public UnityEvent<int> onNewDay;
-
-    //List<GameObject> phases; 
+    [SerializeField]
+    string taskName;
+    [SerializeField]
+    List<GameObject> phases; 
     public void Start(){
         //Load();
 
@@ -25,15 +27,15 @@ public class Waterable : MonoBehaviour
     
     public void UpdateState(int day){
         if(data.watered){
-            int day_since_water=Mathf.Clamp(day-data.day_watered,0,transform.childCount-1);
-            foreach(Transform t in transform){
-                t.gameObject.SetActive(false);
+            int day_since_water=Mathf.Clamp(day-data.day_watered,0,phases.Count-1);
+            foreach(GameObject t in phases){
+                t.SetActive(false);
             }
             if(day_since_water>=0)
-                transform.GetChild(day_since_water).gameObject.SetActive(true);
+                phases[day_since_water].SetActive(true);
         }
         else{
-            transform.GetChild(0).gameObject.SetActive(true);
+            phases[0].SetActive(true);
         }
     }
     public void Water()
@@ -46,6 +48,7 @@ public class Waterable : MonoBehaviour
 
 
         waterableCallback.Invoke();
+        TaskSystem.instance.UpdateTask(taskName, 1);
         //Save();
 
     }

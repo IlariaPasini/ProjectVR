@@ -9,8 +9,13 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    /// <summary>
+    /// Cambia la scena chiamando l'animazione di fade
+    /// </summary>
+    /// <param name="id"></param>
+    public void GoToSceneWithFade(int id){
+        Fader.GotoScene(id);
+    }
     
     public void GotoScene(int id){
         //SceneManager.LoadScene(id);
