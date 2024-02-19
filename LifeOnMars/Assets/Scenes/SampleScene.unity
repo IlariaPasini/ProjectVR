@@ -759,6 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0028a43bec831440b457c8a45812661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: TestDestination
 --- !u!1 &248630425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0028a43bec831440b457c8a45812661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: TestDestination
 --- !u!65 &516577108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2454,6 +2456,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!1 &533128464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2909805204527510722, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
+    type: 3}
+  m_PrefabInstance: {fileID: 862344851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &542366437
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,7 +3876,7 @@ PrefabInstance:
     - target: {fileID: 6310950528726241727, guid: c526e3fb4ea0d704690c537c4eaefbfc,
         type: 3}
       propertyPath: layerMask.m_Bits
-      value: 1
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 6405671602066255343, guid: c526e3fb4ea0d704690c537c4eaefbfc,
         type: 3}
@@ -4928,10 +4936,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 99047945, guid: 1ad8a1b9b3f05274bac97e08e4befc27, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1085398910722421671, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -7584,6 +7588,117 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 862344851}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1541007728
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533128464}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: -1.71
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1541007729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533128464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e370617efc2d5246893d355274dd5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepSounds:
+  - {fileID: 8300000, guid: 7504bc4f9da2e1e4bbbb2d585869bc8e, type: 3}
+  maxTimeBetweenFootsteps: 0.6
 --- !u!1 &1562151074
 GameObject:
   m_ObjectHideFlags: 0
@@ -8402,11 +8517,26 @@ MonoBehaviour:
   dialogues:
   - name: Cacca Di Marte
     dialogue: {fileID: 11400000, guid: 0fbce35231fcb2944a11a81869ec38d9, type: 2}
+    onTalkStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onTalkEnd:
+      m_PersistentCalls:
+        m_Calls: []
     take: 0
   - name: Cookie
     dialogue: {fileID: 11400000, guid: 92bac73c3b70c3f429c6d82ab0018069, type: 2}
+    onTalkStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onTalkEnd:
+      m_PersistentCalls:
+        m_Calls: []
     take: 1
   nullDialogue: {fileID: 11400000, guid: d2305d325bf6d89468f96a01bab34fc9, type: 2}
+  nullDialogueStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
   ds: {fileID: 0}
   task:
     name: Test
@@ -8421,6 +8551,9 @@ MonoBehaviour:
   answer_on_receive: 1
   defDialogue: {fileID: 11400000, guid: 205670028356d174abd7572f7a9ffee1, type: 2}
   taskDialogue: {fileID: 11400000, guid: bfd31aef72052f34695682d1a741fa31, type: 2}
+  onAnswerStart:
+    m_PersistentCalls:
+      m_Calls: []
   onTaskDialogue:
     m_PersistentCalls:
       m_Calls: []

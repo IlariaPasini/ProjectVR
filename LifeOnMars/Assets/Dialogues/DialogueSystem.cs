@@ -23,23 +23,29 @@ public class DialogueSystem : MonoBehaviour
     TextMeshProUGUI tmp;
     [SerializeField] Dialogue dialogues;
     Dialogue defDialogue;
+    [SerializeField] UnityEvent onStartTalking;
     [SerializeField] UnityEvent events;
-    UnityEvent defEvents;
+    UnityEvent defEvents, defStartEvents=new UnityEvent();
     [SerializeField] bool interruptable=true;
     bool talking=false;
     int counter=0, size=0;
     //[SerializeField] string text;
+    void Awake(){
+        defStartEvents=onStartTalking;
+        defDialogue=dialogues;
+        defEvents=events;
+    }
     void Start()
     {
-            tmp=GetComponentInChildren<TextMeshProUGUI>();
+        tmp=GetComponentInChildren<TextMeshProUGUI>();
         if(tmp==null)
             throw new DialogueSystemException("No TextMesh");
         
         if(dialogues==null)
             enabled=false;
         size=dialogues.texts.Length;
-        defDialogue=dialogues;
-        defEvents=events;
+
+        
         //events.AddListener(()=>{dialogues=defDialogue; events=defEvents;});
     }
 
@@ -57,16 +63,41 @@ public class DialogueSystem : MonoBehaviour
         tempEvents.AddListener(ResetDialogue);
         events=tempEvents;
     }
+    public void SetDialogueTemp(Dialogue dialogue, UnityEvent newEvents){
+        dialogues=dialogue;
+        counter=0;
+        size=dialogue.texts.Length;
+        UnityEvent tempEvents=newEvents;
+        tempEvents.AddListener(ResetDialogue);
+        events=tempEvents;
+    }
+    public void SetDialogueTemp(Dialogue dialogue, UnityEvent newEvents, UnityEvent startEvents){
+        dialogues=dialogue;
+        counter=0;
+        size=dialogue.texts.Length;
+        onStartTalking=startEvents;
+        UnityEvent tempEvents=newEvents;
+        tempEvents.AddListener(ResetDialogue);
+        events=tempEvents;
+    }
+
     public void ResetDialogue(){
         dialogues=defDialogue; 
         counter=0;
         size=defDialogue.texts.Length;
-
         events=defEvents;
+        onStartTalking=defStartEvents;
     }
     public void SetDialoguePermanent(Dialogue dialogue, UnityEvent newEvents){
         defDialogue=dialogue;
         defEvents=newEvents;
+
+        ResetDialogue();
+    }
+    public void SetDialoguePermanent(Dialogue dialogue, UnityEvent newEvents, UnityEvent startEvents){
+        defDialogue=dialogue;
+        defEvents=newEvents;
+        defStartEvents=startEvents;
         ResetDialogue();
     }
 
@@ -78,6 +109,7 @@ public class DialogueSystem : MonoBehaviour
 
         StopAllCoroutines();
         tmp.text="";
+        onStartTalking.Invoke();
         StartCoroutine(talk());
         counter++;
         if(counter>=size){

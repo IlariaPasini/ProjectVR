@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    [SerializeField]
+    string target="TestDestination";
     /// <summary>
     /// Cambia la scena chiamando l'animazione di fade
     /// </summary>
@@ -29,7 +31,7 @@ public class ChangeScene : MonoBehaviour
         Transform xro=FindObjectOfType<XROrigin>().transform.root;
         SceneManager.SetActiveScene(s);
         SceneManager.MoveGameObjectToScene(xro.gameObject, SceneManager.GetActiveScene());
-        xro.position=GameObject.Find("TestDestination").transform.position;
+        xro.position=GameObject.Find(target).transform.position;
 
         SceneManager.sceneLoaded-=OnSceneLoaded;
     }

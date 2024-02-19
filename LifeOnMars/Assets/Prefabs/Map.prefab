@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1166523593856791245}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: module_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1774563123570843677}
   - component: {fileID: 7280009121426625661}
   - component: {fileID: 1161621578370928893}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuleDoorFrame.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 7964646274121706516}
   - component: {fileID: 2276932441202982959}
   - component: {fileID: 8758768984627851221}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuloBase3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 1594693369479481517}
   - component: {fileID: 7927456022935496962}
   - component: {fileID: 5065440719374949563}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuleDoorFrame.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 3935979741554694797}
   - component: {fileID: 8254259665083228692}
   - component: {fileID: 8649592614799929113}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuloBase3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,14 +310,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272335775928425734}
-  m_LocalRotation: {x: -0.6279935, y: -0.32499877, z: -0.32499877, w: -0.6279935}
+  m_LocalRotation: {x: 0.59636784, y: 0.37992823, z: 0.37992823, w: 0.59636784}
   m_LocalPosition: {x: 0.28699994, y: -0.21300015, z: 0.000000029802322}
   m_LocalScale: {x: 0.04622828, y: 0.046228264, z: 0.04622827}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3191263025700277510}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 25, y: 90, z: 90}
 --- !u!33 &8254259665083228692
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 2890710996676129437}
   - component: {fileID: 7284298589208463356}
   - component: {fileID: 8371611952464602019}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: DoorFrameRing.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 1216612392902545887}
   - component: {fileID: 4736069127150414741}
   - component: {fileID: 4695568903495055193}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuleDoorFrame.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3239517473857325862}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: module_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 3553719540449032375}
   - component: {fileID: 5395015058785771554}
   - component: {fileID: 1399860605353643671}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: DoorFrameRing.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 5338587174293226869}
   - component: {fileID: 4480009304259798975}
   - component: {fileID: 2014209486862948669}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuloBase3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 3981626439765518708}
   - component: {fileID: 3887366280782820846}
   - component: {fileID: 9097123708904403498}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuleDoorFrame.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 8588103872255046282}
   - component: {fileID: 4382449298569592875}
   - component: {fileID: 8669980058391209487}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: DoorFrameRing.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9190556431901828864}
   - component: {fileID: 4720492747959757588}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: PointerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,14 +926,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4231762783980502760}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.031236295, w: 0.999512}
   m_LocalPosition: {x: 0.18400002, y: 0.11000002, z: -0.072999924}
   m_LocalScale: {x: 0.0896, y: 0.08959998, z: 0.08959998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9020356310608493815}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.58}
 --- !u!114 &4720492747959757588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,14 +946,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4b97d1c01e4674f920a42eb551cf6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staticPointers:
-  - {fileID: 8837196308067546220}
-  dynamicPointers:
-  - {fileID: 8837196308182836698}
+  markerPrefab: {fileID: 4170242811374606013, guid: 95d9b6c3cf6386e429d037b988edec18,
+    type: 3}
+  playerMarker: {fileID: 8837196308182836698}
+  pairs: []
   playerTarget: {fileID: 0}
   baseTarget: {fileID: 0}
-  worldScale: 11
-  mapScale: 0.1
+  worldScale: 71.04
+  mapScale: 1
 --- !u!1 &4532891560796396522
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3562635971426141246}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: module_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 7770592151103949861}
   - component: {fileID: 7341254584597401699}
   - component: {fileID: 8550383524526679575}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: DoorFrameRing.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,7 +1084,7 @@ GameObject:
   - component: {fileID: 8275225300149076314}
   - component: {fileID: 6301490529214224800}
   - component: {fileID: 3123412993163394929}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: DoorFrameRing.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   - component: {fileID: 3768687492363377857}
   - component: {fileID: 1010059224562243658}
   - component: {fileID: 4483388546828063219}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuleDoorFrame.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1250,7 @@ GameObject:
   - component: {fileID: 4239509940373576383}
   - component: {fileID: 3127212881188003847}
   - component: {fileID: 2147555025881446912}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuleDoorFrame.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 6257829059945355643}
   - component: {fileID: 7367942481426762568}
   - component: {fileID: 5624315302248415052}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuleDoorFrame.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 7258075018637783938}
   - component: {fileID: 4589043962960196586}
   - component: {fileID: 1279163015293302631}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: DoorFrameRing.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 7980815711296367883}
   - component: {fileID: 8455301356789458322}
   - component: {fileID: 5953639272039983474}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: DoorFrameRing.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1513,14 +1513,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7984115201258725899}
-  m_LocalRotation: {x: 0.00000007858939, y: -0.00000012727202, z: 0.88811696, w: -0.45961758}
+  m_LocalRotation: {x: 0.00000011264377, y: -0.00000013232321, z: 0.8439609, w: -0.5364047}
   m_LocalPosition: {x: 0.287, y: -0.213, z: 0}
   m_LocalScale: {x: 0.04622828, y: 0.046228286, z: 0.04622828}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3191263025700277510}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -115.122}
 --- !u!33 &8455301356789458322
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1582,7 +1582,7 @@ GameObject:
   - component: {fileID: 5831679141769187076}
   - component: {fileID: 1987687619203689532}
   - component: {fileID: 8635941992375426228}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuloMadre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1663,7 +1663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3191263025700277510}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: module_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1701,7 +1701,7 @@ GameObject:
   - component: {fileID: 1833133599898256076}
   - component: {fileID: 320730162579246342}
   - component: {fileID: 6666571072524056886}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Terreno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1785,7 +1785,7 @@ GameObject:
   - component: {fileID: 4277034302914665571}
   - component: {fileID: 7755531817579553931}
   - component: {fileID: 4861189180111980985}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuleDoorFrame.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1866,7 +1866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9020356310608493815}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: MapComplete2.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1902,7 +1902,7 @@ GameObject:
   - component: {fileID: 5773710821174375811}
   - component: {fileID: 1716267475174443439}
   - component: {fileID: 4584004731259884313}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: DoorFrameRing.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1983,7 +1983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8837196308067546220}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: module
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1998,8 +1998,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8837196308067546219}
   m_LocalRotation: {x: 2.7507445e-17, y: -5.4705944e-17, z: 0.8934158, w: 0.44923064}
-  m_LocalPosition: {x: 0.207, y: 0.394, z: 0}
-  m_LocalScale: {x: 0.43000004, y: 0.43000004, z: 0.43000004}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.31362003, y: 0.31362003, z: 0.31362003}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5831679141769187076}
@@ -2021,7 +2021,7 @@ GameObject:
   - component: {fileID: 8837196308182836698}
   - component: {fileID: 8837196308182836702}
   - component: {fileID: 8837196308182836701}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: PlayerPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2104,7 +2104,7 @@ GameObject:
   - component: {fileID: 8837196309100538681}
   - component: {fileID: 8837196309100538684}
   - component: {fileID: 8837196309100538682}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2230,7 +2230,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8837196309100538680}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.025113, y: 1.1055173, z: 2.0411975}
@@ -2244,7 +2244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8837196309180108096}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2279,7 +2279,7 @@ GameObject:
   - component: {fileID: 8837196310093097924}
   - component: {fileID: 8837196310093097923}
   - component: {fileID: 8837196310093097922}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2375,7 @@ GameObject:
   - component: {fileID: 8489118176932225953}
   - component: {fileID: 2787234192709538921}
   - component: {fileID: 1454113070406377269}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ModuloBase3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2537,7 +2537,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6b841d75ba85f474d85df884cd02c0d8,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b841d75ba85f474d85df884cd02c0d8, type: 3}
