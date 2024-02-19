@@ -9,8 +9,15 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    [SerializeField]
+    string target="TestDestination";
+    /// <summary>
+    /// Cambia la scena chiamando l'animazione di fade
+    /// </summary>
+    /// <param name="id"></param>
+    public void GoToSceneWithFade(int id){
+        Fader.GotoScene(id);
+    }
     
     public void GotoScene(int id){
         //SceneManager.LoadScene(id);
@@ -24,7 +31,7 @@ public class ChangeScene : MonoBehaviour
         Transform xro=FindObjectOfType<XROrigin>().transform.root;
         SceneManager.SetActiveScene(s);
         SceneManager.MoveGameObjectToScene(xro.gameObject, SceneManager.GetActiveScene());
-        xro.position=GameObject.Find("TestDestination").transform.position;
+        xro.position=GameObject.Find(target).transform.position;
 
         SceneManager.sceneLoaded-=OnSceneLoaded;
     }

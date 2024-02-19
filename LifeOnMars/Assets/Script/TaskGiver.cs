@@ -17,6 +17,8 @@ public class TaskGiver : NPCReceiver
     [SerializeField]
     Dialogue taskDialogue;
     [SerializeField]
+    UnityEvent onAnswerStart;
+    [SerializeField]
     UnityEvent onTaskDialogue;
     [SerializeField]
     Dialogue answer;
@@ -28,6 +30,9 @@ public class TaskGiver : NPCReceiver
 
         onTaskDialogue.AddListener(GiveTask);
         UnityEvent emptyEvent=new UnityEvent();
+        if(DaySystem.DayNumber==day){
+            ds.SetDialoguePermanent(taskDialogue, onTaskDialogue);
+        }
         if(ds!=null){
             DaySystem.onDayChange+=(d)=>{
                 print(d+" "+ day);
@@ -51,6 +56,7 @@ public class TaskGiver : NPCReceiver
     /// </summary>
     public void GiveTask(){
         TaskSystem.instance.AddTask(task.name, task);
+        TaskSystem.instance.GetTask(task.name).on_done+=()=>ds.SetDialoguePermanent(defDialogue, new UnityEvent());
     }
 
     /// <summary>
@@ -72,10 +78,12 @@ public class TaskGiver : NPCReceiver
         base.Receive(g);
         if(g.GetComponent<Storable>().ItemName!=expected_object)
             return;
+        
         TaskSystem.instance.UpdateTask(task.name, 1);
         // task.Update(1);
 
         if(answer_on_receive){
+            onAnswerStart.Invoke();
             ds.SetDialogueTemp(answer);
             ds.Talk();
         }
