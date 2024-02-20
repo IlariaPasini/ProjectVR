@@ -17,7 +17,7 @@ public class Storable : MonoBehaviour
     string item_name="Default";
     [SerializeField]
     float scaleFactor=0.01f, speed=1;
-    public string ItemName { get => data.item_name;}
+    public string ItemName { get => item_name;}
 
     void Start()
     {

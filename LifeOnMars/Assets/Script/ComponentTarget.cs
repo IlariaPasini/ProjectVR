@@ -80,7 +80,7 @@ public class ComponentTarget : MonoBehaviour
         
     }
     
-    void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {   
         if(with_object && other.gameObject==requiredComponent) {
             //other.gameObject.SetActive(false);
@@ -103,7 +103,6 @@ public class ComponentTarget : MonoBehaviour
             //Save();
             gameObject.SetActive(false);
         }
-
         Storable s;
         if(!with_object && other.TryGetComponent<Storable>(out s) && s.ItemName==expected_name){
 

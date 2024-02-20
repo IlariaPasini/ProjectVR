@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: InfoAcqua
+  m_EditorClassIdentifier: 
+  texts:
+  - "L'acqua \xE8 vitale per la sopravvivenza su Marte, e si cerca di recuperarne
+    il pi\xF9 possibile anche dalle urine degli astronauti, ottenendo una qualit\xE0
+    quasi migliore di quella terrestre. "
+  - "Purtroppo l'acqua portata dalla Terra non \xE8 sufficiente, e si stanno esplorando
+    opzioni come il recupero da calotte di ghiaccio o da minerali che la contengono. "
+  - "Il sistema ECLSS (Environmental Control and Life Support System) dimostra la
+    possibilit\xE0 di recuperare il 98% dell'acqua utilizzata attraverso appositi
+    processori per le acque di scarto e le urine."
+  - "Inizialmente si credeva che nel suolo non fossero presenti i minerali adatti
+    alla sopravvivenza delle piante, e queste dovevano essere cresciute in apposite
+    serre. Grazie a studi successivi e analizzando meglio il suolo si \xE8 scoperto
+    che in realt\xE0 sono presenti tutti i minerali necessari."

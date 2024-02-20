@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: PresentazioneMichele
+  m_EditorClassIdentifier: 
+  texts:
+  - Ciao! Sono Michele Maniaci
+  - "Laureato in botanica applicata presso l'Universit\xE0 di Stanford"
+  - "Sono un ragazzo di origini siciliane, caratterizzato dalla mia solarit\xE0 e
+    il sorriso sempre stampato in volto!"
+  - Non vedo l'ora di condividere la bellezza e l'importanza delle piante su Marte
+    con te!

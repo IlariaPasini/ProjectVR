@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: InfoMoxie
+  m_EditorClassIdentifier: 
+  texts:
+  - "MOXIE \xE8 uno strumento progettato per produrre ossigeno su Marte e genera
+    circa 12 grammi di ossigeno all'ora. Si stanno sviluppando versioni avanzate
+    di questo strumento, che potrebbero essere presenti in massa sul pianeta con
+    appositi sistemi di stoccaggio."
+  - "Altri metodi per generare ossigeno su Marte includono l'utilizzo di acqua presente
+    sul pianeta in combinazione con l'energia solare, ma l'elettrolisi \xE8 lenta
+    e richiede catalizzatori adeguati, il cui sviluppo \xE8 migliorato dall'intelligenza
+    artificiale."
+  - L'uso di robot specializzati nella chimica, supportati dall'intelligenza artificiale,
+    accelera la ricerca dei catalizzatori corretti!

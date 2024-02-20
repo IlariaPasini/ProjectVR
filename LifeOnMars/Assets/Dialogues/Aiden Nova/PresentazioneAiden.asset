@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: PresentazioneAiden
+  m_EditorClassIdentifier: 
+  texts:
+  - Ciao sono Aiden Nova, l'esploratore!
+  - "La scoperta \xE8 la mia passione e Marte \xE8 il nostro laboratorio di esplorazione."
+  - "Ho navigato tra canyon e pianure, ho studiato la geologia marziana e ho scoperto
+    meraviglie che solo questo pianeta pu\xF2 offrire"
+  - "Il nostro compagno di viaggio \xE8 C.A.R.L."
+  - Computerized AI Rover Lander.
+  - E' un un piccolo amico intelligente che, nonostante la mancanza di parole, riesce
+    a comuncare con parole e suoni
+  - "Ti aiuter\xE0 lui durante le esplorazioni!"
