@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 387294980069919854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0236511, y: 0.0000076293945, z: 3.8620348}
-  m_LocalScale: {x: 1.5127, y: 1.5127, z: 1.5127}
+  m_LocalScale: {x: 1.6864883, y: 1.6864883, z: 1.6864883}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1078844298189910842}
@@ -54,7 +54,8 @@ GameObject:
   - component: {fileID: 5345987916101938952}
   - component: {fileID: 1982418563138376677}
   - component: {fileID: 7282451758909526989}
-  m_Layer: 0
+  - component: {fileID: 1232160128}
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,15 +140,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56faf95e8c66c4a4bb155694b262d5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyMaterial: {fileID: 0}
+  emptyMaterial: {fileID: 2100000, guid: 946d1cbe3991a554ca26168bad5ffcc2, type: 2}
   with_object: 0
   requiredComponent: {fileID: 0}
   expected_name: Card
   task_to_update: Fix Antenna
   onComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886758588611220915}
+        m_TargetAssemblyTypeName: Triggerable, Assembly-CSharp
+        m_MethodName: SendInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   done: 0
+--- !u!65 &1232160128
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724317404958846021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00044478168, y: 0.0023329982, z: 0.0016694936}
+  m_Center: {x: 0.000009823103, y: 0.000012595088, z: -0.000052157025}
 --- !u!1 &1948555426845243272
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +185,9 @@ GameObject:
   - component: {fileID: 5408619741431577848}
   - component: {fileID: 7007806370344731211}
   - component: {fileID: 2174474145703414921}
-  m_Layer: 0
+  - component: {fileID: 426635986}
+  - component: {fileID: 426635985}
+  m_Layer: 6
   m_Name: Frecce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,6 +259,124 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &426635986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948555426845243272}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00074629823, y: 0.0007462983, z: 0.0001800966}
+  m_Center: {x: 0.00012438296, y: 2.9103825e-10, z: -9.313226e-10}
+--- !u!114 &426635985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948555426845243272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3157928393727923360}
+        m_TargetAssemblyTypeName: Aligner, Assembly-CSharp
+        m_MethodName: MoveLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3157928393727923360}
+        m_TargetAssemblyTypeName: Aligner, Assembly-CSharp
+        m_MethodName: Stay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2612044023175155222
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +388,7 @@ GameObject:
   - component: {fileID: 6725073443586395741}
   - component: {fileID: 8937527784753873414}
   - component: {fileID: 2161506082296835858}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,6 +562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Card
+  scaleFactor: 0.01
+  speed: 1
 --- !u!54 &90755553
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -519,7 +667,7 @@ MonoBehaviour:
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 1
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -582,8 +730,8 @@ GameObject:
   - component: {fileID: 6459737725642435031}
   - component: {fileID: 6975008875685069887}
   - component: {fileID: 1886758588611220915}
-  - component: {fileID: 1900304808866839143}
-  m_Layer: 0
+  - component: {fileID: 2670177147738318827}
+  m_Layer: 6
   m_Name: Schermino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,15 +820,14 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6975008875685069887}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
+      - m_Target: {fileID: 1886758588611220915}
+        m_TargetAssemblyTypeName: Triggerable, Assembly-CSharp
+        m_MethodName: ChangeMaterialAt
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: f2e79910639741044acc6f3ebfa65864,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -697,8 +844,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1900304808866839143}
-        m_TargetAssemblyTypeName: TaskGiver, Assembly-CSharp
+      - m_Target: {fileID: 2670177147738318827}
+        m_TargetAssemblyTypeName: SimpleTaskGiver, Assembly-CSharp
         m_MethodName: GiveTask
         m_Mode: 1
         m_Arguments:
@@ -709,8 +856,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  newMaterial: {fileID: 0}
---- !u!114 &1900304808866839143
+  newMaterial: {fileID: 2100000, guid: f2e79910639741044acc6f3ebfa65864, type: 2}
+--- !u!114 &2670177147738318827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -719,21 +866,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2809466150877830418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01caf2c04a8204d4f930bff719c3e9c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bc0d24aede48fa4b9e7f8323a42ef02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   task:
     name: Align
     done: 0
-    description: Move the small circle to align the antenna
+    description: Allinea il cerchio piccolo con quello grande per allineare l'antenna
     target: 1
     current_done: 0
     events:
       m_PersistentCalls:
         m_Calls: []
-  expected_object: 
-  answer_on_receive: 0
-  answer: {fileID: 0}
+  day: 0
 --- !u!1 &3103096381160969769
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +1063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Card
+  scaleFactor: 0.01
+  speed: 1
 --- !u!54 &1580081727
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1021,7 +1168,7 @@ MonoBehaviour:
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 1
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -1083,7 +1230,7 @@ GameObject:
   - component: {fileID: 5091251758547773218}
   - component: {fileID: 8933433294851549530}
   - component: {fileID: 6836452807680199597}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Porta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1402,7 @@ MonoBehaviour:
   movement_delta: 0.5
   delta_error: 0.005
   antenna: {fileID: 6061090965412471790}
-  antenna_angle_delta: 30
+  antenna_angle_delta: 60
   taskToUpdate: Align
 --- !u!1 &4774036474121015234
 GameObject:
@@ -1352,7 +1499,8 @@ GameObject:
   - component: {fileID: 6155330974331117933}
   - component: {fileID: 406290678530502266}
   - component: {fileID: 6188194420545346753}
-  m_Layer: 0
+  - component: {fileID: 1086433721}
+  m_Layer: 6
   m_Name: Plane.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1437,15 +1585,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56faf95e8c66c4a4bb155694b262d5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyMaterial: {fileID: 0}
+  emptyMaterial: {fileID: 2100000, guid: 946d1cbe3991a554ca26168bad5ffcc2, type: 2}
   with_object: 0
   requiredComponent: {fileID: 0}
   expected_name: Card
   task_to_update: Fix Antenna
   onComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886758588611220915}
+        m_TargetAssemblyTypeName: Triggerable, Assembly-CSharp
+        m_MethodName: SendInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   done: 0
+--- !u!65 &1086433721
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5686602213952459304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00044478168, y: 0.0023329982, z: 0.0016694936}
+  m_Center: {x: 0.000009830554, y: 0.000012595088, z: -0.000052157025}
 --- !u!1 &6038813855278088762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,7 +1631,8 @@ GameObject:
   - component: {fileID: 1049857202208313432}
   - component: {fileID: 7801423460447976475}
   - component: {fileID: 2009817206088634451}
-  m_Layer: 0
+  - component: {fileID: 605221293}
+  m_Layer: 6
   m_Name: Plane.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1543,15 +1717,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56faf95e8c66c4a4bb155694b262d5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyMaterial: {fileID: 0}
+  emptyMaterial: {fileID: 2100000, guid: 946d1cbe3991a554ca26168bad5ffcc2, type: 2}
   with_object: 0
   requiredComponent: {fileID: 0}
   expected_name: Card
   task_to_update: Fix Antenna
   onComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886758588611220915}
+        m_TargetAssemblyTypeName: Triggerable, Assembly-CSharp
+        m_MethodName: SendInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   done: 0
+--- !u!65 &605221293
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038813855278088762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00044478168, y: 0.0023329982, z: 0.0016694936}
+  m_Center: {x: 0.000009830554, y: 0.000012595088, z: -0.000052157025}
 --- !u!1 &6142287220037448108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,7 +1762,7 @@ GameObject:
   - component: {fileID: 638245635272067173}
   - component: {fileID: 5644440353326785301}
   - component: {fileID: 4021609127117643900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1646,7 +1845,7 @@ GameObject:
   - component: {fileID: 7755107994521397230}
   - component: {fileID: 5400508909011879697}
   - component: {fileID: 3941941745131003253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1729,7 +1928,8 @@ GameObject:
   - component: {fileID: 1078844298189910842}
   - component: {fileID: 5496356108343161722}
   - component: {fileID: 5894363418053950390}
-  m_Layer: 0
+  - component: {fileID: 1039399862}
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1809,6 +2009,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1039399862
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709528044822035763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3909233067320746374, guid: 6cc27c94700c01e49b7ca1b330b0132e, type: 3}
 --- !u!1 &7139498467609836708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +2034,9 @@ GameObject:
   - component: {fileID: 3257595499564527421}
   - component: {fileID: 6184584807674394268}
   - component: {fileID: 8713001976498608274}
-  m_Layer: 0
+  - component: {fileID: 551755246}
+  - component: {fileID: 551755245}
+  m_Layer: 6
   m_Name: Frecce.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,6 +2108,124 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &551755246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139498467609836708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00074629835, y: 0.0007462983, z: 0.0001800966}
+  m_Center: {x: -0.00012437918, y: 2.9103825e-10, z: -9.313226e-10}
+--- !u!114 &551755245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139498467609836708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3157928393727923360}
+        m_TargetAssemblyTypeName: Aligner, Assembly-CSharp
+        m_MethodName: MoveRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3157928393727923360}
+        m_TargetAssemblyTypeName: Aligner, Assembly-CSharp
+        m_MethodName: Stay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7693236664242952881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Card
+  scaleFactor: 0.01
+  speed: 1
 --- !u!54 &151050019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2096,7 +2432,7 @@ MonoBehaviour:
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 1
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -2158,7 +2494,7 @@ GameObject:
   - component: {fileID: 7823447828443647931}
   - component: {fileID: 6326694660624180427}
   - component: {fileID: 8224201659252121356}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2241,7 +2577,7 @@ GameObject:
   - component: {fileID: 7658593779154216672}
   - component: {fileID: 1681947820413623955}
   - component: {fileID: 8668242198307878738}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2325,7 +2661,7 @@ GameObject:
   - component: {fileID: 2785441978507127692}
   - component: {fileID: 287889470742654397}
   - component: {fileID: 2188405607051484132}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Antenna.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2408,7 +2744,7 @@ GameObject:
   - component: {fileID: 7200116682147961357}
   - component: {fileID: 6490284487308961256}
   - component: {fileID: 2741767181830641924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Palo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2491,7 +2827,7 @@ GameObject:
   - component: {fileID: 6061090965412471790}
   - component: {fileID: 3501857822933279022}
   - component: {fileID: 7764056409676962181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,22 +16,44 @@ public class WaterExtractor : Receiver
     string task_name;
     [SerializeField]
     string expected_storable;
+    Dictionary<Transform, Material> dict=new Dictionary<Transform, Material>();
     // Start is called before the first frame update
     void Start()
     {
         mr=GetComponent<MeshRenderer>();
         ChangeMaterial();
-        onEnable+=(b)=>GetComponent<MeshRenderer>().enabled=b;
+        onEnable+=EnableMaterials;
     }
 
     void ChangeMaterial(){
-        starting=mr.materials;
-        Material[] newMaterials=mr.materials;
-        for(int i=0;i<newMaterials.Length;i++){
-            newMaterials[i]=temp;
+
+        foreach(Transform t in transform){
+            MeshRenderer mr_temp=t.GetComponent<MeshRenderer>();
+            if(mr_temp!=null){
+                dict.Add(t, mr_temp.material);
+                mr_temp.material=temp;
+                mr_temp.enabled=false;
+            }
         }
-        mr.materials=newMaterials;
-        mr.enabled=false;
+    }
+
+    void EnableMaterials(bool enable){
+        foreach(Transform t in transform){
+            MeshRenderer mr_temp=t.GetComponent<MeshRenderer>();
+            if(mr_temp!=null){
+                mr_temp.enabled=enable;
+            }
+        }
+    }
+
+    void RealizeMaterials(){
+        foreach(Transform t in transform){
+            MeshRenderer mr_temp=t.GetComponent<MeshRenderer>();
+            if(mr_temp!=null){
+                mr_temp.material=dict[t];
+                mr_temp.enabled=true;
+            }
+        }
     }
 
     public static void EnableHologram(bool e){
@@ -44,11 +66,10 @@ public class WaterExtractor : Receiver
     }
     public override void Receive(GameObject g)
     {
-            mr.enabled=true;
-            mr.materials=starting;
-            g.SetActive(false);
-            TaskSystem.instance.UpdateTask(task_name,1);
-            enabled=false;
+        RealizeMaterials();
+        g.SetActive(false);
+        TaskSystem.instance.UpdateTask(task_name,1);
+        enabled=false;
         
     }
 }

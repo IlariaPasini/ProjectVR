@@ -106,16 +106,15 @@ public class DialogueSystem : MonoBehaviour
     public void Talk(){
         if(!interruptable && talking)
             return;
-
+        counter%=size;
+        if(counter==size)
+            events.Invoke();
         StopAllCoroutines();
         tmp.text="";
         onStartTalking.Invoke();
         StartCoroutine(talk());
         counter++;
-        if(counter>=size){
-            events.Invoke();
-        }
-        counter%=size;
+        
     }
 
     private IEnumerator talk(){
@@ -133,10 +132,14 @@ public class DialogueSystem : MonoBehaviour
 
         }
 
+
         yield return new WaitForSeconds(1.0f);
         tmp.text="";
+        events.Invoke();
+        counter%=size;
 
         talking=false;
+
         
     }
 }

@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1c986ea26cd7344978c5473ea31929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xrs: {fileID: 0}
 --- !u!1 &4494023658979929815
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +467,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.05
   dialogues: {fileID: 11400000, guid: bfd31aef72052f34695682d1a741fa31, type: 2}
+  onStartTalking:
+    m_PersistentCalls:
+      m_Calls: []
   events:
     m_PersistentCalls:
       m_Calls:
@@ -481,6 +485,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interruptable: 1
 --- !u!1 &4494023659687968629
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,18 +647,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4494023659826974423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00029261474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4494023659427799371}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1600, y: 800}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00030517578, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4494023659826974420
 CanvasRenderer:
   m_ObjectHideFlags: 0

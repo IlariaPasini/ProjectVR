@@ -19,7 +19,7 @@ public class Aligner : MonoBehaviour
     {
         startPos=transform.localPosition;
 
-        transform.localPosition+=transform.right*Random.Range(-1.0f,1.0f)*maxDistance;
+        transform.localPosition+=Vector3.right*Random.Range(-1.0f,1.0f)*maxDistance;
     }
 
     public void Update(){
@@ -36,9 +36,9 @@ public class Aligner : MonoBehaviour
     void _MoveLeft()
     {
         print("Moving Left");
-        if(Vector3.Dot(transform.localPosition-startPos, transform.right)>maxDistance)
+        if(Vector3.Dot(transform.localPosition-startPos, Vector3.right)>maxDistance)
             return;
-        transform.localPosition+=transform.right*Time.deltaTime*movement_delta;
+        transform.localPosition+=Vector3.right*Time.deltaTime*movement_delta;
         antenna.Rotate(Vector3.up,Time.deltaTime*antenna_angle_delta,Space.World);
 
 
@@ -53,7 +53,7 @@ public class Aligner : MonoBehaviour
     }
     public void Stay(){
         direction=0;
-        if(Mathf.Abs(Vector3.Dot(transform.localPosition-startPos, transform.right))<delta_error){
+        if(Mathf.Abs(Vector3.Dot(transform.localPosition-startPos, Vector3.right))<delta_error){
             TaskSystem.instance.UpdateTask(taskToUpdate,1);
             enabled=false;
         }
@@ -61,9 +61,9 @@ public class Aligner : MonoBehaviour
 
     void _MoveRight(){
         print("Moving Right");
-        if(Vector3.Dot(transform.localPosition-startPos, transform.right)<-maxDistance)
+        if(Vector3.Dot(transform.localPosition-startPos, Vector3.right)<-maxDistance)
             return;
-        transform.localPosition-=transform.right*Time.deltaTime*movement_delta;
+        transform.localPosition-=Vector3.right*Time.deltaTime*movement_delta;
         antenna.Rotate(Vector3.up,-Time.deltaTime*antenna_angle_delta,Space.World);
 
     }
