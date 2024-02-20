@@ -32,6 +32,15 @@ public class Fader : MonoBehaviour
         instance.anim.Play("FadeOut");
     }
 
+    public static void PlayFadeIn(){
+        instance.anim.Play("FadeIn");
+    }
+    public static void GotoScene(int id, ChangeScene caller){
+        nextScene=id;
+        instance.anim.Play("FadeOut");
+        instance.changeScene=caller;
+    }
+
     public static void NextDay(){
         instance.anim.Play("FadeOutDay");
     }
