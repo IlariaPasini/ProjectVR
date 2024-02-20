@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 812698185668091128}
   - component: {fileID: 6850989926553693453}
   - component: {fileID: 4879659785178303482}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirstAidKit00.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7031486272531313347}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0016971, y: -1.410077, z: 0.05525198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2774082725262471919}
   - component: {fileID: 7426428915330554615}
   - component: {fileID: 2522290572002142578}
-  m_Layer: 0
+  - component: {fileID: 1049977621111040165}
+  m_Layer: 6
   m_Name: Crate00.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5739959069136493446}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.52436566, y: 2.5197597, z: -0.89284986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -86,3 +87,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1049977621111040165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5739959069136493446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33451554, y: 0.47148573, z: 0.38718516}
+  m_Center: {x: 0.000000014163716, y: 0.00000022786507, z: 0.19359231}

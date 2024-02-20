@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054143616531054372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: stanza_letto_furniture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054143617410607872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanza_Alloggi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 660810292629782814}
   - component: {fileID: 660810292629782812}
   - component: {fileID: 660810292629782813}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,8 @@ GameObject:
   - component: {fileID: 3974741504850938655}
   - component: {fileID: 8593148485275405595}
   - component: {fileID: 678456456922465846}
-  m_Layer: 0
+  - component: {fileID: 6687618802779297822}
+  m_Layer: 6
   m_Name: Cubo.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,6 +277,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6687618802779297822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5694305541359298986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4518733, y: 5.3802648, z: 0.06540542}
+  m_Center: {x: -0.00000047492262, y: 0.0000002370675, z: 0.038695585}
 --- !u!1001 &518901641313990631
 PrefabInstance:
   m_ObjectHideFlags: 0

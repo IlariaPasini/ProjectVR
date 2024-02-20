@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2033460652942744479}
   - component: {fileID: 2342529663673141326}
   - component: {fileID: 5276663551697822073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AlarmLamp00.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324463490201657833}
-  m_LocalRotation: {x: 0.000000089406946, y: -0.25734156, z: -0.000000014901158, w: 0.9663205}
+  m_LocalRotation: {x: 0, y: -0.25734368, z: 0, w: 0.96632}
   m_LocalPosition: {x: 0.955, y: -1.403, z: 0.497}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
