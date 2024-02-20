@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class TaskGiver : NPCReceiver
 {
@@ -37,7 +38,6 @@ public class TaskGiver : NPCReceiver
             DaySystem.onDayChange+=(d)=>{
                 print(d+" "+ day);
                 if(day==d){
-                    
                     DaySystem.TaskForTheDay++;
                     ds.SetDialoguePermanent(taskDialogue, onTaskDialogue);
                 }else{

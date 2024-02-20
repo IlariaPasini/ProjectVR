@@ -18,6 +18,8 @@ public class WaterCleaner : Receiver
     [SerializeField] private Material enabledMat;
     [SerializeField] private MeshRenderer screen;
 
+    [SerializeField] string task_to_update;
+
     bool full = false, cleaned = false;
 
     [SerializeField] private TextMeshPro screenText;
@@ -25,17 +27,15 @@ public class WaterCleaner : Receiver
         cleaningPrompt = "Filtraggio in corso...",
         completePrompt = "Filtraggio completato!";
 
+    public override bool CanReceive(Storable s)
+    {
+        return s.ItemName=="Water" && !full;
+    }
     public override void Receive(GameObject g)
     {
-        if (g.GetComponent<Storable>().ItemName == "Water")
-        {
-            if (!full)
-            {
-                // hide object
-                GameObject.Destroy(g);
-                FillTank();
-            }
-        }
+        TaskSystem.instance.UpdateTask(task_to_update,1);
+        Destroy(g);
+        FillTank();
     }
 
     public void PushButton(SelectEnterEventArgs args)
