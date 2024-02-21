@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Unity.XR.CoreUtils;
 [Serializable]
 public class TargetMarkerPair{
     
@@ -78,7 +78,11 @@ public class PositionToMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(playerTarget==null){
+            playerTarget=FindObjectOfType<XROrigin>().transform;
+            if(playerTarget==null)
+                return;
+        }
         playerMarker.localPosition = new Vector3(playerTarget.position.x- baseTarget.position.x, playerTarget.position.z- baseTarget.position.z, 0.1f) / worldScale * mapScale;
         
     }

@@ -25,13 +25,12 @@ public class MapDiplay : MonoBehaviour
 
     public void OnSelect(SelectEnterEventArgs args)
     {
+        ray_interactor=args.interactorObject.transform.parent.GetComponentInChildren<XRRayInteractor>();
         // on select get current ray interactor
-        if (args.interactorObject is XRRayInteractor)
-        {
-            ray_interactor = args.interactorObject as XRRayInteractor;
-            GetComponent<MeshRenderer>().enabled = false;
-            buttonPivot.gameObject.SetActive(true);
-        }
+        ray_interactor = args.interactorObject as XRRayInteractor;
+        GetComponent<MeshRenderer>().enabled = false;
+        buttonPivot.gameObject.SetActive(true);
+        
     }
 
     public void OnDeselect(SelectExitEventArgs args)
@@ -45,6 +44,12 @@ public class MapDiplay : MonoBehaviour
             GetComponent<MeshRenderer>().enabled = true;
             map.position = hit.Value.point;
             map.gameObject.SetActive(true);
+        }
+        else{
+            buttonPivot.gameObject.SetActive(false);
+            GetComponent<MeshRenderer>().enabled = false;
+            map.position = Vector3.down*100;
+            map.gameObject.SetActive(false);
         }
 
         // remove last ray interactor

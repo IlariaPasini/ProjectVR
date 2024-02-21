@@ -18,6 +18,7 @@ public class Storable : MonoBehaviour
     [SerializeField]
     float scaleFactor=0.01f, speed=1;
     public string ItemName { get => item_name;}
+    Vector3 origScale;
 
     void Start()
     {
@@ -26,9 +27,15 @@ public class Storable : MonoBehaviour
 
         grab.selectEntered.AddListener(OnSelect);
         grab.selectExited.AddListener(OnDeselect);
+        origScale=transform.localScale;
     }
 
     public void OnSelect(SelectEnterEventArgs args){
+        Rigidbody rb=GetComponent<Rigidbody>();
+        if(rb!=null){
+            rb.isKinematic=false;
+        }
+
         if(args.interactorObject is XRRayInteractor){
             ray_interactor=args.interactorObject as XRRayInteractor;
         }
@@ -78,7 +85,14 @@ public class Storable : MonoBehaviour
             transform.position=Vector3.MoveTowards(transform.position, receiver.transform.position, Time.deltaTime*speed);
             yield return new WaitForEndOfFrame();
         }
+        transform.localScale=origScale;
+        grab.enabled=true;
+        GetComponent<Collider>().enabled=true;
+        Rigidbody rb=GetComponent<Rigidbody>();
+        rb.isKinematic=false;
+        rb.useGravity=true;
         receiver.Receive(gameObject);
+
     }
 
 

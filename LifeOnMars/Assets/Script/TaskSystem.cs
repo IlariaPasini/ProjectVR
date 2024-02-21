@@ -137,7 +137,8 @@ public class TaskSystem
 
     public void ResetTasks(){
         tasks.Clear();
-        on_new_task(null);
+        if(on_new_task!=null)
+            on_new_task(null);
 
     }
     //metodo che permette di ottenere la lista di Task presenti nel dizionario
