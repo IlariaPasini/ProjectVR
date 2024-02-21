@@ -221,6 +221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2164557780511038074, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
         type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2164557780511038074, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
+        type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 2147485281
       objectReference: {fileID: 0}
@@ -233,6 +238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342379120624755432, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
+        type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7622898736772462197, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
         type: 3}
@@ -15446,7 +15456,7 @@ PrefabInstance:
     - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
