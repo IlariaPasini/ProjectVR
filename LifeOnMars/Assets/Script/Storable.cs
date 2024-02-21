@@ -37,6 +37,7 @@ public class Storable : MonoBehaviour
 
     public void OnDeselect(SelectExitEventArgs args)
     {
+        ray_interactor=args.interactorObject.transform.parent.GetComponentInChildren<XRRayInteractor>();
         ray_interactor.TryGetCurrentRaycast(out hit,out _,out _,out _,out _);
         if(hit.HasValue){
             Receiver receiver;

@@ -11,7 +11,8 @@ public class ChangeScene : MonoBehaviour
 {
     [SerializeField]
     string target="TestDestination";
-
+    [SerializeField]
+    LoadSceneMode mode=LoadSceneMode.Additive;
 
     /// <summary>
     /// Cambia la scena chiamando l'animazione di fade
@@ -28,7 +29,7 @@ public class ChangeScene : MonoBehaviour
             MovePlayer(s);
             Fader.PlayFadeIn();
         }else{
-            AsyncOperation op=SceneManager.LoadSceneAsync(id, LoadSceneMode.Additive);
+            AsyncOperation op=SceneManager.LoadSceneAsync(id, mode);
             SceneManager.sceneLoaded+=OnSceneLoaded;
         }
     }
@@ -42,9 +43,12 @@ public class ChangeScene : MonoBehaviour
         Transform xro=FindObjectOfType<XROrigin>().transform.root;
         SceneManager.SetActiveScene(s);
         print(SceneManager.GetActiveScene().name);
-        SceneManager.MoveGameObjectToScene(xro.gameObject, SceneManager.GetActiveScene());
         GameObject targetObj=GameObject.Find(target);
-        xro.GetComponentInChildren<XROrigin>().transform.position=targetObj.transform.position;
+        if(mode==LoadSceneMode.Additive){
+            SceneManager.MoveGameObjectToScene(xro.gameObject, SceneManager.GetActiveScene());
+            xro.GetComponentInChildren<XROrigin>().transform.position=targetObj.transform.position;
+        }
+        
     }
     public void ChangeDay(){
         if(TaskSystem.instance.TaskCompleted==DaySystem.TaskForTheDay){

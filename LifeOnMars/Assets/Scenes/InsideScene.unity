@@ -11328,7 +11328,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11480,6 +11480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: Destination1Out
+  mode: 1
 --- !u!65 &1743217563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12278,7 +12279,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12430,6 +12431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: Destination3Out
+  mode: 1
 --- !u!65 &1909655498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13128,7 +13130,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -13280,6 +13282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: Destination2Out
+  mode: 1
 --- !u!65 &1978941877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19944,7 +19947,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -20136,6 +20139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: Destination4Out
+  mode: 1
 --- !u!65 &3181735423820094662
 BoxCollider:
   m_ObjectHideFlags: 0

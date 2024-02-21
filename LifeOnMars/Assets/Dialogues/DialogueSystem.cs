@@ -106,9 +106,9 @@ public class DialogueSystem : MonoBehaviour
     public void Talk(){
         if(!interruptable && talking)
             return;
-        counter%=size;
         if(counter==size)
             events.Invoke();
+        counter%=size;
         StopAllCoroutines();
         tmp.text="";
         onStartTalking.Invoke();
