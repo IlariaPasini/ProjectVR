@@ -12,8 +12,19 @@ public class ChangeScene : MonoBehaviour
     [SerializeField]
     string target="TestDestination";
     [SerializeField]
+    int other_scene=-1;
+    [SerializeField]
     LoadSceneMode mode=LoadSceneMode.Additive;
+    public static bool other_scene_loaded=false;
 
+    public void Start(){
+        if(!other_scene_loaded && other_scene!=-1){
+            other_scene_loaded=true;
+            Scene s=SceneManager.GetSceneByBuildIndex(other_scene);
+            AsyncOperation op=SceneManager.LoadSceneAsync(other_scene, mode);
+            
+        }
+    }
     /// <summary>
     /// Cambia la scena chiamando l'animazione di fade
     /// </summary>
