@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlaySoundOnMove : MonoBehaviour
 {
     public AudioClip[] footstepSounds; // Array to hold footstep sound clips
-    private float minSpace = 0.05f; 
-    public float maxTimeBetweenFootsteps = 0.6f; // Maximum time between footstep sounds
-
-    private AudioSource audioSource; // Reference to the Audio Source component
+    [SerializeField] private float minSpace = 0.05f; 
+   [SerializeField] public float maxTimeBetweenFootsteps = 0.6f; // Maximum time between footstep sounds
+    [SerializeField] AudioSource audioSource; // Reference to the Audio Source component
     private bool isWalking = false; // Flag to track if the player is walking
     private float timeSinceLastFootstep; // Time since the last footstep sound
     private Vector3 transMove;
@@ -16,7 +15,10 @@ public class PlaySoundOnMove : MonoBehaviour
     private void Awake()
     {
         transMove = this.transform.position;
-        audioSource = GetComponent<AudioSource>(); // Get the Audio Source component
+        if(audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
 
     }
 
@@ -26,6 +28,7 @@ public class PlaySoundOnMove : MonoBehaviour
         // Check if the player is walking
         if (moveDistance >= minSpace)
         {
+           
             // Check if enough time has passed to play the next footstep sound
             if (Time.time - timeSinceLastFootstep >= maxTimeBetweenFootsteps)
             {

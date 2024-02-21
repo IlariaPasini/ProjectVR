@@ -164,6 +164,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1367523107, guid: 1ad8a1b9b3f05274bac97e08e4befc27, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1707046173, guid: 1ad8a1b9b3f05274bac97e08e4befc27, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4423,6 +4427,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1086766084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086766081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1121260610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4845,6 +4862,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: newMoxie
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424e90838960d5f49ac9b9e1fb1ac41a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424e90838960d5f49ac9b9e1fb1ac41a, type: 3}
@@ -11382,7 +11404,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 044a5674839a97444a667c91d8b866b9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11509,7 +11531,12 @@ PrefabInstance:
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
@@ -11539,6 +11566,36 @@ PrefabInstance:
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1503665151598799449}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1151671107}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2081557840}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1503665151598799449}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
@@ -11573,6 +11630,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -11603,6 +11690,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -11614,6 +11736,21 @@ PrefabInstance:
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108559, guid: 961803c177fa32347a013b072b2e18ca,
@@ -12333,7 +12470,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 044a5674839a97444a667c91d8b866b9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -13184,7 +13321,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 044a5674839a97444a667c91d8b866b9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
