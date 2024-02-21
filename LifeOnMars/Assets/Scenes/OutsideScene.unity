@@ -1149,8 +1149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!82 &160353422
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2562,8 +2562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!82 &431464518
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2789,8 +2789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!114 &465453207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3497,8 +3497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!114 &801875917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4538,8 +4538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!114 &957206234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5595,8 +5595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!82 &1184417914
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5832,8 +5832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!114 &1207842452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8504,8 +8504,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!114 &1766796498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9441,8 +9441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_name: Minerali
-  scaleFactor: 0.01
-  speed: 1
+  scaleFactor: 5
+  speed: 3
 --- !u!82 &1955386838
 AudioSource:
   m_ObjectHideFlags: 0

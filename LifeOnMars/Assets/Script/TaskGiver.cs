@@ -35,6 +35,7 @@ public class TaskGiver : NPCReceiver
             DaySystem.TaskForTheDay++;
             ds.SetDialoguePermanent(taskDialogue, onTaskDialogue);
         }
+        
         if(ds!=null){
             DaySystem.onDayChange+=(d)=>{
                 print(d+" "+ day);
