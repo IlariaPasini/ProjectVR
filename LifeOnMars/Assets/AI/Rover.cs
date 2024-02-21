@@ -45,10 +45,9 @@ public class Rover : Receiver
             popped=stored_objects.Last();
             stored_objects.Remove(popped);
 
-            popped.transform.SetParent(anchor);
             popped.SetActive(true);
             popped.GetComponent<Rigidbody>().isKinematic=true;
-            popped.transform.localPosition=Vector3.zero;
+            popped.transform.position=anchor.position;
             popped.GetComponent<Rigidbody>().isKinematic=false;
             //.position=Vector3.zero;
             
@@ -61,10 +60,9 @@ public class Rover : Receiver
             popped=stored_objects[id];
             stored_objects.RemoveAt(id);
 
-            popped.transform.SetParent(anchor);
             popped.SetActive(true);
             popped.GetComponent<Rigidbody>().isKinematic=true;
-            popped.transform.localPosition=Vector3.zero;
+            popped.transform.position=anchor.position;
             popped.GetComponent<Rigidbody>().isKinematic=false;
             
             if(on_inv_update!=null){

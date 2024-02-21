@@ -65,6 +65,7 @@ public class Task{
 public class TaskSystem
 {
     // Start is called before the first frame update
+    public Action on_any_task_update;
     public Action<Task> on_new_task;
 
     public Action onTasksDone;
@@ -109,8 +110,9 @@ public class TaskSystem
         if(!tasks.ContainsKey(task_name))
             return;
 
+
         tasks[task_name].Update(amount);
-        
+        on_any_task_update?.Invoke();
         // if(tasks[task_name].Update(amount)){
         //     tasks.Remove(task_name);
         //     on_new_task(null);
@@ -131,12 +133,14 @@ public class TaskSystem
         if(tasks.ContainsKey(task_name))
             return;
         tasks.Add(task_name,task);
+        on_any_task_update?.Invoke();
         if(on_new_task!=null)
             on_new_task(task);
     }
 
     public void ResetTasks(){
         tasks.Clear();
+        on_any_task_update?.Invoke();
         if(on_new_task!=null)
             on_new_task(null);
 
