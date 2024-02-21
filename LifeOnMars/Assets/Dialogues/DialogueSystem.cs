@@ -135,7 +135,8 @@ public class DialogueSystem : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
         tmp.text="";
-        events.Invoke();
+        if(counter==size)
+            events.Invoke();
         counter%=size;
 
         talking=false;
