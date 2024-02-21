@@ -19,7 +19,7 @@ public class Storable : MonoBehaviour
     float scaleFactor=0.01f, speed=1;
     public string ItemName { get => item_name;}
     Vector3 origScale;
-
+    Rigidbody rb;
     void Start()
     {
         data.item_name=item_name;
@@ -28,13 +28,12 @@ public class Storable : MonoBehaviour
         grab.selectEntered.AddListener(OnSelect);
         grab.selectExited.AddListener(OnDeselect);
         origScale=transform.localScale;
+        rb=GetComponent<Rigidbody>();
     }
 
     public void OnSelect(SelectEnterEventArgs args){
-        Rigidbody rb=GetComponent<Rigidbody>();
-        if(rb!=null){
-            rb.isKinematic=false;
-        }
+        
+        
 
         if(args.interactorObject is XRRayInteractor){
             ray_interactor=args.interactorObject as XRRayInteractor;
@@ -57,6 +56,9 @@ public class Storable : MonoBehaviour
                 rb.useGravity=false;
                 StartCoroutine(delayedStore(receiver));
             }
+        }
+        if(rb!=null){
+            rb.isKinematic=false;
         }
     }
 
