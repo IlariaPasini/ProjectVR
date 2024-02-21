@@ -40,7 +40,7 @@ public class ChangeScene : MonoBehaviour
     }
 
     void MovePlayer(Scene s){
-        Transform xro=FindObjectOfType<XROrigin>().transform.root;
+        Transform xro=FindObjectOfType<XROrigin>()?.transform.root;
         SceneManager.SetActiveScene(s);
         print(SceneManager.GetActiveScene().name);
         GameObject targetObj=GameObject.Find(target);

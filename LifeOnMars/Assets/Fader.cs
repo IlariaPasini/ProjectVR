@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,18 +15,24 @@ public class Fader : MonoBehaviour
     private static int nextScene=0;
     void Start()
     {
-        if(instance==null){
+        if(instance==null || instance.IsDestroyed()){
             instance=this;
         }else{
             Destroy(gameObject);
         }
         anim=GetComponent<Animator>();
         changeScene=GetComponent<ChangeScene>();
-        SceneManager.sceneLoaded += (_,_)=>{
-            anim.Play("FadeIn");
-        };
+        SceneManager.sceneLoaded += FadeIn;
 
         DaySystem.onDayChange+=(_)=>{anim.Play("FadeIn");};
+    }
+
+    public void FadeIn(Scene s, LoadSceneMode ls){
+        anim.Play("FadeIn");
+    }
+
+    void OnDestroy(){
+        SceneManager.sceneLoaded-=FadeIn;
     }
     public static void GotoScene(int id){
         nextScene=id;

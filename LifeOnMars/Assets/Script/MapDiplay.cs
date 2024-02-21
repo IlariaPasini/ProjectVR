@@ -20,7 +20,7 @@ public class MapDiplay : MonoBehaviour
             map=FindObjectOfType<PositionToMap>().transform.root;
             enabled=map!=null;
         };
-        enabled=map!=null;
+
     }
 
     public void OnSelect(SelectEnterEventArgs args)
