@@ -38,6 +38,10 @@ public class Waterable : MonoBehaviour
             phases[0].SetActive(true);
         }
     }
+
+    public void OnDestroy(){
+        DaySystem.onDayChange-=UpdateState;
+    }
     public void Water()
     {
         if(data.watered)
