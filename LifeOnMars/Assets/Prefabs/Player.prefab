@@ -1791,7 +1791,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepSounds:
   - {fileID: 8300000, guid: 7504bc4f9da2e1e4bbbb2d585869bc8e, type: 3}
+  minSpace: 0.05
   maxTimeBetweenFootsteps: 0.6
+  audioSource: {fileID: 0}
 --- !u!4 &3330087444513181237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8191352816732770755, guid: 759fcc14112677d4ca9e32d4c4f3423b,

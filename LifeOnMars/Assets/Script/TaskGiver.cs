@@ -32,6 +32,7 @@ public class TaskGiver : NPCReceiver
         onTaskDialogue.AddListener(GiveTask);
         UnityEvent emptyEvent=new UnityEvent();
         if(DaySystem.DayNumber==day){
+            DaySystem.TaskForTheDay++;
             ds.SetDialoguePermanent(taskDialogue, onTaskDialogue);
         }
         if(ds!=null){

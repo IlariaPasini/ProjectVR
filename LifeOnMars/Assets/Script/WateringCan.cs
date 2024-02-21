@@ -11,12 +11,17 @@ public class WateringCan : MonoBehaviour
     float angle;
     [SerializeField]
     bool isPlaying;
+    [SerializeField]
+    public bool triggerWatering=true;
     ParticleSystem ps;
     ParticleSystem.EmissionModule pe;
     [SerializeField]
     LayerMask mask;
     
     // Start is called before the first frame update
+    public void ActivateWatering(bool enabled){
+        triggerWatering=enabled;
+    }
     void Start()
     {
         ps=GetComponentInChildren<ParticleSystem>(true);
@@ -44,7 +49,7 @@ public class WateringCan : MonoBehaviour
     void FixedUpdate(){
         RaycastHit hit;
 
-        if(isPlaying && Physics.Raycast(ps.transform.position,Vector3.down,out hit,2,mask)){
+        if(triggerWatering && isPlaying && Physics.Raycast(ps.transform.position,Vector3.down,out hit,2,mask)){
             //Call watering on plants
             Waterable w;
 

@@ -826,16 +826,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VasoPiantePomodoro
       objectReference: {fileID: 0}
-    - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
-        type: 3}
-      propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
-        type: 3}
-      propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3246868284939261797, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
       propertyPath: m_RootOrder
@@ -906,16 +896,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 702826364727541228}
     m_Modifications:
-    - target: {fileID: 218070631404050909, guid: 9deaa6eed149f5b438ae3c509f605f87,
-        type: 3}
-      propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 218070631404050909, guid: 9deaa6eed149f5b438ae3c509f605f87,
-        type: 3}
-      propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 327645016257592889, guid: 9deaa6eed149f5b438ae3c509f605f87,
         type: 3}
       propertyPath: m_RootOrder

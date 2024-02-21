@@ -17,7 +17,7 @@ public class MapDiplay : MonoBehaviour
     // al rilascio spostare l'oggetto
     public void Start(){
         SceneManager.activeSceneChanged+=(_,_)=>{
-            map=FindObjectOfType<PositionToMap>().transform.root;
+            map=FindObjectOfType<PositionToMap>()?.transform.root;
             enabled=map!=null;
         };
 
