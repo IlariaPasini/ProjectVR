@@ -31,9 +31,11 @@ public class GameMenuManager : MonoBehaviour
     }
 
     public void Quit(){
+        #if UNITY_EDITOR
         if(Application.isEditor){
             EditorApplication.ExitPlaymode();
         }else
-            Application.Quit();
+        #endif
+        Application.Quit();
     }
 }
