@@ -6349,7 +6349,7 @@ PrefabInstance:
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
@@ -6364,7 +6364,7 @@ PrefabInstance:
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
@@ -6380,7 +6380,7 @@ PrefabInstance:
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1464038238}
+      objectReference: {fileID: 1357979813}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -6400,7 +6400,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onAnswerStart.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1464038238}
+      objectReference: {fileID: 0}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6419,7 +6419,7 @@ PrefabInstance:
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: SetDialogueTemp
       objectReference: {fileID: 0}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
@@ -6459,7 +6459,7 @@ PrefabInstance:
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: DialogueSystem, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
@@ -6474,7 +6474,7 @@ PrefabInstance:
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
@@ -6498,6 +6498,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
+      propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f66fa3b7cb9e74692dd1a11f6dc0c4,
+        type: 2}
+    - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
+        type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -6509,7 +6515,7 @@ PrefabInstance:
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: Dialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3954953147769564153, guid: f2074165c34221c4d8d05c4b95de3bd7,
         type: 3}
@@ -6540,6 +6546,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1357979810}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1357979813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3934985787697737732, guid: f2074165c34221c4d8d05c4b95de3bd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1357979810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5c8abea07252545be0615a3ca819dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1374269104
 PrefabInstance:
   m_ObjectHideFlags: 0
