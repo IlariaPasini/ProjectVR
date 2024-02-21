@@ -29,7 +29,6 @@ public class PlaySoundOnMove : MonoBehaviour
         if (moveDistance >= minSpace)
         {
            
-            Debug.Log(moveDistance);
             // Check if enough time has passed to play the next footstep sound
             if (Time.time - timeSinceLastFootstep >= maxTimeBetweenFootsteps)
             {
