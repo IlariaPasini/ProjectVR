@@ -2038,9 +2038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  stored_objects:
-  - {fileID: 0}
-  - {fileID: 0}
+  stored_objects: []
   anchor: {fileID: 8736397951189874386}
   max_items: 5
 --- !u!114 &8736397951723325763
