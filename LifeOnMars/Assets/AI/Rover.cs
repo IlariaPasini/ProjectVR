@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Rover : Receiver
 {
     // Start is called before the first frame update
     [SerializeField] Transform target;
-
-    
+    NavMeshAgent navMeshAgent;
     public List<GameObject> stored_objects=new List<GameObject>();
 
     [SerializeField]Transform anchor;
@@ -21,6 +22,7 @@ public class Rover : Receiver
     
     void Start()
     {
+        navMeshAgent=GetComponent<NavMeshAgent>();
         
     }
 
@@ -73,10 +75,16 @@ public class Rover : Receiver
     }
     void Update()
     {
-        GetComponent<NavMeshAgent>().SetDestination(target.position);
+        if(target==null){
+            target=FindObjectOfType<XROrigin>().transform;
+            if(target==null){
+                return;
+            }
+        }
+        navMeshAgent.SetDestination(target.position);
     }
 
     public void SetDestination(Transform t){
-        GetComponent<NavMeshAgent>().SetDestination(t.position);
+        navMeshAgent.SetDestination(t.position);
     }
 }
