@@ -27,7 +27,8 @@ public class TaskTracker : MonoBehaviour
     }
 
     public void OnDestroy(){
-        TaskSystem.instance.on_any_task_update-=Refresh;
+        if(TaskSystem.instance!=null)
+            TaskSystem.instance.on_any_task_update-=Refresh;
     }
 
     public void Refresh(){

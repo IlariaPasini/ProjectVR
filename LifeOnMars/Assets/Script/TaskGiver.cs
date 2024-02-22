@@ -28,7 +28,7 @@ public class TaskGiver : NPCReceiver
 
     public new void Start(){
         base.Start();
-
+        TaskSystem.Init();
         onTaskDialogue.AddListener(GiveTask);
         UnityEvent emptyEvent=new UnityEvent();
         

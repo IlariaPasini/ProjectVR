@@ -52,7 +52,7 @@ public class Waterable : MonoBehaviour
 
 
         waterableCallback.Invoke();
-        TaskSystem.instance.UpdateTask(taskName, 1);
+        TaskSystem.instance?.UpdateTask(taskName, 1);
         //Save();
 
     }

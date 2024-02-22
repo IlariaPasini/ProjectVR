@@ -7,6 +7,7 @@ public class DayTracker : MonoBehaviour
 {
     // Start is called before the first frame update
     TextMeshProUGUI tmp;
+    [SerializeField] int lastDay=5;
     void Start()
     {
         tmp=GetComponent<TextMeshProUGUI>();
@@ -17,8 +18,13 @@ public class DayTracker : MonoBehaviour
     IEnumerator Polling()
     {   
         while(true){
+
         tmp.text="Giorno "+DaySystem.DayNumber+"\n Task del giorno: "+DaySystem.TaskForTheDay;
         yield return new WaitForSeconds(1);
+            if(DaySystem.DayNumber==lastDay){
+                tmp.text="La missione è finita, tempo di tornare!\n Sali sulla navicella fuori";
+                break;
+            }
         }
     }
 }
