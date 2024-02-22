@@ -11,6 +11,9 @@ public class SimpleTaskGiver : MonoBehaviour
     int day;
 
     public void Start(){
+        if(DaySystem.DayNumber==day){
+            DaySystem.TaskForTheDay++;
+        }
         DaySystem.onDayChange+=(d)=>{
             if(day==d){
                 DaySystem.TaskForTheDay++;
