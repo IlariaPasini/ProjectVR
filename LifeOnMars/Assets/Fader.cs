@@ -23,16 +23,20 @@ public class Fader : MonoBehaviour
         changeScene=GetComponent<ChangeScene>();
         SceneManager.sceneLoaded += FadeIn;
 
-        DaySystem.onDayChange+=(_)=>{anim.Play("FadeIn");};
+        DaySystem.onDayChange+=FadeIn;
     }
 
+    public void OnDestroy(){
+        DaySystem.onDayChange-=FadeIn;
+        SceneManager.sceneLoaded-=FadeIn;
+    }
     public void FadeIn(Scene s, LoadSceneMode ls){
         anim.Play("FadeIn");
     }
-
-    void OnDestroy(){
-        SceneManager.sceneLoaded-=FadeIn;
+    public void FadeIn(int i){
+        anim.Play("FadeIn");
     }
+
     public static void GotoScene(int id){
         nextScene=id;
         instance.anim.Play("FadeOut");
