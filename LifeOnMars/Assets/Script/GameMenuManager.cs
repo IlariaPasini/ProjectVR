@@ -23,8 +23,16 @@ public class GameMenuManager : MonoBehaviour
     {
         //faccio sì che l'oggetto sia disattivato all'avvio del gioco
         menu.SetActive(false);
-        showButton.action.started+=(_)=>{menu.SetActive(!menu.activeSelf);};
+        showButton.action.started+=Toggle;
     }
+    public void OnDestroy(){
+        showButton.action.started-=Toggle;
+    }   
+
+    public void Toggle(InputAction.CallbackContext context){
+        menu.SetActive(!menu.activeSelf);
+    }
+
 
     public void AudioSetting(float value){
         group.audioMixer.SetFloat(volumeName,value);
