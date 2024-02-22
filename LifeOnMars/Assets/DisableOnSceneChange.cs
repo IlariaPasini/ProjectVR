@@ -10,17 +10,17 @@ public class DisableOnSceneChange : MonoBehaviour
     void Start()
     {
         s=gameObject.scene;   
-        DeactivateOnSceneChange(SceneManager.GetActiveScene(),LoadSceneMode.Additive);
-        SceneManager.sceneLoaded+=DeactivateOnSceneChange;
+        DeactivateOnSceneChange(SceneManager.GetActiveScene(),SceneManager.GetActiveScene());
+        SceneManager.activeSceneChanged+=DeactivateOnSceneChange;
     }
 
     void OnDestroy(){
-        SceneManager.sceneLoaded-=DeactivateOnSceneChange;
+        SceneManager.activeSceneChanged-=DeactivateOnSceneChange;
     }
 
     // Update is called once per frame
-    void DeactivateOnSceneChange(Scene s, LoadSceneMode mode)
+    void DeactivateOnSceneChange(Scene s,Scene s2)
     {
-        gameObject.SetActive(this.s==s);
+        gameObject.SetActive(this.s==s2);
     }
 }
