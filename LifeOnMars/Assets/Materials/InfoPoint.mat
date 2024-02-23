@@ -98,7 +98,7 @@ Material:
     - _DstBlend: 0
     - _EdgeDiffuse: 0.001
     - _EdgeDistanceAttenuation: 0.001
-    - _EdgeRim: 0.001
+    - _EdgeRim: 0
     - _EdgeShadowAttenuation: 1
     - _EdgeSpecular: 0.001
     - _EnvironmentReflections: 1
@@ -115,7 +115,7 @@ Material:
     - _RimAmount: 0.25
     - _RimStrength: 1
     - _RimThreshold: 0.15
-    - _Smoothness: 0.5
+    - _Smoothness: 0.605
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

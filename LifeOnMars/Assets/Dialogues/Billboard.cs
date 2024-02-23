@@ -5,10 +5,11 @@ using UnityEngine;
 public class Billboard : MonoBehaviour
 {
     // Start is called before the first frame update
-    Quaternion originalRotation;
+    [SerializeField]
+    bool positiveAxis=false;
     void Start()
     {
-        originalRotation=transform.rotation;
+
     }
 
     // Update is called once per frame
@@ -16,8 +17,15 @@ public class Billboard : MonoBehaviour
     {
         //transform.rotation=Camera.main.transform.rotation*originalRotation;
 
-        transform.rotation=Quaternion.LookRotation(Vector3.ProjectOnPlane(-Camera.main.transform.position+transform.position,Vector3.up), Vector3.up);
+        Turn();
         
         //transform.rotation=Quaternion.Euler(new Vector3(0,-Camera.main.transform.rotation.eulerAngles.y,0));
+    }
+
+    public void Turn(){
+        Vector3 differenceVector=-Camera.main.transform.position+transform.position;
+        if(positiveAxis)
+            differenceVector*=-1;
+        transform.rotation=Quaternion.LookRotation(Vector3.ProjectOnPlane(differenceVector,Vector3.up), Vector3.up);
     }
 }

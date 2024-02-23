@@ -58,6 +58,7 @@ public class ChangeScene : MonoBehaviour
         if(mode==LoadSceneMode.Additive){
             SceneManager.MoveGameObjectToScene(xro.gameObject, SceneManager.GetActiveScene());
             xro.GetComponentInChildren<XROrigin>().transform.position=targetObj.transform.position;
+            xro.GetComponentInChildren<SafeBounds>().ResetPosition=targetObj.transform.position;
         }
         
     }

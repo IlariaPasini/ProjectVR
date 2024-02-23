@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 //using UnityEngine.Rendering;
 
 public class GameMenuManager : MonoBehaviour
@@ -45,5 +46,15 @@ public class GameMenuManager : MonoBehaviour
         }else
         #endif
         Application.Quit();
+    }
+
+    public void ChangeAlpha(float value){
+        Image i=GetComponentInChildren<Image>(true);
+        if(i==null)
+            return;
+        Color c=i.color;
+        c.a=value;
+        i.color=c;
+
     }
 }
