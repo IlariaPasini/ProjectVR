@@ -136,6 +136,11 @@ PrefabInstance:
       propertyPath: m_text
       value: C.A.R.L.
       objectReference: {fileID: 0}
+    - target: {fileID: 5143129549399904813, guid: f49285f1ff88f5d4b938e3ddb1126b31,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8736397951723325763, guid: f49285f1ff88f5d4b938e3ddb1126b31,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
@@ -233,6 +238,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49285f1ff88f5d4b938e3ddb1126b31, type: 3}
+--- !u!1 &39195985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5143129549399904813, guid: f49285f1ff88f5d4b938e3ddb1126b31,
+    type: 3}
+  m_PrefabInstance: {fileID: 39195984}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &39195986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39195985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e392387d9c23ff4e8bac98d0d7c2cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraRelative: 1
+  transitionActive: 0
+  normal: {x: 0, y: 0, z: 1}
+  comparisonVector: 0
+  setThreshold: 0.5
+  resetThreshold: 0
+  onSet:
+    m_PersistentCalls:
+      m_Calls: []
+  onReset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 39195985}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTransition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &40375226
 GameObject:
   m_ObjectHideFlags: 0

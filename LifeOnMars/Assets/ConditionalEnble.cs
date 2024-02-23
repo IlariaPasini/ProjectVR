@@ -11,20 +11,19 @@ public class ConditionalEnble : MonoBehaviour
 
     void Start()
     {
-        
+        SceneManager.activeSceneChanged+=OnActiveScene;
     }
 
-    void Update(){
-        SceneManager.activeSceneChanged+=(_,_)=>{
-            if(TaskSystem.instance?.GetTask(task_name)!=null)
-                gameObject.SetActive(true);
-            
-        };
-        if(TaskSystem.instance?.GetTask(task_name)==null){
-            gameObject.SetActive(false);
-        }
-        enabled=false;   
+    void OnDestroy(){
+        SceneManager.activeSceneChanged-=OnActiveScene;
     }
+    
+
+    void OnActiveScene(Scene s, Scene s2){
+                    if(TaskSystem.instance?.GetTask(task_name)!=null)
+                gameObject.SetActive(true);
+    }
+
 
 
 }
