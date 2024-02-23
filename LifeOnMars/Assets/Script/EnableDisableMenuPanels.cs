@@ -8,11 +8,27 @@ using UnityEngine.UI;
 public class EnableDisableMenuPanels : MonoBehaviour
 {
     [SerializeField] private GameObject taskMenu;
+    [SerializeField] private GameObject commandMenu;
     [SerializeField] private bool isTaskMenuEnabled = false;
+    [SerializeField] private bool isCommandMenuEnabled = false;
     
-    public void ButtonClicked(){
-        isTaskMenuEnabled = !isTaskMenuEnabled;
+    /*public void ButtonClicked(){
+        isMenuEnabled = !isMenuEnabled;
+        taskMenu.SetActive(isMenuEnabled);
+    }*/
+
+    public void TaskMenuEnabledOnClick(){
+        if(commandMenu.activeSelf)
+            commandMenu.SetActive(false);
+        isTaskMenuEnabled = !taskMenu.activeSelf;
         taskMenu.SetActive(isTaskMenuEnabled);
+    }
+
+    public void CommandMenuEnabledOnClick(){
+        if(taskMenu.activeSelf)
+            taskMenu.SetActive(false);
+        isCommandMenuEnabled = !commandMenu.activeSelf;
+        commandMenu.SetActive(isCommandMenuEnabled);
     }
     
 }
