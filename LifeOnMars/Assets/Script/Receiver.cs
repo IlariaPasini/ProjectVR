@@ -11,12 +11,12 @@ public class Receiver : MonoBehaviour
         g.SetActive(false);
     }
 
-    protected virtual void enableOutline()
+    protected virtual void enableOutline(string s)
     {
         GetComponent<Outline>().enabled = true;
     }
 
-    protected virtual void disableOutline()
+    protected virtual void disableOutline(string s)
     {
         GetComponent<Outline>().enabled = false;
     }

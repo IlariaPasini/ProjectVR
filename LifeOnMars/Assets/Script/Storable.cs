@@ -32,8 +32,8 @@ public class Storable : MonoBehaviour
         rb=GetComponent<Rigidbody>();
 
         // on grab enable/disable outline NPC
-        grab.selectEntered.AddListener((_) => {TaskGiver.onOutlineEnable.Invoke();});
-        grab.selectExited.AddListener((_) => {TaskGiver.onOutlineDisable.Invoke();});
+        grab.selectEntered.AddListener((_) => {TaskGiver.onOutlineEnable.Invoke(ItemName);});
+        grab.selectExited.AddListener((_) => {TaskGiver.onOutlineDisable.Invoke(ItemName);});
     }
 
     public void OnSelect(SelectEnterEventArgs args){

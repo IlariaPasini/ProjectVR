@@ -91,10 +91,12 @@ public class TaskGiver : NPCReceiver
         }
     }
 
-    protected override void enableOutline()
+    protected override void enableOutline(string s)
     {
-        // check if the receiver needs an object
-        if (expected_object != "")
+        // check if the receiver needs this specific object
+        if (s != "" && s == expected_object)
+        {
             GetComponent<Outline>().enabled = true;
+        }
     }
 }
