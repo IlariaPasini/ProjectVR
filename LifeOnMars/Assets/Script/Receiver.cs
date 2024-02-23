@@ -10,4 +10,14 @@ public class Receiver : MonoBehaviour
     public virtual void Receive(GameObject g){
         g.SetActive(false);
     }
+
+    protected virtual void enableOutline()
+    {
+        GetComponent<Outline>().enabled = true;
+    }
+
+    protected virtual void disableOutline()
+    {
+        GetComponent<Outline>().enabled = false;
+    }
 }

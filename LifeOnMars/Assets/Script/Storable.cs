@@ -30,6 +30,10 @@ public class Storable : MonoBehaviour
         grab.selectExited.AddListener(OnDeselect);
         origScale=transform.localScale;
         rb=GetComponent<Rigidbody>();
+
+        // on grab enable/disable outline NPC
+        grab.selectEntered.AddListener((_) => {TaskGiver.onOutlineEnable.Invoke();});
+        grab.selectExited.AddListener((_) => {TaskGiver.onOutlineDisable.Invoke();});
     }
 
     public void OnSelect(SelectEnterEventArgs args){
@@ -39,6 +43,7 @@ public class Storable : MonoBehaviour
         if(args.interactorObject is XRRayInteractor){
             ray_interactor=args.interactorObject as XRRayInteractor;
         }
+
     }
 
 

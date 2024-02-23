@@ -28,10 +28,16 @@ public class NPCReceiver : Receiver
     [SerializeField]
     UnityEvent nullDialogueStartEvent;
     public DialogueSystem ds;
+
+    public static Action onOutlineEnable, onOutlineDisable;
     
     protected void Start()
     {
         ds=GetComponentInChildren<DialogueSystem>(true);
+
+        // outline callback
+        onOutlineEnable += enableOutline;
+        onOutlineDisable += disableOutline;
     }
 
     // Update is called once per frame
@@ -47,5 +53,15 @@ public class NPCReceiver : Receiver
         ds.SetDialogueTemp(nullDialogue,new UnityEvent(), nullDialogueStartEvent);
         ds.Talk();
         return false;
+    }
+
+    protected override void enableOutline()
+    {
+        GetComponent<Outline>().enabled = true;
+    }
+
+    protected override void disableOutline()
+    {
+        GetComponent<Outline>().enabled = false;
     }
 }
