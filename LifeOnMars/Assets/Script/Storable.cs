@@ -6,6 +6,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(Outline))]
 public class Storable : MonoBehaviour
 {
     // Start is called before the first frame update

@@ -16,7 +16,8 @@ public class ItemDialoguePair{
     public UnityEvent onTalkEnd;
 
     public bool take;
-} 
+}
+[RequireComponent(typeof(Outline))]
 public class NPCReceiver : Receiver
 {
     // Start is called before the first frame update
