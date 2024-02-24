@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [DisallowMultipleComponent]
 
@@ -32,21 +33,25 @@ public class Outline : MonoBehaviour {
     }
   }
 
-  public Color OutlineColor {
-    get { return outlineColor; }
-    set {
-      outlineColor = value;
-      needsUpdate = true;
+    public Color OutlineColor
+    {
+        get { return outlineColor; }
+        set
+        {
+            outlineColor = value;
+            needsUpdate = true;
+        }
     }
-  }
 
-  public float OutlineWidth {
-    get { return outlineWidth; }
-    set {
-      outlineWidth = value;
-      needsUpdate = true;
+    public float OutlineWidth
+    {
+        get { return outlineWidth; }
+        set
+        {
+            outlineWidth = value;
+            needsUpdate = true;
+        }
     }
-  }
 
   [Serializable]
   private class ListVector3 {
@@ -57,10 +62,10 @@ public class Outline : MonoBehaviour {
   private Mode outlineMode;
 
   [SerializeField]
-  private Color outlineColor = Color.white;
+  private Color outlineColor = Color.yellow;
 
   [SerializeField, Range(0f, 10f)]
-  private float outlineWidth = 2f;
+  private float outlineWidth = 10f;
 
   [Header("Optional")]
 
@@ -80,7 +85,8 @@ public class Outline : MonoBehaviour {
 
   private bool needsUpdate;
 
-  void Awake() {
+    #region Default Shader functions
+    void Awake() {
 
     // Cache renderers
     renderers = GetComponentsInChildren<Renderer>();
@@ -99,18 +105,7 @@ public class Outline : MonoBehaviour {
     needsUpdate = true;
   }
 
-  void OnEnable() {
-    foreach (var renderer in renderers) {
-
-      // Append outline shaders
-      var materials = renderer.sharedMaterials.ToList();
-
-      materials.Add(outlineMaskMaterial);
-      materials.Add(outlineFillMaterial);
-
-      renderer.materials = materials.ToArray();
-    }
-  }
+  
 
   void OnValidate() {
 
@@ -137,18 +132,6 @@ public class Outline : MonoBehaviour {
     }
   }
 
-  void OnDisable() {
-    foreach (var renderer in renderers) {
-
-      // Remove outline shaders
-      var materials = renderer.sharedMaterials.ToList();
-
-      materials.Remove(outlineMaskMaterial);
-      materials.Remove(outlineFillMaterial);
-
-      renderer.materials = materials.ToArray();
-    }
-  }
 
   void OnDestroy() {
 
@@ -306,4 +289,66 @@ public class Outline : MonoBehaviour {
         break;
     }
   }
+
+    #endregion
+
+    private void Start()
+    {
+        // on start register callbacks
+        XRGrabInteractable grabInt;
+        XRSimpleInteractable simpleInt;
+
+        // add event on hover
+        if (TryGetComponent<XRGrabInteractable>(out grabInt))
+        {
+            grabInt.hoverEntered.AddListener((_) => { this.enabled = true; });
+            grabInt.hoverExited.AddListener((_) => { this.enabled = false; });
+        }
+        else if (TryGetComponent<XRSimpleInteractable>(out simpleInt))
+        {
+            
+            simpleInt.hoverEntered.AddListener((_) => { this.enabled = true; });
+            simpleInt.hoverExited.AddListener((_) => { this.enabled = false; });
+        }
+        else
+        {
+            // log an error if cannot find an xr interactable component
+            Debug.Log("Missing XR Simple/Grab Interactable reference on object: " + this.name + "\n");
+        }
+
+        // turn it self off
+        this.enabled = false;
+    }
+
+    void OnEnable()
+    {
+        foreach (var renderer in renderers)
+        {
+
+            // Append outline shaders
+            var materials = renderer.sharedMaterials.ToList();
+
+            materials.Add(outlineMaskMaterial);
+            materials.Add(outlineFillMaterial);
+
+            renderer.materials = materials.ToArray();
+        }
+    }
+
+    void OnDisable()
+    {
+        foreach (var renderer in renderers)
+        {
+
+            // Remove outline shaders
+            var materials = renderer.sharedMaterials.ToList();
+
+            materials.Remove(outlineMaskMaterial);
+            materials.Remove(outlineFillMaterial);
+
+            renderer.materials = materials.ToArray();
+        }
+    }
+
+    
 }

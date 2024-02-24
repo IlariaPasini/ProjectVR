@@ -51,7 +51,6 @@ public class TaskGiver : NPCReceiver
                 }
             };
         }
-
     }
 
     /// <summary>
@@ -89,6 +88,15 @@ public class TaskGiver : NPCReceiver
             onAnswerStart.Invoke();
             ds.SetDialogueTemp(answer);
             ds.Talk();
+        }
+    }
+
+    protected override void enableOutline(string s)
+    {
+        // check if the receiver needs this specific object
+        if (s != "" && s == expected_object)
+        {
+            GetComponent<Outline>().enabled = true;
         }
     }
 }
