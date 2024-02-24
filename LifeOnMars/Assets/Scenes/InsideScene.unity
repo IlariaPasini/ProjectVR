@@ -624,10 +624,15 @@ PrefabInstance:
       propertyPath: m_Extents.z
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 4804802494266036858, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
+        type: 3}
+      propertyPath: m_Antialiasing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4836774986593053622, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4854395176866148091, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
         type: 3}
@@ -758,7 +763,7 @@ PrefabInstance:
     - target: {fileID: 660810292629782812, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782812, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
@@ -1561,6 +1566,11 @@ PrefabInstance:
       propertyPath: m_Maskable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4038341851333013341, guid: 25389e264b0a293448ea5a1ecdff4aab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4494023658622784084, guid: 25389e264b0a293448ea5a1ecdff4aab,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1584,7 +1594,7 @@ PrefabInstance:
     - target: {fileID: 4494023659427799364, guid: 25389e264b0a293448ea5a1ecdff4aab,
         type: 3}
       propertyPath: m_Layer
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4494023659427799364, guid: 25389e264b0a293448ea5a1ecdff4aab,
         type: 3}
@@ -1625,7 +1635,7 @@ PrefabInstance:
     - target: {fileID: 4494023659826974423, guid: 25389e264b0a293448ea5a1ecdff4aab,
         type: 3}
       propertyPath: m_Layer
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4494023659826974423, guid: 25389e264b0a293448ea5a1ecdff4aab,
         type: 3}
@@ -2678,7 +2688,7 @@ Light:
   m_InnerSpotAngle: 87.628555
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -4017,6 +4027,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33465552, y: 0.29320917, z: 0.27303252}
   m_Center: {x: 0.0012611564, y: 0.14660458, z: 0.018927846}
+--- !u!114 &929860277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929860267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &932642042
 GameObject:
   m_ObjectHideFlags: 0
@@ -8396,7 +8424,7 @@ Light:
   m_InnerSpotAngle: 23.02614
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -8740,6 +8768,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2001383, y: 1.5957192, z: 2.6666677}
   m_Center: {x: 0.00000023724401, y: 0.019698774, z: -0.00000006046}
+--- !u!114 &1151671113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151671107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1161156831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14605,6 +14651,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3128422236997658549, guid: 646614e3b4e00184cbce4cb879cbafc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3128422237854842660, guid: 646614e3b4e00184cbce4cb879cbafc5,
         type: 3}
       propertyPath: m_Name
@@ -15621,6 +15672,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 728ce27f0682bd448998fa0a86e5d9ae, type: 2}
+    - target: {fileID: 3128422236997658549, guid: 646614e3b4e00184cbce4cb879cbafc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128422236997658554, guid: 646614e3b4e00184cbce4cb879cbafc5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.53333336
+      objectReference: {fileID: 0}
     - target: {fileID: 3128422237854842660, guid: 646614e3b4e00184cbce4cb879cbafc5,
         type: 3}
       propertyPath: m_Name
@@ -19395,7 +19456,7 @@ PrefabInstance:
     - target: {fileID: 660810292629782812, guid: 05d384e9171811049bf4c529b25e1aed,
         type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782812, guid: 05d384e9171811049bf4c529b25e1aed,
         type: 3}
@@ -20097,6 +20158,24 @@ MonoBehaviour:
   item_name: OldMoxie
   scaleFactor: 5
   speed: 5
+--- !u!114 &2081557846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081557838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &2090116083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1054143617410607872, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
