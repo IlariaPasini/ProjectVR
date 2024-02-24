@@ -29,7 +29,7 @@ public class NPCReceiver : Receiver
     UnityEvent nullDialogueStartEvent;
     public DialogueSystem ds;
 
-    public static Action onOutlineEnable, onOutlineDisable;
+    public static Action<string> onOutlineEnable, onOutlineDisable;
     
     protected void Start()
     {
@@ -55,12 +55,12 @@ public class NPCReceiver : Receiver
         return false;
     }
 
-    protected override void enableOutline()
+    protected override void enableOutline(string s)
     {
         GetComponent<Outline>().enabled = true;
     }
 
-    protected override void disableOutline()
+    protected override void disableOutline(string s)
     {
         GetComponent<Outline>().enabled = false;
     }
