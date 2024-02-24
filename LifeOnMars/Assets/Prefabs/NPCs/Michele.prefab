@@ -1343,6 +1343,7 @@ GameObject:
   - component: {fileID: 7696161059986159414}
   - component: {fileID: 7696161059986159416}
   - component: {fileID: 7696161059986159417}
+  - component: {fileID: 6247065339775224797}
   m_Layer: 6
   m_Name: Michele
   m_TagString: Untagged
@@ -1685,6 +1686,24 @@ MonoBehaviour:
       m_Calls: []
   answer: {fileID: 11400000, guid: 92bac73c3b70c3f429c6d82ab0018069, type: 2}
   day: 5
+--- !u!114 &6247065339775224797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7354141130161161696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7552927789172456183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,6 +2172,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c7e2c7584ef8a994bb7f1bc10a65ad93,
         type: 2}
+    - target: {fileID: 4494023659427799375, guid: 25389e264b0a293448ea5a1ecdff4aab,
+        type: 3}
+      propertyPath: auotmaticTalk
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4494023659427799375, guid: 25389e264b0a293448ea5a1ecdff4aab,
         type: 3}
       propertyPath: events.m_PersistentCalls.m_Calls.Array.size

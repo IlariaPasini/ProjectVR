@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: MenuEUI
+  m_EditorClassIdentifier: 
+  texts:
+  - Per aprire il Menu, premi B sul controller destro
+  - Si attiver' un pannello sul polso sinistro
+  - Premendo Task, otterrai le task attive che dovrai completare per passare al giorno
+    successivo
+  - Premendo Comandi avrai un riassunto dei comandi
+  - Con lo slider del volume puoi controllare il volume
+  - Con Quit uscirai dall'applicazione
