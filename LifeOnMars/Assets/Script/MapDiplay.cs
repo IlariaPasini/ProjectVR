@@ -8,6 +8,13 @@ public class MapDiplay : MonoBehaviour
 {
     [SerializeField] private Transform buttonPivot;
     [SerializeField] private Transform map;
+    [SerializeField] private Transform player;
+
+    float spawnDistance;
+
+    // default transform
+    private XRGrabInteractable grab;
+    private MeshRenderer mr;
 
     private RaycastHit? hit;                    // raycast hit struct
     private XRRayInteractor ray_interactor;     // ray interactor
@@ -23,40 +30,82 @@ public class MapDiplay : MonoBehaviour
             map=FindObjectOfType<PositionToMap>()?.transform.root;
             mapEnabled = map!=null;
         };
+
+        mr = GetComponent<MeshRenderer>();
+        grab = GetComponent<XRGrabInteractable>();
+
+        map.GetComponent<XRSimpleInteractable>().selectExited.AddListener(onEnableMap);
+    }
+
+    private void Update()
+    {
+        if (!mapEnabled) return;
+        if (map)
+        {
+            if ((Vector3.Distance(player.position, map.position) - spawnDistance > 2f))
+            {
+                map.gameObject.SetActive(false);
+                onEnableMap(new());
+            }
+            else
+            {
+                spawnDistance = Mathf.Max(1.0f, Mathf.Min(Vector3.Distance(player.position, map.position), spawnDistance));
+            }
+        }
     }
 
     public void OnSelect(SelectEnterEventArgs args)
     {
-        if (!mapEnabled) return;
-        ray_interactor=args.interactorObject.transform.parent.GetComponentInChildren<XRRayInteractor>();
-        // on select get current ray interactor
-        ray_interactor = args.interactorObject as XRRayInteractor;
-        GetComponent<MeshRenderer>().enabled = false;
-        buttonPivot.gameObject.SetActive(true);
-        
+        GetComponent<Rigidbody>().isKinematic = false;
     }
 
     public void OnDeselect(SelectExitEventArgs args)
     {
-        if (!mapEnabled) return;
-        ray_interactor=args.interactorObject.transform.parent.GetComponentInChildren<XRRayInteractor>();
-        // try get current raycast from current ray interactor
-        ray_interactor.TryGetCurrentRaycast(out hit, out _, out _, out _, out _);
-        if (hit.HasValue)
-        {
-            buttonPivot.gameObject.SetActive(false);
-            GetComponent<MeshRenderer>().enabled = true;
-            map.position = hit.Value.point;
-            map.gameObject.SetActive(true);
-        }
-        else{
-            buttonPivot.gameObject.SetActive(false);
-            GetComponent<MeshRenderer>().enabled = true;
-            map.position = Vector3.down*100;
-            map.gameObject.SetActive(false);
-        }
+        GetComponent<Rigidbody>().isKinematic = false;
+    }
 
-        // remove last ray interactor
-        ray_interactor = null;
+    public void ResetMapPosition()
+    {
+        // reset cosino sul bracciale
+        GetComponent<Rigidbody>().isKinematic = true;
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
+    }
+
+    public void disable()
+    {
+        // disable mr
+        mr.enabled = false;
+        // disable grabbable
+        grab.enabled = false;
+    }
+
+    public void onEnableMap(SelectExitEventArgs args)
+    {
+        // disable mr
+        mr.enabled = true;
+        // disable grabbable
+        grab.enabled = true;
+
+        spawnDistance = 0;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!mapEnabled)
+        {
+            ResetMapPosition();
+        }
+        else
+        {
+            // display map
+            map.position = collision.GetContact(0).point;
+            map.gameObject.SetActive(true);
+
+            spawnDistance = Vector3.Distance(player.position, map.position);
+
+            ResetMapPosition();
+            disable();
+        }
     }
 }
