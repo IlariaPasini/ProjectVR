@@ -46,9 +46,15 @@ public class DialogueSystem : MonoBehaviour
         audioSource=GetComponent<AudioSource>();
         if(panel==null && withPanel){
             panel=transform.parent.GetComponentInChildren<Image>(true)?.gameObject;
-            panel.SetActive(false);
+            
         }
-        tmp=GetComponentInChildren<TextMeshProUGUI>();
+        if(withPanel){
+            panel.SetActive(false);
+            onTalkStart.AddListener(()=>panel.SetActive(true));
+            onTalkEnd.AddListener(()=>panel.SetActive(false));
+        }
+
+        tmp=GetComponentInChildren<TextMeshProUGUI>(true);
         if(tmp==null)
             throw new DialogueSystemException("No TextMesh");
         tmp.text="";
@@ -61,11 +67,6 @@ public class DialogueSystem : MonoBehaviour
         //events.AddListener(()=>{dialogues=defDialogue; events=defEvents;});
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void SetDialogueTemp(Dialogue dialogue){
         dialogues=dialogue;
@@ -123,6 +124,7 @@ public class DialogueSystem : MonoBehaviour
     public void Talk(){
         if(!interruptable && talking)
             return;
+
         if(counter==size)
             onTalkEnd.Invoke();
         counter%=size+1;
@@ -130,6 +132,7 @@ public class DialogueSystem : MonoBehaviour
         if(counter==0)
             onTalkStart.Invoke();
         tmp.text="";
+
         if(counter<size){
             onTalk.Invoke();
             PlayAudio();
