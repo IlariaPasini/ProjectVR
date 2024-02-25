@@ -25,19 +25,31 @@ public class MapDiplay : MonoBehaviour
     // spostare l'oggetto sulla mano
     // al rilascio spostare l'oggetto
     private bool mapEnabled;
-    public void Start(){
+
+    void findMap()
+    {
         map = FindObjectOfType<PositionToMap>()?.transform.root;
         mapEnabled = map != null;
-        SceneManager.activeSceneChanged+=(_,_)=>{
-            map=FindObjectOfType<PositionToMap>()?.transform.root;
-            mapEnabled = map!=null;
-        };
+        if (mapEnabled)
+        {
+            map.GetComponent<XRSimpleInteractable>().selectExited.AddListener(onMapEnabled);
+            grab.enabled = true;
+        }
+        else
+        {
+            grab.enabled = false;
+        }
+    }
 
+    public void Start(){
         mr = GetComponent<MeshRenderer>();
         grab = GetComponent<XRGrabInteractable>();
 
-        map.GetComponent<XRSimpleInteractable>().selectExited.AddListener(onMapEnabled);
+        SceneManager.activeSceneChanged+=(_,_)=>{
+            findMap();
+        };
 
+        findMap();
         ResetMapPosition();
     }
 
@@ -91,7 +103,7 @@ public class MapDiplay : MonoBehaviour
         thrown = false;
     }
 
-    public void disable()
+    public void hide()
     {
         // disable mr
         mr.enabled = false;
@@ -117,7 +129,7 @@ public class MapDiplay : MonoBehaviour
 
             // reset map chip
             ResetMapPosition();
-            disable();
+            hide();
         }
     }
 }
