@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using System;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class DialogueSystemException : System.Exception
@@ -19,24 +20,31 @@ public class DialogueSystemException : System.Exception
 public class DialogueSystem : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private float speed=.1f;
+    [SerializeField] private float speed=.1f, persistance=1.0f;
     TextMeshProUGUI tmp;
     [SerializeField] Dialogue dialogues;
     Dialogue defDialogue;
-    [SerializeField] UnityEvent onStartTalking;
-    [SerializeField] UnityEvent events;
+    [SerializeField] UnityEvent onTalkStart, onTalk, onTalkEnd;
     UnityEvent defEvents, defStartEvents=new UnityEvent();
-    [SerializeField] bool interruptable=true;
+    [SerializeField] bool interruptable=true, auotmaticTalk=false, withPanel=false;
+    [SerializeField] GameObject panel;
     bool talking=false;
     int counter=0, size=0;
+
+    public bool AuotmaticTalk { get => auotmaticTalk; set => auotmaticTalk = value; }
+
     //[SerializeField] string text;
     void Awake(){
-        defStartEvents=onStartTalking;
+        defStartEvents=onTalk;
         defDialogue=dialogues;
-        defEvents=events;
+        defEvents=onTalkEnd;
     }
     void Start()
     {
+
+        if(panel==null && withPanel){
+            panel=transform.parent.GetComponentInChildren<Image>(true)?.gameObject;
+        }
         tmp=GetComponentInChildren<TextMeshProUGUI>();
         if(tmp==null)
             throw new DialogueSystemException("No TextMesh");
@@ -61,7 +69,7 @@ public class DialogueSystem : MonoBehaviour
         size=dialogue.texts.Length;
         UnityEvent tempEvents=new UnityEvent();
         tempEvents.AddListener(ResetDialogue);
-        events=tempEvents;
+        onTalkEnd=tempEvents;
     }
     public void SetDialogueTemp(Dialogue dialogue, UnityEvent newEvents){
         dialogues=dialogue;
@@ -69,24 +77,24 @@ public class DialogueSystem : MonoBehaviour
         size=dialogue.texts.Length;
         UnityEvent tempEvents=newEvents;
         tempEvents.AddListener(ResetDialogue);
-        events=tempEvents;
+        onTalkEnd=tempEvents;
     }
     public void SetDialogueTemp(Dialogue dialogue, UnityEvent newEvents, UnityEvent startEvents){
         dialogues=dialogue;
         counter=0;
         size=dialogue.texts.Length;
-        onStartTalking=startEvents;
+        onTalk=startEvents;
         UnityEvent tempEvents=newEvents;
         tempEvents.AddListener(ResetDialogue);
-        events=tempEvents;
+        onTalkEnd=tempEvents;
     }
 
     public void ResetDialogue(){
         dialogues=defDialogue; 
         counter=0;
         size=defDialogue.texts.Length;
-        events=defEvents;
-        onStartTalking=defStartEvents;
+        onTalkEnd=defEvents;
+        onTalk=defStartEvents;
     }
     public void SetDialoguePermanent(Dialogue dialogue, UnityEvent newEvents){
         defDialogue=dialogue;
@@ -107,19 +115,26 @@ public class DialogueSystem : MonoBehaviour
         if(!interruptable && talking)
             return;
         if(counter==size)
-            events.Invoke();
-        counter%=size;
+            onTalkEnd.Invoke();
+        counter%=size+1;
         StopAllCoroutines();
+        if(counter==0)
+            onTalkStart.Invoke();
         tmp.text="";
-        onStartTalking.Invoke();
-        StartCoroutine(talk());
+        if(counter<size){
+            onTalk.Invoke();
+            StartCoroutine(talk());
+        }
         counter++;
         
     }
 
     private IEnumerator talk(){
         CharEnumerator e=dialogues.texts[counter].GetEnumerator();
+
         talking=true;
+        if (panel)
+            panel.SetActive(true);
         while(e.MoveNext()){
             char c=e.Current;
             tmp.text+=c;
@@ -133,14 +148,22 @@ public class DialogueSystem : MonoBehaviour
         }
 
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(persistance);
         tmp.text="";
+        if(panel)
+            panel.SetActive(false);
+
         if(counter==size)
-            events.Invoke();
-        counter%=size;
+            onTalkEnd.Invoke();
+
 
         talking=false;
-
+        if(auotmaticTalk)
+            Talk();
+        else
+            counter%=size;
+        
+        
         
     }
 }

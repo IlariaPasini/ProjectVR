@@ -27,6 +27,7 @@ public class EnableAtDay : MonoBehaviour
     // Update is called once per frame
     void Callback(int day)
     {
-        events.Invoke();
+        if(day==DaySystem.DayNumber)
+            events.Invoke();
     }
 }

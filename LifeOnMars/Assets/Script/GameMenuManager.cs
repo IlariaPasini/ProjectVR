@@ -36,6 +36,7 @@ public class GameMenuManager : MonoBehaviour
 
 
     public void AudioSetting(float value){
+        
         group.audioMixer.SetFloat(volumeName,value);
     }
 

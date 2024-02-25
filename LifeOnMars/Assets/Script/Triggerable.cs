@@ -32,4 +32,8 @@ public class Triggerable : MonoBehaviour
         materials[id]=newMaterial;
         mr.materials=materials;
     }
+
+    public void UpdateTask(string name){
+        TaskSystem.instance.UpdateTask(name,1);
+    }
 }
