@@ -9,10 +9,12 @@ public class MapDiplay : MonoBehaviour
     [SerializeField] private Transform buttonPivot;
     [SerializeField] private Transform map;
     [SerializeField] private Transform player;
+    [SerializeField] private GameObject hologram;
 
     float spawnDistance;
 
     // default transform
+    bool thrown = false;
     private XRGrabInteractable grab;
     private MeshRenderer mr;
 
@@ -34,18 +36,20 @@ public class MapDiplay : MonoBehaviour
         mr = GetComponent<MeshRenderer>();
         grab = GetComponent<XRGrabInteractable>();
 
-        map.GetComponent<XRSimpleInteractable>().selectExited.AddListener(onEnableMap);
+        map.GetComponent<XRSimpleInteractable>().selectExited.AddListener(onMapEnabled);
+
+        ResetMapPosition();
     }
 
     private void Update()
     {
         if (!mapEnabled) return;
-        if (map)
+        if (map.gameObject.active)
         {
             if ((Vector3.Distance(player.position, map.position) - spawnDistance > 2f))
             {
                 map.gameObject.SetActive(false);
-                onEnableMap(new());
+                onMapEnabled(new());
             }
             else
             {
@@ -56,12 +60,25 @@ public class MapDiplay : MonoBehaviour
 
     public void OnSelect(SelectEnterEventArgs args)
     {
-        GetComponent<Rigidbody>().isKinematic = false;
+        hologram.SetActive(false);
     }
 
     public void OnDeselect(SelectExitEventArgs args)
     {
         GetComponent<Rigidbody>().isKinematic = false;
+        thrown = true;
+    }
+
+    public void onMapEnabled(SelectExitEventArgs args)
+    {
+        // disable mr
+        mr.enabled = true;
+        // disable grabbable
+        grab.enabled = true;
+
+        hologram.SetActive(true);
+
+        spawnDistance = 0;
     }
 
     public void ResetMapPosition()
@@ -70,6 +87,8 @@ public class MapDiplay : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+
+        thrown = false;
     }
 
     public void disable()
@@ -80,30 +99,23 @@ public class MapDiplay : MonoBehaviour
         grab.enabled = false;
     }
 
-    public void onEnableMap(SelectExitEventArgs args)
-    {
-        // disable mr
-        mr.enabled = true;
-        // disable grabbable
-        grab.enabled = true;
-
-        spawnDistance = 0;
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
+        if (!thrown) return;
         if (!mapEnabled)
         {
             ResetMapPosition();
         }
         else
         {
-            // display map
+            // display map on collision point
             map.position = collision.GetContact(0).point;
             map.gameObject.SetActive(true);
 
+            // set spawn distance
             spawnDistance = Vector3.Distance(player.position, map.position);
 
+            // reset map chip
             ResetMapPosition();
             disable();
         }
