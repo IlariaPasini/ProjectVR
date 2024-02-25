@@ -17,6 +17,7 @@ public class DialogueSystemException : System.Exception
         System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
 }
 
+[RequireComponent(typeof(AudioSource))]
 public class DialogueSystem : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class DialogueSystem : MonoBehaviour
     UnityEvent defEvents, defStartEvents=new UnityEvent();
     [SerializeField] bool interruptable=true, auotmaticTalk=false, withPanel=false;
     [SerializeField] GameObject panel;
+    AudioSource audioSource;
     bool talking=false;
     int counter=0, size=0;
 
@@ -41,7 +43,7 @@ public class DialogueSystem : MonoBehaviour
     }
     void Start()
     {
-
+        audioSource=GetComponent<AudioSource>();
         if(panel==null && withPanel){
             panel=transform.parent.GetComponentInChildren<Image>(true)?.gameObject;
             panel.SetActive(false);
@@ -111,7 +113,12 @@ public class DialogueSystem : MonoBehaviour
         ResetDialogue();
     }
 
-    
+    public void PlayAudio(){
+        if(dialogues.audio.Length>counter){
+            audioSource.clip=dialogues.audio[counter];
+            audioSource.Play();
+        }
+    }    
 
     public void Talk(){
         if(!interruptable && talking)
@@ -125,11 +132,16 @@ public class DialogueSystem : MonoBehaviour
         tmp.text="";
         if(counter<size){
             onTalk.Invoke();
+            PlayAudio();
             StartCoroutine(talk());
+        }else{
+            audioSource.Stop();
         }
         counter++;
         
     }
+
+
 
     private IEnumerator talk(){
         CharEnumerator e=dialogues.texts[counter].GetEnumerator();
