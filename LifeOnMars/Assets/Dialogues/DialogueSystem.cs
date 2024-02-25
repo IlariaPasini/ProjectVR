@@ -95,6 +95,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     public void ResetDialogue(){
+        StopAllCoroutines();
         dialogues=defDialogue; 
         counter=0;
         size=defDialogue.texts.Length;
@@ -125,13 +126,17 @@ public class DialogueSystem : MonoBehaviour
         if(!interruptable && talking)
             return;
 
+        
         if(counter==size)
             onTalkEnd.Invoke();
+        
         counter%=size+1;
         StopAllCoroutines();
+
         if(counter==0)
             onTalkStart.Invoke();
         tmp.text="";
+
 
         if(counter<size){
             onTalk.Invoke();
@@ -140,8 +145,9 @@ public class DialogueSystem : MonoBehaviour
         }else{
             audioSource.Stop();
         }
+
         counter++;
-        
+        print("Counter +1 "+counter);
     }
 
 
@@ -170,17 +176,20 @@ public class DialogueSystem : MonoBehaviour
         if(panel)
             panel.SetActive(false);
 
-        if(counter==size)
-            onTalkEnd.Invoke();
-
-
         talking=false;
-        if(auotmaticTalk)
+
+        if(counter==size){
+            onTalkEnd.Invoke();
+            counter%=size; 
+            yield break;
+        }
+            
+        
+        else if(auotmaticTalk && counter<size)
             Talk();
-        else
-            counter%=size;
-        
-        
-        
+        else{
+            counter%=size;  
+        }
+
     }
 }

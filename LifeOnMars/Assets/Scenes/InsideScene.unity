@@ -1357,7 +1357,7 @@ RectTransform:
   m_Children:
   - {fileID: 1279980818}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22953,7 +22953,7 @@ PrefabInstance:
     - target: {fileID: 3128422237854842666, guid: 646614e3b4e00184cbce4cb879cbafc5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 3128422237854842666, guid: 646614e3b4e00184cbce4cb879cbafc5,
         type: 3}
@@ -24101,7 +24101,7 @@ PrefabInstance:
     - target: {fileID: 7643682372519108559, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108559, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
@@ -24251,13 +24251,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792891460}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.41, y: -1511.583, z: 30.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.8983491, z: 0, w: 0.43928224}
+  m_LocalPosition: {x: -142.28963, y: 2.5512695, z: 22.173119}
+  m_LocalScale: {x: 6.250001, y: 6.25, z: 6.250001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1918142437}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1861400081
 PrefabInstance:
@@ -25605,7 +25605,7 @@ PrefabInstance:
     - target: {fileID: 7696161059986159414, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159414, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
@@ -25616,7 +25616,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1918142443}
     - target: {fileID: 7696161059986159414, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -25625,17 +25625,17 @@ PrefabInstance:
     - target: {fileID: 7696161059986159414, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: Turn
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159414, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DialogueSystem, Assembly-CSharp
+      value: Billboard, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159414, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
@@ -25902,12 +25902,31 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   newMaterial: {fileID: 0}
+--- !u!4 &1918142437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7873691587533397850, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1918142434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1918142442 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4297793164440569120, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
     type: 3}
   m_PrefabInstance: {fileID: 1918142434}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1918142443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918142435}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05560e5669c3ed14ab72bc318de5ed39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positiveAxis: 1
 --- !u!1001 &1923283851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25918,7 +25937,7 @@ PrefabInstance:
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
@@ -25929,7 +25948,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1923283856}
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -25938,17 +25957,17 @@ PrefabInstance:
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: Turn
       objectReference: {fileID: 0}
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DialogueSystem, Assembly-CSharp
+      value: Billboard, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2048300876900440445, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
@@ -26023,6 +26042,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
+      propertyPath: onTalkStart.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
       propertyPath: onTalk.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
@@ -26038,8 +26062,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
+      propertyPath: onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
       propertyPath: onTalk.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1923283856}
+    - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Turn
       objectReference: {fileID: 0}
     - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
@@ -26053,13 +26097,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
+      propertyPath: onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Billboard, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
       propertyPath: onTalk.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2559055025878357321, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 2559055025878357321, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
@@ -26316,6 +26370,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   newMaterial: {fileID: 0}
+--- !u!114 &1923283856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923283854}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05560e5669c3ed14ab72bc318de5ed39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positiveAxis: 1
 --- !u!1 &1946505546
 GameObject:
   m_ObjectHideFlags: 0
@@ -27242,7 +27309,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2031912259
 GameObject:
