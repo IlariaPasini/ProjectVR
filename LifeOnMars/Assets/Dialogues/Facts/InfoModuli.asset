@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
-  m_Name: InfoAntenna
+  m_Name: InfoModuli
   m_EditorClassIdentifier: 
   texts:
-  - "Riparare l'antenna \xE8 cruciale per mantenere la connessione vitale con la
-    Terra e ricevere informazioni. Oltre a contribuire anche al monitoraggio del
-    clima marziano e ad altre rilevazioni fondamentali per la nostra missione, l'antenna
-    garantisce una comunicazione efficace."
+  - La NASA sta studiando e sviluppando moduli abitativi spaziali per missioni prolungate
+    nello spazio profondo. Questi moduli devono garantire il supporto vitale degli
+    astronauti, proteggerli dalle radiazioni e dai micrometeoriti, e mantenere un
+    ambiente sicuro e salutare.
   audio:
-  - {fileID: 8300000, guid: 5b66e1209d1281949bf4de280597388c, type: 3}
+  - {fileID: 8300000, guid: 6fd5198be2dcc5944b92eb94e3a7e53c, type: 3}
