@@ -6,4 +6,5 @@ using UnityEngine;
 public class Dialogue : ScriptableObject
 {
     [SerializeField] public string[] texts;
+    [SerializeField] public AudioClip[] audio;
 }

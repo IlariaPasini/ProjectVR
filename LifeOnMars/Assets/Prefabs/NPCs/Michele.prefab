@@ -2161,11 +2161,6 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
-    - target: {fileID: 4494023659427799371, guid: 25389e264b0a293448ea5a1ecdff4aab,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.847
-      objectReference: {fileID: 0}
     - target: {fileID: 4494023659427799375, guid: 25389e264b0a293448ea5a1ecdff4aab,
         type: 3}
       propertyPath: dialogues

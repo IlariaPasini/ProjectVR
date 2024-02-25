@@ -16,8 +16,12 @@ MonoBehaviour:
   - Oggi affronteremo due compiti importanti
   - Dovremmo analizzare il terreno e raccogliere campioni di Ghiaccio e Minerali!
   - "C.A.R.L sar\xE0 il tuo migliore amico, ti permetter\xE0 di portare tutti gli
-    oggetti in giro!"
+    oggetti per il pianeta!"
   - 'Usando la mappa puoi vedere i punti dove posizionare le torrette. '
-  - "C.A.R.L sar\xE0 il tuo migliore amico! Ti aiuter\xE0 a portare tutti gli oggetti
-    per il pianeta!"
   - Potrai trovare dei materiali, anche quelli possono essere immagazzinati da C.A.R.L
+  audio:
+  - {fileID: 8300000, guid: f4c4e9c99929aa04da202a508e6fa731, type: 3}
+  - {fileID: 8300000, guid: ce067f37bbff1494cb624fffe436a1da, type: 3}
+  - {fileID: 8300000, guid: 853cd61bfc163054791076dee0c41da4, type: 3}
+  - {fileID: 8300000, guid: 4bc16e20c2e739549af0469a05ac50ae, type: 3}
+  - {fileID: 8300000, guid: 689d064b52a0dcd42b4c1ad941cf524b, type: 3}

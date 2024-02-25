@@ -11,6 +11,7 @@ public class DayTracker : MonoBehaviour
     void Start()
     {
         tmp=GetComponent<TextMeshProUGUI>();
+        
         StartCoroutine(Polling());
     }
 
@@ -19,7 +20,7 @@ public class DayTracker : MonoBehaviour
     {   
         while(true){
 
-        tmp.text="Giorno "+DaySystem.DayNumber+"\n Task del giorno: "+DaySystem.TaskForTheDay;
+        tmp.text="Giorno "+(DaySystem.DayNumber+1);
         yield return new WaitForSeconds(1);
             if(DaySystem.DayNumber==lastDay){
                 tmp.text="La missione è finita, tempo di tornare!\n Sali sulla navicella fuori";

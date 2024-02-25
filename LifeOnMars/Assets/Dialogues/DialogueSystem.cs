@@ -17,6 +17,7 @@ public class DialogueSystemException : System.Exception
         System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
 }
 
+[RequireComponent(typeof(AudioSource))]
 public class DialogueSystem : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class DialogueSystem : MonoBehaviour
     UnityEvent defEvents, defStartEvents=new UnityEvent();
     [SerializeField] bool interruptable=true, auotmaticTalk=false, withPanel=false;
     [SerializeField] GameObject panel;
+    AudioSource audioSource;
     bool talking=false;
     int counter=0, size=0;
 
@@ -41,14 +43,22 @@ public class DialogueSystem : MonoBehaviour
     }
     void Start()
     {
-
+        audioSource=GetComponent<AudioSource>();
         if(panel==null && withPanel){
             panel=transform.parent.GetComponentInChildren<Image>(true)?.gameObject;
+            
         }
-        tmp=GetComponentInChildren<TextMeshProUGUI>();
+        if(withPanel){
+            panel.SetActive(false);
+            onTalkStart.AddListener(()=>panel.SetActive(true));
+            onTalkEnd.AddListener(()=>panel.SetActive(false));
+        }
+
+        tmp=GetComponentInChildren<TextMeshProUGUI>(true);
         if(tmp==null)
             throw new DialogueSystemException("No TextMesh");
-        
+        tmp.text="";
+
         if(dialogues==null)
             enabled=false;
         size=dialogues.texts.Length;
@@ -57,11 +67,6 @@ public class DialogueSystem : MonoBehaviour
         //events.AddListener(()=>{dialogues=defDialogue; events=defEvents;});
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void SetDialogueTemp(Dialogue dialogue){
         dialogues=dialogue;
@@ -90,6 +95,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     public void ResetDialogue(){
+        StopAllCoroutines();
         dialogues=defDialogue; 
         counter=0;
         size=defDialogue.texts.Length;
@@ -109,25 +115,42 @@ public class DialogueSystem : MonoBehaviour
         ResetDialogue();
     }
 
-    
+    public void PlayAudio(){
+        if(dialogues.audio.Length>counter){
+            audioSource.clip=dialogues.audio[counter];
+            audioSource.Play();
+        }
+    }    
 
     public void Talk(){
         if(!interruptable && talking)
             return;
+
+        
         if(counter==size)
             onTalkEnd.Invoke();
+        
         counter%=size+1;
         StopAllCoroutines();
+
         if(counter==0)
             onTalkStart.Invoke();
         tmp.text="";
+
+
         if(counter<size){
             onTalk.Invoke();
+            PlayAudio();
             StartCoroutine(talk());
+        }else{
+            audioSource.Stop();
         }
+
         counter++;
-        
+        print("Counter +1 "+counter);
     }
+
+
 
     private IEnumerator talk(){
         CharEnumerator e=dialogues.texts[counter].GetEnumerator();
@@ -153,17 +176,20 @@ public class DialogueSystem : MonoBehaviour
         if(panel)
             panel.SetActive(false);
 
-        if(counter==size)
-            onTalkEnd.Invoke();
-
-
         talking=false;
-        if(auotmaticTalk)
+
+        if(counter==size){
+            onTalkEnd.Invoke();
+            counter%=size; 
+            yield break;
+        }
+            
+        
+        else if(auotmaticTalk && counter<size)
             Talk();
-        else
-            counter%=size;
-        
-        
-        
+        else{
+            counter%=size;  
+        }
+
     }
 }

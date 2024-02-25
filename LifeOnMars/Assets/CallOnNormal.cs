@@ -65,7 +65,7 @@ public class CallOnNormal : MonoBehaviour
 
         Vector3 cameraNormal=normal;
         if(cameraRelative)
-            cameraNormal=Camera.main.transform.InverseTransformDirection(normal);
+            cameraNormal=Camera.main.transform.TransformDirection(normal);
         switch(comparisonVector){
             case TransformDir.FORWARD:
             dot=Vector3.Dot(cameraNormal, transform.forward);

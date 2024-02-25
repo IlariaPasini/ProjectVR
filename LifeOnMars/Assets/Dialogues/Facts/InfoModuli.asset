@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: InfoModuli
+  m_EditorClassIdentifier: 
+  texts:
+  - La NASA sta studiando e sviluppando moduli abitativi spaziali per missioni prolungate
+    nello spazio profondo. Questi moduli devono garantire il supporto vitale degli
+    astronauti, proteggerli dalle radiazioni e dai micrometeoriti, e mantenere un
+    ambiente sicuro e salutare.
+  audio:
+  - {fileID: 8300000, guid: 6fd5198be2dcc5944b92eb94e3a7e53c, type: 3}

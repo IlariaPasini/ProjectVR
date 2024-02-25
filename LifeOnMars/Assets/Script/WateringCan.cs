@@ -24,7 +24,7 @@ public class WateringCan : MonoBehaviour
     }
     void Start()
     {
-        ps=GetComponentInChildren<ParticleSystem>(true);
+        ps=GetComponentInChildren<ParticleSystem>(false);
         pe=ps.emission;
         ps.Play();
     }
