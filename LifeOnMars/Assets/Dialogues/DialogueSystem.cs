@@ -44,11 +44,13 @@ public class DialogueSystem : MonoBehaviour
 
         if(panel==null && withPanel){
             panel=transform.parent.GetComponentInChildren<Image>(true)?.gameObject;
+            panel.SetActive(false);
         }
         tmp=GetComponentInChildren<TextMeshProUGUI>();
         if(tmp==null)
             throw new DialogueSystemException("No TextMesh");
-        
+        tmp.text="";
+
         if(dialogues==null)
             enabled=false;
         size=dialogues.texts.Length;
