@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: FrasiGenericheRomulus
+  m_EditorClassIdentifier: 
+  texts:
+  - Mi chiedo sempre se un giorno raggiungeremo altre galassie
+  - "Quale \xE8 il tuo pianeta preferito? Spero non Plutone che \xE8 stato declassato
+    a pianeta nano"
+  - I problemi di comunicazione sono frequenti a causa delle condizioni climatiche
+    del pianeta
+  - Chissa se riusciremo a trasferire dati con sistemi ottici o con i laser...
+  - 'Vorrei proprio poter catturare la bellezza di questo posto, ma non mi hanno
+    fatto portare gli acquerelli '
+  - "Che temperatura ci sar\xE0 oggi? Sempre un po' variabile"
+  audio: []
