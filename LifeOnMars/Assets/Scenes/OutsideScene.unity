@@ -2936,8 +2936,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 5
+      scalar: 20
+      minScalar: 30
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3052,7 +3052,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 2.06
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3375,7 +3375,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3429,7 +3429,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 24.1
+    angle: 37.75
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -7586,7 +7586,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5206c211a457a7047879965094ea9d1a, type: 2}
+  - {fileID: 2100000, guid: 487e11517869f0f41bbe0c4fea253a6e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7644,14 +7644,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383986755}
-  m_LocalRotation: {x: -0.0990268, y: 0.08442154, z: 0.6432411, w: 0.7545248}
+  m_LocalRotation: {x: 0.10611021, y: -0.15462852, z: 0.64211065, w: 0.74332}
   m_LocalPosition: {x: 0.000015192716, y: 0.002034032, z: 0.00045398314}
-  m_LocalScale: {x: 0.0077397684, y: 0.0077397684, z: 0.007739773}
+  m_LocalScale: {x: 0.068406396, y: 0.068406396, z: 0.06840643}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 122856039}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20.875, y: -5.75, z: 80.584}
 --- !u!1 &391900402
 GameObject:
   m_ObjectHideFlags: 0
@@ -15439,6 +15439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Casco
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b843e1b8eeae18d4fac3a92636bf2ab0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b843e1b8eeae18d4fac3a92636bf2ab0, type: 3}
