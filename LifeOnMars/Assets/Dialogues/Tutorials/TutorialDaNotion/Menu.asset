@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: Menu
+  m_EditorClassIdentifier: 
+  texts:
+  - "Il tuo braccio sinistro ha delle funzionalit\xE0 nascoste"
+  - "Se premi A sul controller destro ti si aprir\xE0 un men\xF9"
+  - "Se ripremi A scomparir\xE0"
+  - "Nel men\xF9 sono presenti diversi elementi:"
+  - Task Manager che ti mostra i compiti del giorno
+  - "Comandi che ti riassumer\xE0 tutti i tasti che puoi usare e come"
+  - Volume che ti permette di aumentare/diminuire il volume
+  - Quit per chiudere l'applicazione, fai attenzione!
+  audio: []

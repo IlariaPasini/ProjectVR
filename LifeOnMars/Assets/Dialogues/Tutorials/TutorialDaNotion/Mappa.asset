@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
-  m_Name: Movimento
+  m_Name: Mappa
   m_EditorClassIdentifier: 
   texts:
-  - Per muoverti usa l'analogico del controller sinistro
-  - Per girarti su te stesso usa l'analogico del controller destro, o puoi girarti
-    tu
-  - Se, quando indichi un oggetto, questo viene evidenziato, puoi interagire con
-    esso
-  - Premi quindi Grab per interagire con gli oggetti
+  - Ti sei perso? Non preoccuparti!
+  - "Sul polso del guanto sinistro c'\xE8 una mappa olografica"
+  - Per utilizzarla prendila in mano con il grilletto del controller destro
+  - Posizionala su una superficie rilasciando il trigger
   audio: []

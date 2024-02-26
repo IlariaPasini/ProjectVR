@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: MenuEUI
   m_EditorClassIdentifier: 
   texts:
-  - Per aprire il Menu, premi B sul controller destro
-  - Si attiver' un pannello sul polso sinistro
-  - Premendo Task, otterrai le task attive che dovrai completare per passare al giorno
-    successivo
+  - Per aprire il Menu, premi A sul controller destro
+  - Si attivera' un pannello sul polso sinistro
+  - Premendo Manager Task, otterrai le task attive che dovrai completare per passare
+    al giorno successivo
   - Premendo Comandi avrai un riassunto dei comandi
   - Con lo slider del volume puoi controllare il volume
   - Con Quit uscirai dall'applicazione
+  audio: []
