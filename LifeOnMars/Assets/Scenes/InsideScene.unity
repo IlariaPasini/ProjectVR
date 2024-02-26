@@ -670,6 +670,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782812, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
+      propertyPath: m_Range
+      value: 5.6779523
+      objectReference: {fileID: 0}
+    - target: {fileID: 660810292629782812, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
+        type: 3}
       propertyPath: m_Lightmapping
       value: 1
       objectReference: {fileID: 0}
@@ -695,8 +700,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782814, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 660810292629782814, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.93
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782815, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
@@ -9369,7 +9379,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 7.7177606
+  m_Range: 6.9651256
   m_SpotAngle: 179
   m_InnerSpotAngle: 23.02614
   m_CookieSize: 10
@@ -21634,6 +21644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 660810292629782812, guid: 05d384e9171811049bf4c529b25e1aed,
+        type: 3}
+      propertyPath: m_Range
+      value: 7.0334797
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782812, guid: 05d384e9171811049bf4c529b25e1aed,
         type: 3}
