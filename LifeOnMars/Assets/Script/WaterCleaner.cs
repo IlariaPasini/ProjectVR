@@ -63,12 +63,12 @@ public class WaterCleaner : Receiver
             if (dirtyWaterLevel < WATER_MAX_AMOUNT)
             {
                 print("Riempimento cisterna: " + dirtyWaterLevel * 100f + "%");
-                StartCoroutine(Grow(dirtyWaterLevel, dirtyTank, 0.05f));
+                StartCoroutine(Grow(dirtyWaterLevel, dirtyTank, 0.01f));
             }
             else
             {
                 print("Cisterna piena!");
-                StartCoroutine(Grow(dirtyWaterLevel, dirtyTank, 0.05f));
+                StartCoroutine(Grow(dirtyWaterLevel, dirtyTank, 0.01f));
 
                 // change material of the screen when the tank is full
                 Material[] mats = screen.materials;
@@ -88,9 +88,9 @@ public class WaterCleaner : Receiver
         // set screen text
         screenText.text = cleaningPrompt;
         // empty the dirty water tank
-        StartCoroutine(Shrink(dirtyTank, 0.05f));
+        StartCoroutine(Shrink(dirtyTank, 0.01f));
         // fill the clean water tank
-        StartCoroutine(Grow(WATER_MAX_AMOUNT, cleanTank, 0.05f));
+        StartCoroutine(Grow(WATER_MAX_AMOUNT, cleanTank, 0.01f));
     }
 
     #region Coroutines
