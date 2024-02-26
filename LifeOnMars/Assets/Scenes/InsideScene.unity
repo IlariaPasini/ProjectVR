@@ -17901,6 +17901,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
+      propertyPath: dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].name
+      value: Biscotto
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].take
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 92bac73c3b70c3f429c6d82ab0018069,
+        type: 2}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -18096,6 +18117,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -18181,6 +18207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 0}
@@ -18188,6 +18219,21 @@ PrefabInstance:
         type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
       value: Romita
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 803176033}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
@@ -18232,6 +18278,21 @@ PrefabInstance:
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Thankful
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108559, guid: 961803c177fa32347a013b072b2e18ca,
@@ -19896,6 +19957,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
+      propertyPath: dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].name
+      value: Biscotto
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].take
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 92bac73c3b70c3f429c6d82ab0018069,
+        type: 2}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -19931,6 +20013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: WateringCan, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -19946,12 +20033,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Michele
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1918142442}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Thankful
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159417, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
@@ -20429,6 +20551,27 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
+      propertyPath: dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].name
+      value: Biscotto
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].take
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 92bac73c3b70c3f429c6d82ab0018069,
+        type: 2}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
       propertyPath: task.events.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -20494,6 +20637,11 @@ PrefabInstance:
       objectReference: {fileID: 1923283852}
     - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
       propertyPath: nullDialogueStartEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
       objectReference: {fileID: 0}
@@ -20515,8 +20663,28 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Romulus
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1923283852}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
@@ -20526,6 +20694,21 @@ PrefabInstance:
     - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Thankful
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].onTalkStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
