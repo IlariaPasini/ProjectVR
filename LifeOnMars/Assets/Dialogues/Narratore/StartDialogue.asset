@@ -19,8 +19,6 @@ MonoBehaviour:
   - "La biosfera \xE8 il cuore della nostra missione, il luogo in cui coltiviamo
     cibo, estraiamo risorse e garantiamo la nostra sostenibilit\xE0."
   - "Su Marte le temperature vanno da -175\xB0 a 30\xB0 "
-  - "Un giorno su Marte dura 37 minuti in pi\xF9 che sulla Terra, un anno dura il
-    doppio rispetto alla Terra, di conseguenza avrai tanto tempo per imparare."
   - 'Interagirai con un team di esperti:'
   - Il botanico Michele Maniaci...
   - Il meccanico Romita Newgate...
@@ -29,6 +27,8 @@ MonoBehaviour:
   - E infine...
   - TU!
   - Ogni giorno un nuovo compito, una nuova sfida da affrontare.
+  - "Un giorno su Marte dura 37 minuti in pi\xF9 che sulla Terra, un anno dura il
+    doppio rispetto alla Terra, di conseguenza avrai tanto tempo per imparare."
   audio:
   - {fileID: 8300000, guid: b4bd6123ae1dd4f498d1bd478b27d685, type: 3}
   - {fileID: 8300000, guid: a6eb0d1b77f6f0e4db385a9a28032b8c, type: 3}
