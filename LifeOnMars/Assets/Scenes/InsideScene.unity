@@ -3749,7 +3749,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -24807,6 +24807,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7696161059986159417, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
+      propertyPath: taskDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 38efd2e702774b944bd9556dacd812e9,
+        type: 2}
+    - target: {fileID: 7696161059986159417, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -24860,6 +24866,12 @@ PrefabInstance:
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Triggerable, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159417, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: task.events.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: c22bc396a18694e40a5329d5c47184dd,
+        type: 2}
     - target: {fileID: 7696161059986159417, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: onTaskDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -25257,6 +25269,12 @@ PrefabInstance:
       propertyPath: day
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
+      propertyPath: defDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: ea67fe13fda144f4fbaadafb3dcefca4,
+        type: 2}
     - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: taskDialogue

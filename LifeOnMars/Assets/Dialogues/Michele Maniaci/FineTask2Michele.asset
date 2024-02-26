@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 442e0d9669a00e442a932e45d2d5e387, type: 3}
-  m_Name: New Craft
+  m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
+  m_Name: FineTask2Michele
   m_EditorClassIdentifier: 
-  secondElement: Cube (8)
-  createdElement: {fileID: 8240350304212918192, guid: 064e628b531e1c944bcb00824a17769c,
-    type: 3}
+  texts:
+  - Fantastico! Grazie mille!
+  - "Il tuo pollice \xE8 sempre pi\xF9 verde!"
+  audio: []
