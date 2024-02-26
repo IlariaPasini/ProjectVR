@@ -25,5 +25,10 @@ public class SimpleTaskGiver : MonoBehaviour
         TaskSystem.instance.AddTask(task.name, task);
     }
 
-    
+    public void UpdateTask(string taskName){
+        TaskSystem.instance.UpdateTask(taskName, 1);
+    }
+    public void UpdateTask(){
+        TaskSystem.instance.UpdateTask(task.name, 1);
+    }
 }

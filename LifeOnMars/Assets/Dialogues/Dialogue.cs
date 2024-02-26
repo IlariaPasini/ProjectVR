@@ -7,4 +7,6 @@ public class Dialogue : ScriptableObject
 {
     [SerializeField] public string[] texts;
     [SerializeField] public AudioClip[] audio;
+
+    [SerializeField] public bool randomized, automaticTalk;
 }

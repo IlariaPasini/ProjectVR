@@ -16,6 +16,8 @@ MonoBehaviour:
   - Prova a parlare con Aiden
   - Per farlo devi interagire con lui
   - Per interagire premi Grab
-  - Puoi interagire con qualsiasi oggetto che viene evidenziato di giallo
-  - Se tieni premuto puoi tenerlo in mano, quando rilasci il testo si rilascia l'oggett
+  - Puoi interagire con qualsiasi oggetto che viene evidenziato
+  - Se tieni premuto puoi tenerlo in mano, quando rilasci il tasto si rilascia l'oggetto
   audio: []
+  randomized: 0
+  automaticTalk: 1

@@ -12,6 +12,11 @@ public class ChangeDay : MonoBehaviour
 
     [SerializeField]
     bool debugMode;
+    [SerializeField]
+    bool active=true;
+
+    public bool Active { get => active; set => active = value; }
+
     void Start()
     {
         #if !UNITY_EDITOR
@@ -24,7 +29,7 @@ public class ChangeDay : MonoBehaviour
     /// Fa partire l'animazione di fade e cambia giorno con il Fade
     /// </summary>
     public void NextDayFade(){
-        if(TaskSystem.instance.TaskCompleted>=DaySystem.TaskForTheDay || debugMode){
+        if((TaskSystem.instance.TaskCompleted>=DaySystem.TaskForTheDay || debugMode) && Active){
             TaskSystem.instance.ResetTasks();
             Fader.NextDay();
         }else{
@@ -33,9 +38,17 @@ public class ChangeDay : MonoBehaviour
     }
     // Update is called once per frame
     public void NextDay(){
-        if(TaskSystem.instance.TaskCompleted>=DaySystem.TaskForTheDay  || debugMode){
+        if((TaskSystem.instance.TaskCompleted>=DaySystem.TaskForTheDay || debugMode) && Active){
             TaskSystem.instance.ResetTasks();
             DaySystem.DayNumber++;
+        }else{
+            onNextDayDeny.Invoke();
+        }
+    }
+
+    public void ResetDay(){
+        if((TaskSystem.instance.TaskCompleted>=DaySystem.TaskForTheDay || debugMode) && Active){
+            TaskSystem.instance.ResetTasks();
         }else{
             onNextDayDeny.Invoke();
         }

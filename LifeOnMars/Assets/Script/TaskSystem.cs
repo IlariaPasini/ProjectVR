@@ -124,6 +124,12 @@ public class TaskSystem
             return tasks.Count((pair)=>pair.Value.done);
         }
     }
+
+    public bool AllTasksDone{
+        get{
+            return tasks.Count((pair)=>pair.Value.done)==tasks.Count;
+        }
+    }
     /// <summary>
     /// Aggiunge una task, se è gia presente una task con lo stesso nome non fa nulla
     /// </summary>

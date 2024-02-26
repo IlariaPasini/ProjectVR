@@ -26,6 +26,7 @@ public class DailyTasker : MonoBehaviour
     {
         if(taskPerDay.Count>day){
             foreach(Task t in taskPerDay[day].task){
+                DaySystem.TaskForTheDay++;
                 TaskSystem.instance.AddTask(t.name,t);
             }
         }

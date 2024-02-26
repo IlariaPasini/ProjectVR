@@ -68,4 +68,9 @@ public class ChangeScene : MonoBehaviour
             DaySystem.DayNumber++;
         }
     }
+
+    public void ResetDay(){
+        
+        TaskSystem.instance.ResetTasks();
+    }
 }

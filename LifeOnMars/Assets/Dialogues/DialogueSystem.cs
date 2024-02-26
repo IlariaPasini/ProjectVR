@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using System;
+//using System;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -27,23 +28,24 @@ public class DialogueSystem : MonoBehaviour
     Dialogue defDialogue;
     [SerializeField] UnityEvent onTalkStart, onTalk, onTalkEnd;
     UnityEvent defEvents, defStartEvents=new UnityEvent();
-    [SerializeField] bool interruptable=true, auotmaticTalk=false, withPanel=false;
+    [SerializeField] bool interruptable=true, automaticTalk=false, withPanel=false;
     [SerializeField] GameObject panel;
     AudioSource audioSource;
     bool talking=false;
     int counter=0, size=0;
 
-    public bool AuotmaticTalk { get => auotmaticTalk; set => auotmaticTalk = value; }
+    public bool AuotmaticTalk { get => automaticTalk; set => automaticTalk = value; }
 
     //[SerializeField] string text;
     void Awake(){
         defStartEvents=onTalk;
         defDialogue=dialogues;
         defEvents=onTalkEnd;
-    }
-    void Start()
-    {
         audioSource=GetComponent<AudioSource>();
+        tmp=GetComponentInChildren<TextMeshProUGUI>(true);
+        if(tmp==null)
+            throw new DialogueSystemException("No TextMesh");
+        tmp.text="";
         if(panel==null && withPanel){
             panel=transform.parent.GetComponentInChildren<Image>(true)?.gameObject;
             
@@ -53,15 +55,20 @@ public class DialogueSystem : MonoBehaviour
             onTalkStart.AddListener(()=>panel.SetActive(true));
             onTalkEnd.AddListener(()=>panel.SetActive(false));
         }
-
-        tmp=GetComponentInChildren<TextMeshProUGUI>(true);
-        if(tmp==null)
-            throw new DialogueSystemException("No TextMesh");
-        tmp.text="";
-
         if(dialogues==null)
             enabled=false;
         size=dialogues.texts.Length;
+    }
+    void Start()
+    {
+        
+       
+        
+
+        
+        
+
+        
 
         
         //events.AddListener(()=>{dialogues=defDialogue; events=defEvents;});
@@ -143,6 +150,7 @@ public class DialogueSystem : MonoBehaviour
 
         if(counter==0)
             onTalkStart.Invoke();
+
         tmp.text="";
 
 
@@ -153,7 +161,10 @@ public class DialogueSystem : MonoBehaviour
             audioSource.Stop();
         }
 
-        counter++;
+        if(!dialogues.randomized)
+            counter++;
+        else
+            counter=UnityEngine.Random.Range(0,size);
         print("Counter +1 "+counter);
     }
 
@@ -195,7 +206,7 @@ public class DialogueSystem : MonoBehaviour
         }
             
         
-        else if(auotmaticTalk && counter<size)
+        else if(dialogues.automaticTalk && counter<size && !dialogues.randomized)
             Talk();
         else{
             counter%=size;  
