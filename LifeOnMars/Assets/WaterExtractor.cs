@@ -54,6 +54,10 @@ public class WaterExtractor : Receiver
                 mr_temp.enabled=true;
             }
         }
+
+        onEnable-=EnableMaterials;
+        Destroy(this);
+
     }
 
     public static void EnableHologram(bool e){

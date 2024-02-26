@@ -101,6 +101,9 @@ public class DialogueSystem : MonoBehaviour
         size=defDialogue.texts.Length;
         onTalkEnd=defEvents;
         onTalk=defStartEvents;
+        if(withPanel){
+            panel.SetActive(false);
+        }
     }
     public void SetDialoguePermanent(Dialogue dialogue, UnityEvent newEvents){
         defDialogue=dialogue;
@@ -126,7 +129,9 @@ public class DialogueSystem : MonoBehaviour
         if(!interruptable && talking)
             return;
 
-        
+        if(withPanel)
+            panel.SetActive(false);
+            
         if(counter==size)
             onTalkEnd.Invoke();
         
