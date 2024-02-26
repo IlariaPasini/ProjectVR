@@ -118,10 +118,13 @@ public class DialogueSystem : MonoBehaviour
         ResetDialogue();
     }
 
-    public void PlayAudio(){
+    public AudioClip PlayAudio(){
         if(dialogues.audio.Length>counter){
             audioSource.clip=dialogues.audio[counter];
             audioSource.Play();
+            return audioSource.clip;
+        }else{
+            return null;
         }
     }    
 
@@ -131,7 +134,7 @@ public class DialogueSystem : MonoBehaviour
 
         if(withPanel)
             panel.SetActive(false);
-            
+
         if(counter==size)
             onTalkEnd.Invoke();
         
@@ -145,8 +148,7 @@ public class DialogueSystem : MonoBehaviour
 
         if(counter<size){
             onTalk.Invoke();
-            PlayAudio();
-            StartCoroutine(talk());
+            StartCoroutine(talk(PlayAudio()));  //Inizia la coroutine di parlata
         }else{
             audioSource.Stop();
         }
@@ -157,9 +159,9 @@ public class DialogueSystem : MonoBehaviour
 
 
 
-    private IEnumerator talk(){
+    private IEnumerator talk(AudioClip clip){
         CharEnumerator e=dialogues.texts[counter].GetEnumerator();
-
+        float timeStarted=Time.time, timeElapsed=0.0f;
         talking=true;
         if (panel)
             panel.SetActive(true);
@@ -168,6 +170,7 @@ public class DialogueSystem : MonoBehaviour
             tmp.text+=c;
 
             yield return new WaitForSeconds(speed);
+            timeElapsed=Time.time- timeStarted;
             if(tmp.isTextOverflowing){
                 tmp.text="";
                 tmp.text+=c;
@@ -175,8 +178,10 @@ public class DialogueSystem : MonoBehaviour
 
         }
 
-
-        yield return new WaitForSeconds(persistance);
+        if(clip!=null)        
+            yield return new WaitForSeconds(Mathf.Max(clip.length-timeElapsed,0) + persistance);
+        else
+            yield return new WaitForSeconds(persistance);
         tmp.text="";
         if(panel)
             panel.SetActive(false);
