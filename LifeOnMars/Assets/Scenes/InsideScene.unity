@@ -3136,12 +3136,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9128dacc49cc14a4a85e61265d40bce9, type: 3}
---- !u!23 &682166722 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7246400963907581304, guid: 9128dacc49cc14a4a85e61265d40bce9,
+--- !u!1 &682166722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9192021905273377965, guid: 9128dacc49cc14a4a85e61265d40bce9,
     type: 3}
   m_PrefabInstance: {fileID: 682166721}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &682166723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682166722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4648dcc2225c2e74292bcab710337b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expected_input: 1
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  newMaterial: {fileID: 2100000, guid: 028966f8ddabace44991a1a5e8491993, type: 2}
 --- !u!1 &700833715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2347467576570180537, guid: 31eaf18c18185f94aabc76c015bac25f,
@@ -3639,12 +3656,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9128dacc49cc14a4a85e61265d40bce9, type: 3}
---- !u!23 &769415508 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7246400963907581304, guid: 9128dacc49cc14a4a85e61265d40bce9,
+--- !u!1 &769415508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9192021905273377965, guid: 9128dacc49cc14a4a85e61265d40bce9,
     type: 3}
   m_PrefabInstance: {fileID: 769415507}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &769415509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769415508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4648dcc2225c2e74292bcab710337b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expected_input: 1
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  newMaterial: {fileID: 2100000, guid: 028966f8ddabace44991a1a5e8491993, type: 2}
 --- !u!1001 &794308941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4771,13 +4805,13 @@ PrefabInstance:
     - target: {fileID: 413404402971376328, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 413404402971376328, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 682166722}
+      objectReference: {fileID: 682166723}
     - target: {fileID: 413404402971376328, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
@@ -4786,22 +4820,27 @@ PrefabInstance:
     - target: {fileID: 413404402971376328, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: set_material
+      value: ChangeMaterialAt
       objectReference: {fileID: 0}
     - target: {fileID: 413404402971376328, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: UnityEngine.Renderer, UnityEngine
+      value: Triggerable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 413404402971376328, guid: 07b6f190872407c40a24816b67793ec0,
+        type: 3}
+      propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 413404402971376328, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2100000, guid: 028966f8ddabace44991a1a5e8491993, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 413404402971376328, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Material, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 413828656869861753, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
@@ -6016,13 +6055,13 @@ PrefabInstance:
     - target: {fileID: 3768419913554085704, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3768419913554085704, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 769415508}
+      objectReference: {fileID: 769415509}
     - target: {fileID: 3768419913554085704, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
@@ -6031,22 +6070,27 @@ PrefabInstance:
     - target: {fileID: 3768419913554085704, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: set_material
+      value: ChangeMaterialAt
       objectReference: {fileID: 0}
     - target: {fileID: 3768419913554085704, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: UnityEngine.Renderer, UnityEngine
+      value: Triggerable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768419913554085704, guid: 07b6f190872407c40a24816b67793ec0,
+        type: 3}
+      propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3768419913554085704, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2100000, guid: 028966f8ddabace44991a1a5e8491993, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 3768419913554085704, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Material, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3913166693171078987, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
@@ -7301,7 +7345,7 @@ PrefabInstance:
     - target: {fileID: 5692584815062632732, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5692584815062632732, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
@@ -7322,7 +7366,7 @@ PrefabInstance:
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 7889097372120954895}
+      objectReference: {fileID: 7889097372120954896}
     - target: {fileID: 5692584815062632732, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
@@ -7346,22 +7390,27 @@ PrefabInstance:
     - target: {fileID: 5692584815062632732, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: set_material
+      value: ChangeMaterialAt
       objectReference: {fileID: 0}
     - target: {fileID: 5692584815062632732, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: UnityEngine.Renderer, UnityEngine
+      value: Triggerable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692584815062632732, guid: 07b6f190872407c40a24816b67793ec0,
+        type: 3}
+      propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5692584815062632732, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2100000, guid: 028966f8ddabace44991a1a5e8491993, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5692584815062632732, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Material, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5717943737449495874, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
@@ -16953,12 +17002,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9128dacc49cc14a4a85e61265d40bce9, type: 3}
---- !u!23 &1642262536 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7246400963907581304, guid: 9128dacc49cc14a4a85e61265d40bce9,
+--- !u!1 &1642262536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9192021905273377965, guid: 9128dacc49cc14a4a85e61265d40bce9,
     type: 3}
   m_PrefabInstance: {fileID: 1642262535}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1642262537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642262536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4648dcc2225c2e74292bcab710337b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expected_input: 1
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  newMaterial: {fileID: 2100000, guid: 028966f8ddabace44991a1a5e8491993, type: 2}
 --- !u!1 &1666935902 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1942015651869792816, guid: 68740ab08767cdc4caa194ae29a1d304,
@@ -18267,13 +18333,13 @@ PrefabInstance:
     - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1642262536}
+      objectReference: {fileID: 1642262537}
     - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
@@ -18282,22 +18348,27 @@ PrefabInstance:
     - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: set_material
+      value: ChangeMaterialAt
       objectReference: {fileID: 0}
     - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: UnityEngine.Renderer, UnityEngine
+      value: Triggerable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
+        type: 3}
+      propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2100000, guid: 028966f8ddabace44991a1a5e8491993, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 3064005745377030273, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
       propertyPath: waterableCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Material, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3246868284939261797, guid: 5cf68f1eb83fe944391a2b652c6f5979,
         type: 3}
@@ -22634,6 +22705,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9128dacc49cc14a4a85e61265d40bce9, type: 3}
+--- !u!1 &714901405537586552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9192021905273377965, guid: 9128dacc49cc14a4a85e61265d40bce9,
+    type: 3}
+  m_PrefabInstance: {fileID: 714901405537586551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &751003654856961383
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30789,12 +30866,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6616600867515047657}
   m_Mesh: {fileID: 6617714137955955173, guid: 8ba04c2d0f7821548b66507a51f5ea24, type: 3}
---- !u!23 &7889097372120954895 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7246400963907581304, guid: 9128dacc49cc14a4a85e61265d40bce9,
-    type: 3}
-  m_PrefabInstance: {fileID: 714901405537586551}
+--- !u!114 &7889097372120954896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714901405537586552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4648dcc2225c2e74292bcab710337b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expected_input: 1
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  newMaterial: {fileID: 2100000, guid: 028966f8ddabace44991a1a5e8491993, type: 2}
 --- !u!1001 &7928521634261898311
 PrefabInstance:
   m_ObjectHideFlags: 0
