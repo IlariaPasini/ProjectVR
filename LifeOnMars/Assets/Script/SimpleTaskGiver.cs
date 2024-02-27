@@ -22,6 +22,8 @@ public class SimpleTaskGiver : MonoBehaviour
     }
     public void GiveTask()
     {
+        if(TaskSystem.instance==null)
+            TaskSystem.Init();
         TaskSystem.instance.AddTask(task.name, task);
     }
 
