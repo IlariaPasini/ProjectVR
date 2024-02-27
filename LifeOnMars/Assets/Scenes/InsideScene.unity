@@ -3749,7 +3749,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -22530,7 +22530,7 @@ PrefabInstance:
     - target: {fileID: 7014356635306607989, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
       propertyPath: m_Name
-      value: Marina
+      value: Romita
       objectReference: {fileID: 0}
     - target: {fileID: 7643682372519108557, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
@@ -22602,6 +22602,12 @@ PrefabInstance:
       propertyPath: day
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
+      propertyPath: defDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: bdd2b9691b6c0324396f351508730928,
+        type: 2}
     - target: {fileID: 7643682372519108558, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
       propertyPath: task.target

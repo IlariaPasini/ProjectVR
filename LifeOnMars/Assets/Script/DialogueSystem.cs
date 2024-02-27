@@ -57,7 +57,10 @@ public class DialogueSystem : MonoBehaviour
         }
         if(dialogues==null)
             enabled=false;
-        size=dialogues.texts.Length;
+        
+             size=dialogues.texts.Length;
+       
+
     }
     void Start()
     {
@@ -165,7 +168,7 @@ public class DialogueSystem : MonoBehaviour
             counter++;
         else
             counter=UnityEngine.Random.Range(0,size);
-        print("Counter +1 "+counter);
+        print("Counter +1 "+ counter);
     }
 
 
@@ -185,6 +188,9 @@ public class DialogueSystem : MonoBehaviour
             if(tmp.isTextOverflowing){
                 tmp.text="";
                 tmp.text+=c;
+            }
+            if(dialogues.randomized ){
+                counter=size;
             }
 
         }
