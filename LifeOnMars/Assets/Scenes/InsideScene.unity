@@ -22468,6 +22468,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2930177244853258843, guid: 961803c177fa32347a013b072b2e18ca,
         type: 3}
+      propertyPath: dialogues
+      value: 
+      objectReference: {fileID: 11400000, guid: bdd2b9691b6c0324396f351508730928,
+        type: 2}
+    - target: {fileID: 2930177244853258843, guid: 961803c177fa32347a013b072b2e18ca,
+        type: 3}
       propertyPath: persistance
       value: 1.5
       objectReference: {fileID: 0}
@@ -24572,6 +24578,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6094420330905987229, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
+      propertyPath: dialogues
+      value: 
+      objectReference: {fileID: 11400000, guid: 0cd3aa4d674279444abb1ae8ddc02125,
+        type: 2}
+    - target: {fileID: 6094420330905987229, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
       propertyPath: persistance
       value: 1.3
       objectReference: {fileID: 0}
@@ -24670,6 +24682,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: defDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 0cd3aa4d674279444abb1ae8ddc02125,
+        type: 2}
     - target: {fileID: 7696161059986159416, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: task.target
@@ -24806,6 +24824,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7696161059986159417, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
+        type: 3}
+      propertyPath: defDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 0cd3aa4d674279444abb1ae8ddc02125,
+        type: 2}
     - target: {fileID: 7696161059986159417, guid: a4ba945b0f76e4149a7fc68ee11eba7a,
         type: 3}
       propertyPath: task.target
@@ -25122,6 +25146,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
+      propertyPath: dialogues
+      value: 
+      objectReference: {fileID: 11400000, guid: db7d2ca2ebaa6e247bf87bad6833d163,
+        type: 2}
+    - target: {fileID: 2048300877985557157, guid: 61664da09d94cc04cbdcf9b8627ad202,
+        type: 3}
       propertyPath: persistance
       value: 1.5
       objectReference: {fileID: 0}
@@ -25279,7 +25309,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defDialogue
       value: 
-      objectReference: {fileID: 11400000, guid: ea67fe13fda144f4fbaadafb3dcefca4,
+      objectReference: {fileID: 11400000, guid: db7d2ca2ebaa6e247bf87bad6833d163,
         type: 2}
     - target: {fileID: 8401739783162086691, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
