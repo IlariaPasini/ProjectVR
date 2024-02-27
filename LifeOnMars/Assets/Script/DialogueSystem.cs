@@ -127,15 +127,16 @@ public class DialogueSystem : MonoBehaviour
     public void Talk(){
         if(!interruptable && talking)
             return;
-
+        StopAllCoroutines();
         if(withPanel)
             panel.SetActive(false);
 
+        
         if(counter==size)
             onTalkEnd.Invoke();
         
         counter%=size+1;
-        StopAllCoroutines();
+        
 
         if(counter==0)
             onTalkStart.Invoke();
@@ -143,7 +144,7 @@ public class DialogueSystem : MonoBehaviour
         tmp.text="";
 
 
-        if(counter<size){
+        if(counter<size && gameObject.activeInHierarchy){
             onTalk.Invoke();
             StartCoroutine(talk(PlayAudio()));  //Inizia la coroutine di parlata
         }else{

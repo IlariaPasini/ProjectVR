@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 //using UnityEngine.Rendering;
@@ -18,13 +19,22 @@ public class GameMenuManager : MonoBehaviour
     //voglio che la UI sia sempre ancorata al braccio del giocatore
     [SerializeField] private Transform bracelet;
     [SerializeField] private float spawnDistance = 0.005f;
-
+    [SerializeField] private UnityEvent onEnable; 
+    bool firstEnabled=true;
     // Start is called before the first frame update
+
+    
     void Start()
     {
+        showButton.action.started+=Toggle;
         //faccio sì che l'oggetto sia disattivato all'avvio del gioco
         menu.SetActive(false);
-        showButton.action.started+=Toggle;
+    }
+
+    public void OnEnable(){
+        if(onEnable!=null && !firstEnabled)
+            onEnable.Invoke();
+        firstEnabled=false;
     }
     public void OnDestroy(){
         showButton.action.started-=Toggle;
