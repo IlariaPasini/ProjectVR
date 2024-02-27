@@ -54,6 +54,9 @@ public class WaterExtractor : Receiver
                 mr_temp.enabled=true;
             }
         }
+        Markable m;
+        if(TryGetComponent<Markable>(out m))
+            m.enabled=false;
 
         onEnable-=EnableMaterials;
         Destroy(this);
