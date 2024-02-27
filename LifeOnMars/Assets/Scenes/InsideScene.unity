@@ -25051,7 +25051,7 @@ PrefabInstance:
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
@@ -25062,7 +25062,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1923283856}
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -25071,17 +25071,17 @@ PrefabInstance:
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: Turn
       objectReference: {fileID: 0}
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DialogueSystem, Assembly-CSharp
+      value: Billboard, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 831612297372483815, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2048300876900440445, guid: 61664da09d94cc04cbdcf9b8627ad202,
         type: 3}
@@ -25528,6 +25528,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   newMaterial: {fileID: 0}
+--- !u!114 &1923283856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923283854}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05560e5669c3ed14ab72bc318de5ed39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positiveAxis: 1
 --- !u!1 &1946505546
 GameObject:
   m_ObjectHideFlags: 0

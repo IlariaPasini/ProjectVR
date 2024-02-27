@@ -786,7 +786,7 @@ PrefabInstance:
     - target: {fileID: 1085398911376493805, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
         type: 3}
       propertyPath: onEnable.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1085398911376493805, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
         type: 3}
@@ -822,7 +822,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onEnable.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 666638268}
+      objectReference: {fileID: 932590643}
     - target: {fileID: 1085398911376493805, guid: 1ad8a1b9b3f05274bac97e08e4befc27,
         type: 3}
       propertyPath: onEnable.m_PersistentCalls.m_Calls.Array.data[3].m_Target
@@ -41379,6 +41379,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 666638268}
+          m_TargetAssemblyTypeName: SimpleTaskGiver, Assembly-CSharp
+          m_MethodName: GiveTask
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
