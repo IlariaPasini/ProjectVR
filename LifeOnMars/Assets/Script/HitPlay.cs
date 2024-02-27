@@ -5,7 +5,8 @@ using UnityEngine;
 public class HitPlay : MonoBehaviour
 {
     // Start is called before the first frame update
-    new AudioSource audio;
+    #nullable enable
+    new AudioSource? audio;
     Vector3 startPos;
     Quaternion startRot;
     void Start()
@@ -18,7 +19,8 @@ public class HitPlay : MonoBehaviour
     // Update is called once per frame
     void OnCollisionEnter(Collision c)
     {
-        audio?.Play();
+        if(audio!=null)
+            audio.Play();
     }
 
     public void Reset(){

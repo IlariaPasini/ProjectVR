@@ -62,20 +62,6 @@ public class DialogueSystem : MonoBehaviour
        
 
     }
-    void Start()
-    {
-        
-       
-        
-
-        
-        
-
-        
-
-        
-        //events.AddListener(()=>{dialogues=defDialogue; events=defEvents;});
-    }
 
 
     public void SetDialogueTemp(Dialogue dialogue){
