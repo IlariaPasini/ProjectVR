@@ -1102,6 +1102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782812, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
+      propertyPath: m_Range
+      value: 5.962373
+      objectReference: {fileID: 0}
+    - target: {fileID: 660810292629782812, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
+        type: 3}
       propertyPath: m_Lightmapping
       value: 1
       objectReference: {fileID: 0}
@@ -1119,6 +1124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AdditionalLightsShadowResolutionTier
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 660810292629782814, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782814, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
@@ -2477,7 +2487,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 7
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2512,7 +2522,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4464,7 +4474,7 @@ Light:
   m_InnerSpotAngle: 87.628555
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -11774,7 +11784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147623417}
   m_LocalRotation: {x: 0.27059826, y: -0.6532809, z: 0.65328217, w: 0.2705978}
-  m_LocalPosition: {x: -0.045227528, y: 5.66, z: 13.385199}
+  m_LocalPosition: {x: -0.05, y: 6.66, z: 13.39}
   m_LocalScale: {x: 1.2999997, y: 1.2999998, z: 1.2999996}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11814,12 +11824,12 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 7.7177606
+  m_Range: 7.806006
   m_SpotAngle: 179
   m_InnerSpotAngle: 23.02614
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -22487,6 +22497,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782812, guid: 05d384e9171811049bf4c529b25e1aed,
         type: 3}
+      propertyPath: m_Range
+      value: 6.4056664
+      objectReference: {fileID: 0}
+    - target: {fileID: 660810292629782812, guid: 05d384e9171811049bf4c529b25e1aed,
+        type: 3}
       propertyPath: m_Lightmapping
       value: 1
       objectReference: {fileID: 0}
@@ -30294,10 +30309,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6909403849660494598, guid: 25389e264b0a293448ea5a1ecdff4aab,
         type: 3}
+      propertyPath: MaxDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6909403849660494598, guid: 25389e264b0a293448ea5a1ecdff4aab,
+        type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: 649039fff9031d14ab4fe04f142ca463,
         type: 2}
+    - target: {fileID: 6909403849660494598, guid: 25389e264b0a293448ea5a1ecdff4aab,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25389e264b0a293448ea5a1ecdff4aab, type: 3}
 --- !u!4 &1698019521874182859
@@ -31628,7 +31653,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 7
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -31663,7 +31688,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -36826,7 +36851,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 7
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -36861,7 +36886,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -38194,7 +38219,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 7
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -38229,7 +38254,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -681,7 +681,7 @@ PrefabInstance:
     - target: {fileID: 660810292629782812, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782812, guid: f87cf8d095ece10428ee2c2dfb2fc6e5,
         type: 3}
@@ -2910,7 +2910,7 @@ Light:
   m_InnerSpotAngle: 87.628555
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7025,7 +7025,7 @@ PrefabInstance:
     - target: {fileID: 5478243772718750718, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5478243772718750718, guid: 07b6f190872407c40a24816b67793ec0,
         type: 3}
@@ -14327,7 +14327,7 @@ Light:
   m_InnerSpotAngle: 23.02614
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -26696,7 +26696,7 @@ PrefabInstance:
     - target: {fileID: 660810292629782812, guid: 05d384e9171811049bf4c529b25e1aed,
         type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 660810292629782812, guid: 05d384e9171811049bf4c529b25e1aed,
         type: 3}
