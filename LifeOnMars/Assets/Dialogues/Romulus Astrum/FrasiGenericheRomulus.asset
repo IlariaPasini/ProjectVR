@@ -22,6 +22,12 @@ MonoBehaviour:
   - 'Vorrei proprio poter catturare la bellezza di questo posto, ma non mi hanno
     fatto portare gli acquerelli '
   - "Che temperatura ci sar\xE0 oggi? Sempre un po' variabile"
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: 29336a16e06beb9428c79de3a022a065, type: 3}
+  - {fileID: 8300000, guid: 7d0ed0698e46f7f4fbfb02678aadd51b, type: 3}
+  - {fileID: 8300000, guid: f3d3e029dcc19b64a9ffb1dc9368b9d2, type: 3}
+  - {fileID: 8300000, guid: a1d7fff1fc666ac4191f5443771e74cd, type: 3}
+  - {fileID: 8300000, guid: 9c70452cbbcad734a8d0d2e2cfe68ef3, type: 3}
+  - {fileID: 8300000, guid: 4b804f2644009ae4a8827e0e1b868a33, type: 3}
   randomized: 1
   automaticTalk: 0

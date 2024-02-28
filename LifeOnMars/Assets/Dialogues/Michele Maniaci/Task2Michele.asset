@@ -16,4 +16,9 @@ MonoBehaviour:
   - Wow! Guarda come sono cresciute le piante!
   - "Ora \xE8 il momento di raccogliere quello che hai fatto crescere!"
   - Prendi il cesto e inserisci almeno 8 frutti tra pomodori e segale
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: 554fb0b0dcce32e448280ffdf2ad1ae8, type: 3}
+  - {fileID: 8300000, guid: f700a235fdd272b42b35ba17083294ff, type: 3}
+  - {fileID: 8300000, guid: e4ec743952088e04ebba8aec1cc39c59, type: 3}
+  randomized: 0
+  automaticTalk: 1

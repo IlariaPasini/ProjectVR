@@ -20,6 +20,11 @@ MonoBehaviour:
     esso
   - Premi quindi Grab per interagire con gli oggetti
   - Se tieni premuto puoi tenerlo in mano, quando rilasci il tasto si rilascia l'oggetto
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: b5298d95e73fed147ba0eb110602ce1a, type: 3}
+  - {fileID: 8300000, guid: 58f1faccf986f034c90867243390462e, type: 3}
+  - {fileID: 8300000, guid: 2ba819a8c80d54548ba88e27a5101ba3, type: 3}
+  - {fileID: 8300000, guid: f843bde681cc3e548982201e3b8f2a42, type: 3}
+  - {fileID: 8300000, guid: cbee880913a7489449c19a707df30bd6, type: 3}
   randomized: 0
   automaticTalk: 1

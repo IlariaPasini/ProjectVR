@@ -18,6 +18,11 @@ MonoBehaviour:
   - 'Preferisci i cani o i gatti? '
   - "Avere sia le piante che i MOXIE che producono ossigeno \xE8 veramente utile"
   - Ho controllato tutto il sistema elettrico, non si sa mai!
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: 92ab316788ddc0249b61c4d1fa5a5cbf, type: 3}
+  - {fileID: 8300000, guid: 33a560ebbde153549bc9ca2e554ac4ff, type: 3}
+  - {fileID: 8300000, guid: a3d6c8b3066ae4649a9b034e94870925, type: 3}
+  - {fileID: 8300000, guid: 5b2272d3185d3a043a8dfde264300482, type: 3}
+  - {fileID: 8300000, guid: 1efe8e19c3790134fa36e75ad8a97435, type: 3}
   randomized: 1
   automaticTalk: 0

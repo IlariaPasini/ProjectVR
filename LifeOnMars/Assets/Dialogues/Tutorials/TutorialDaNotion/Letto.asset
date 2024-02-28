@@ -15,6 +15,8 @@ MonoBehaviour:
   texts:
   - Quando hai terminato i tuoi task puoi terminare la tua giornata se non vuoi esplorare
   - Per terminare la giornata dovrai andare a dormire nel tuo caldo lettino!
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: e7958d4a101218a43a4cca3bbc291109, type: 3}
+  - {fileID: 8300000, guid: 36aa7d926160cc54587a11c5fc344b7c, type: 3}
   randomized: 0
   automaticTalk: 1
