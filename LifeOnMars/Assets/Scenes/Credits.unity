@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: cdac2391679f3aa42986b41ca0697ad3, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 95ebf50189f880e4aa17c4fdba9007aa, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.02971158, g: 0.017666405, b: 0.019892825, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -311,7 +311,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438260102}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.53}
   m_LocalScale: {x: 0.0052020005, y: 0.0052020005, z: 0.0052020005}
   m_ConstrainProportionsScale: 1
@@ -500,8 +500,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'DESIGN\n \n Daniel Bologna \n Ester Di Matteo '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b73ffa0acc1a48b4f95c7733397d3e2e, type: 2}
+  m_sharedMaterial: {fileID: 805323760897709040, guid: b73ffa0acc1a48b4f95c7733397d3e2e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -636,8 +637,9 @@ MonoBehaviour:
   m_text: PROGRAMMAZIONE\n  \n Martina Plumari \n Ilaria Pasini \n Daniel Bologna
     \n Vincenzo Micciche'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b73ffa0acc1a48b4f95c7733397d3e2e, type: 2}
+  m_sharedMaterial: {fileID: 805323760897709040, guid: b73ffa0acc1a48b4f95c7733397d3e2e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -772,8 +774,9 @@ MonoBehaviour:
   m_text: ARTE E UI\n \n Martina Plumari \n Ilaria Pasini \n Daniel Bologna \n Ester
     Di Matteo \n \n GRAZIE PER AVER PARTECIPATO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b73ffa0acc1a48b4f95c7733397d3e2e, type: 2}
+  m_sharedMaterial: {fileID: 805323760897709040, guid: b73ffa0acc1a48b4f95c7733397d3e2e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -934,7 +937,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232932538}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.53}
   m_LocalScale: {x: 0.0052020005, y: 0.0052020005, z: 0.0052020005}
   m_ConstrainProportionsScale: 1
@@ -1082,8 +1085,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AUDIO\n \n  Martina Plumari \n Ilaria Pasini \n Ester Di Matteo \n '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b73ffa0acc1a48b4f95c7733397d3e2e, type: 2}
+  m_sharedMaterial: {fileID: 805323760897709040, guid: b73ffa0acc1a48b4f95c7733397d3e2e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4255,7 +4259,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskMenu: {fileID: 3090406087732132989}
+  commandMenu: {fileID: 0}
+  quitMenu: {fileID: 0}
   isTaskMenuEnabled: 0
+  isCommandMenuEnabled: 0
+  isQuitMenuEnabled: 0
 --- !u!1 &3090406087810734920
 GameObject:
   m_ObjectHideFlags: 0
@@ -4699,6 +4707,9 @@ MonoBehaviour:
   volumeName: Volume
   bracelet: {fileID: 0}
   spawnDistance: 0.05
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3090406088377174054
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,6 +6672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPivot: {fileID: 8582522187541265887}
   map: {fileID: 0}
+  player: {fileID: 0}
+  hologram: {fileID: 0}
 --- !u!4 &3783753834303383457
 Transform:
   m_ObjectHideFlags: 0
@@ -9225,7 +9238,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153695049298915273}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
