@@ -17,6 +17,10 @@ MonoBehaviour:
   - "Sul polso del guanto sinistro c'\xE8 una mappa olografica"
   - Per utilizzarla prendila in mano con il grilletto del controller destro
   - Posizionala su una superficie rilasciando il trigger
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: 22f87682f0bb9ed43858dbc4596e80fc, type: 3}
+  - {fileID: 8300000, guid: b62d836a54d78c14397578c2ca3f0063, type: 3}
+  - {fileID: 8300000, guid: 68067d2e56f468d43b28f3cf6926e6a1, type: 3}
+  - {fileID: 8300000, guid: 89236968d7b6ceb44b52a664da4451e3, type: 3}
   randomized: 0
   automaticTalk: 1

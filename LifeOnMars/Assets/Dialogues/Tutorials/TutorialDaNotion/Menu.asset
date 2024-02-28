@@ -21,6 +21,14 @@ MonoBehaviour:
   - "Comandi che ti riassumer\xE0 tutti i tasti che puoi usare e come"
   - Volume che ti permette di aumentare/diminuire il volume
   - Quit per chiudere l'applicazione, fai attenzione!
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: 6d2b6d00dcc33004cb94f3eb1f0dae9a, type: 3}
+  - {fileID: 8300000, guid: 5e363c13f17721b489d0cc67ec1ad290, type: 3}
+  - {fileID: 8300000, guid: 23433b487e2c1ae49909c4172be04d91, type: 3}
+  - {fileID: 8300000, guid: e3b3ea9eeba9786428ff4cde08b29db9, type: 3}
+  - {fileID: 8300000, guid: 87eda255150953a4ab6bf8154c4979e9, type: 3}
+  - {fileID: 8300000, guid: 0e9b7da2516ec83448f18035ac0eb5e6, type: 3}
+  - {fileID: 8300000, guid: 09c50de0b9195a24a8c3f6b0a127ebbe, type: 3}
+  - {fileID: 8300000, guid: 26a258dbb0292d04da71ec66835f8110, type: 3}
   randomized: 0
   automaticTalk: 1

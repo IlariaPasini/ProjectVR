@@ -19,6 +19,12 @@ MonoBehaviour:
   - "C.A.R.L \xE8 proprio simpatico, ogni tanto Romita gli fa degli upgrade"
   - Le tempeste di sabbia sono fin troppo frequenti!
   - Hai visto Phobos e Deimos le due lune di Marte?
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: 4934337892f95f744bb29707248c7587, type: 3}
+  - {fileID: 8300000, guid: 465af04ce5fe9ad4cb854705f12d4e67, type: 3}
+  - {fileID: 8300000, guid: a14b48dad63e90f4f9734da6e9afabdb, type: 3}
+  - {fileID: 8300000, guid: f7bc431a149c92041b81f68fe3433ca8, type: 3}
+  - {fileID: 8300000, guid: 0d443e97113cb3245b204a756c4d0eef, type: 3}
+  - {fileID: 8300000, guid: ca3c6d74aa2581841b4ec8253251d290, type: 3}
   randomized: 1
   automaticTalk: 0

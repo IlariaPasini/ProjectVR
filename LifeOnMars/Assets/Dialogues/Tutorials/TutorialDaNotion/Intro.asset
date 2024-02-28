@@ -16,6 +16,9 @@ MonoBehaviour:
   - Prova a parlare con Aiden
   - Per farlo devi interagire con lui
   - 'Per interagire premi Grab '
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: 02d7345a3583ef84eb3a60b574a28dd9, type: 3}
+  - {fileID: 8300000, guid: 6b28489e30ffa8c45907a4cfa1d5a2ee, type: 3}
+  - {fileID: 8300000, guid: 1fd0b29aae5a517438a8eed4f98ffc9f, type: 3}
   randomized: 0
   automaticTalk: 1

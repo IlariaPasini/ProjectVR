@@ -15,6 +15,8 @@ MonoBehaviour:
   texts:
   - Fantastico! Grazie mille!
   - "Il tuo pollice \xE8 sempre pi\xF9 verde!"
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: c14ef817db9981543a68c1453c9aad3a, type: 3}
+  - {fileID: 8300000, guid: 34445086b2b3e3542a2e3922758c1fa1, type: 3}
   randomized: 0
   automaticTalk: 1
