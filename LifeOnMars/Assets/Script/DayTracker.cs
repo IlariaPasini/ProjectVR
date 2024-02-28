@@ -20,7 +20,7 @@ public class DayTracker : MonoBehaviour
     {   
         while(true){
 
-        tmp.text="Giorno "+(DaySystem.DayNumber+1);
+        tmp.text="Giorno "+(DaySystem.DayNumber+1) + "\nTask completate: " + TaskSystem.instance.TaskCompleted  + "\nTask for the day: " + DaySystem.TaskForTheDay;
         yield return new WaitForSeconds(1);
             if(DaySystem.DayNumber==lastDay){
                 tmp.text="La missione è finita, tempo di tornare!\n Sali sulla navicella fuori";
