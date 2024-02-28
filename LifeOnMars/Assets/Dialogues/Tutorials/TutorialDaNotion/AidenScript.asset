@@ -15,6 +15,8 @@ MonoBehaviour:
   texts:
   - Ciao! Ho un po' di fame!
   - Mi passeresti un biscotto per favore?
-  audio: []
+  audio:
+  - {fileID: 8300000, guid: c52a8e29af18f1243aedbb28be02369c, type: 3}
+  - {fileID: 8300000, guid: e8ef0aa7cd8aa7d44914d8e7dddd30a4, type: 3}
   randomized: 0
   automaticTalk: 1
