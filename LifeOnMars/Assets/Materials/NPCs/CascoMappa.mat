@@ -7,20 +7,29 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RadialAlpha_mapMat
-  m_Shader: {fileID: -6465566751694194690, guid: 6138a3182f4c8154484c488bfbfff7ed,
+  m_Name: CascoMappa
+  m_Shader: {fileID: -6465566751694194690, guid: 8dcdece5f1b6e284689331a3234ea276,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,15 +44,33 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade: 3.2
-    - _InnerRadius: 0.34
+    - _AlphaClip: 0
+    - _AmbientEnvironmentMultiplier: 1
+    - _Blend: 0
+    - _CastShadows: 1
+    - _Cull: 2
+    - _DstBlend: 0
+    - _EdgeDiffuse: 0
+    - _EdgeDistanceAttenuation: 0
+    - _EdgeRim: 0.001
+    - _EdgeShadowAttenuation: 1
+    - _EdgeSpecular: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Radius: 0
+    - _RimAmount: 0.8
+    - _RimStrength: 1
+    - _RimThreshold: 0.15
+    - _Smoothness: 0
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 0.0127091, g: 0.4896351, b: 0.9622642, a: 0}
+    - _AmbientColor: {r: 1, g: 1, b: 1, a: 0}
+    - _BaseColor: {r: 0.6037736, g: 0.22872494, b: 0.070630096, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &6649215638599284939
+--- !u!114 &7905919910131106483
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
