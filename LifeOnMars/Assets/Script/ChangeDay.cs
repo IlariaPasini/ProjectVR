@@ -47,8 +47,8 @@ public class ChangeDay : MonoBehaviour
     }
 
     public void ResetDay(){
-        DaySystem.TaskForTheDay = 0;
         if((TaskSystem.instance.TaskCompleted>=DaySystem.TaskForTheDay || debugMode) && Active){
+            DaySystem.TaskForTheDay = 0;
             TaskSystem.instance.ResetTasks();
         }else{
             onNextDayDeny.Invoke();
