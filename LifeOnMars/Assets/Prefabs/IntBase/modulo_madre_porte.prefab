@@ -532,6 +532,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2352116876159219093, guid: c4204c08aaf47f046b873e66c75782b9,
         type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2352116876159219093, guid: c4204c08aaf47f046b873e66c75782b9,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9791eb7c29cd8bf45aaa37e24d4c2fae, type: 2}
@@ -619,6 +624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297728882913858624, guid: c4204c08aaf47f046b873e66c75782b9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4204c08aaf47f046b873e66c75782b9, type: 3}

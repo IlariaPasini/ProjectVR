@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1707046177, guid: 759fcc14112677d4ca9e32d4c4f3423b, type: 3}
       propertyPath: m_PlaneDistance
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1707046177, guid: 759fcc14112677d4ca9e32d4c4f3423b, type: 3}
       propertyPath: m_SortingLayerID
