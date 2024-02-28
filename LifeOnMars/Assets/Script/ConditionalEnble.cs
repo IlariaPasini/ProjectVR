@@ -12,6 +12,7 @@ public class ConditionalEnble : MonoBehaviour
     void Start()
     {
         SceneManager.activeSceneChanged+=OnActiveScene;
+        gameObject.SetActive(false);
     }
 
     void OnDestroy(){
