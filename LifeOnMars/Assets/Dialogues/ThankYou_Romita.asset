@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b507452c3df4b34fb3e924c851b21a9, type: 3}
-  m_Name: ThankYou
+  m_Name: ThankYou_Romita
   m_EditorClassIdentifier: 
   texts:
   - Grazie mille! Sei stato fantastico!
   - Grande lo apprezzo davvero tanto!
   audio:
-  - {fileID: 8300000, guid: 7da3c9abd5c4bc44b9fc8430111cba9e, type: 3}
-  - {fileID: 8300000, guid: 822c67d1b8053f246a4371e006c8b98e, type: 3}
+  - {fileID: 8300000, guid: 822bfa4e50e55c34c9faf2a743cf1860, type: 3}
+  - {fileID: 8300000, guid: 71b847ca26f30ab40921c401eb0d1e32, type: 3}
   randomized: 0
   automaticTalk: 1

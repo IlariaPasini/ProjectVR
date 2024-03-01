@@ -41,7 +41,7 @@ public class MapDiplay : MonoBehaviour
         }
     }
 
-    public void Start(){
+    /*public void Start(){
         mr = GetComponent<MeshRenderer>();
         grab = GetComponent<XRGrabInteractable>();
 
@@ -51,6 +51,24 @@ public class MapDiplay : MonoBehaviour
 
         findMap();
         ResetMapPosition();
+    }*/
+
+    public void Start(){
+        mr = GetComponent<MeshRenderer>();
+        grab = GetComponent<XRGrabInteractable>();
+
+        SceneManager.activeSceneChanged+=findMap;
+
+        findMap();
+        ResetMapPosition();
+    }
+
+    void findMap(Scene s1, Scene s2){
+        findMap();
+    }
+
+     void OnDestroy(){
+        SceneManager.activeSceneChanged-=findMap;
     }
 
     private void Update()
